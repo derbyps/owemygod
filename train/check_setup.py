@@ -55,6 +55,7 @@ def main() -> None:
 
         tc = service.create_lora_training_client(base_model=MODEL, rank=32)
         log_path = ROOT / "runs" / "base"
+        log_path.mkdir(parents=True, exist_ok=True)
         paths = checkpoint_utils.save_checkpoint(training_client=tc, name="base-writer", log_path=str(log_path),
                                                  kind="sampler", loop_state={"step": 0}, ttl_seconds=None)
         write_result(log_path, paths)
