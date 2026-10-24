@@ -15,6 +15,9 @@ Deadline: 2026-10-25 23:59 PDT (= 2026-10-26 13:59 WIB / 14:59 WITA)
 - The friend's **reply** (excuse) is logged as a short note ("lagi buat beli susu, katanya minggu depan"). Logged replies refine the *next* reminder: its date and its wording. This is a log, **not a chatbot**.
 - The detail page reads like a **log** (a tracking timeline), never chat bubbles.
 - The daily push arrives at **09:00 WITA** for the author.
+- Home looks like a **chat list** (WhatsApp-style rows with unread badges) with a **+** button; a new debt needs only name, amount and an optional due date.
+- Reminders follow a **rhythm** (e.g. weekly on Monday). A logged promise ("Friday ya") brings a push on that day: "Budi promised to pay today". A **Remind now** button drafts a message any day.
+- **Not an AI-looking UI**; use the author's brand colors.
 - **English UI**: the target user is a South Jakarta ("Jaksel") English-Indonesian speaker.
 - Why open matters: friends' phone numbers and money excuses are personal; they should not go to a general AI assistant.
 
@@ -82,34 +85,54 @@ Guards (code): must contain `{amount}`; ≤ 300 characters; a blocklist of threa
 
 ### 3.3 Schedule (code only)
 
-- On the due date → level 1. No payment → +3 days, level 2 → +7 days, level 3.
-- After level 3 is sent and ignored for 7 days: status **"Talk in person"**, no more reminders.
-- A `promise` excuse sets the next nudge to *resolved date + 1 day* at the same level; a broken promise moves up one level.
-- A `vague` excuse sets the next nudge to +5 days.
-- **Partial payment** lowers the remaining amount; the schedule continues.
+Each debt has a **reminder rhythm**, chosen when it's created (default from Settings: weekly on Monday):
+`weekly on <day>` · `every 2 weeks on <day>` · `monthly on <date>` (e.g. the 25th, payday).
+
+- **First reminder:** the due date if one was given; otherwise the next rhythm day.
+- **On a rhythm day:** a reminder is due. Each sent reminder raises the tone one level: gentle → playful → firm (stays firm).
+- **Reply with a promise** (e.g. logged Wednesday: "Friday ya"): the rhythm pauses until that date.
+  - On the promise day the push says **"Budi promised to pay today (Rp150k)"**. No message is drafted that day; it's a heads-up.
+  - If the debt isn't marked paid by the next morning, a reminder is due that day ("Budi's promise was yesterday"), one level up. Then the normal rhythm resumes.
+- **Vague reply** ("nanti ya"): the rhythm continues unchanged; the reply is still used to write the next message.
+- **Remind now** (button, any day — e.g. you saw Budi posting concert photos on Friday): drafts a message immediately at the current level. Sending it counts as a reminder, and the next rhythm day is **skipped if it falls within 3 days** (Friday → Sunday is skipped; the next one is the Sunday after). Slow and steady: never two reminders in 3 days.
+- **After 3 firm reminders with no payment or reply:** status **"Talk in person"**, reminders stop, with a **Resume reminders** button.
+- **Partial payment** lowers the remaining amount; the rhythm continues.
+- **Paid** ends everything.
 
 ### 3.4 Daily job (in-process)
 
-An asyncio task checks every 10 minutes; once per day after **09:00 in the user's timezone** (author: Asia/Makassar, WITA; default Asia/Jakarta) it sends one push: "Today: Budi, Sari · Tomorrow: Andi". A `push_log(user_id, date)` row makes it idempotent across restarts.
+An asyncio task checks every 10 minutes; once per day after **09:00 in the user's timezone** (author: Asia/Makassar, WITA; default Asia/Jakarta) it sends **one** push summarising the day, e.g.:
+"Remind today: Sari, Andi · Budi promised to pay today". If nothing is due, no push. A `push_log(user_id, date)` row makes it idempotent across restarts.
 
 ## 4. Screens (English UI, mobile-first)
 
-1. **List (home)**: "You're owed Rp1.25jt". Rows: name, amount, what for, status chip:
-   **● Due today** (bold, unread dot) · **Tomorrow** · **Waiting until Oct 25** · **Talk in person** · **Paid** (grey, at the bottom).
-   Sorted: due today, tomorrow, waiting, talk in person, paid.
-2. **Friend detail** (a log, not a chat):
-   - Top: a **Next reminder** card: date, level, why ("because 'after payday ya'"), the draft message in a plain text box (editable, with **Regenerate**), and the button **Open in WhatsApp**. Pressing it records "Reminder sent" (with **Undo**).
-   - Below: a vertical tracking timeline with icons, newest first, e.g. `💸 Lent Rp150k · Oct 12` · `📤 Reminder sent (gentle) · Oct 20` · `💬 Reply: "after payday ya" → Promise · Oct 25` · `💵 Paid Rp50k · Oct 26`.
-   - Buttons: **Log reply**, **Partial payment**, **Paid**.
-   - No message bubbles, no input box that "answers" — the app never talks to the friend or to the user like a chatbot.
-3. **Log reply**: one text box → shows how it was read ("Promise · after payday → Oct 25") with **Looks right** / **Fix date** (manual date picker).
-4. **Add debt**: name, WhatsApp number, amount, what for, date lent, due date (default: today).
-5. **Settings**: enable notifications (with an iPhone "Add to Home Screen" guide), tone, default payday day, timezone (WIB / WITA / WIT).
+1. **Home: a chat-list look** (like WhatsApp's list of chats — familiar, *not* a chatbot):
+   - Header: "You're owed Rp1.25jt".
+   - Each row: an initial avatar, name, amount, and a one-line preview of the latest log entry (`💬 "after payday ya"`, `📤 Reminder sent Mon`); on the right, the date and a badge.
+   - **Unread style = action needed today**: bold row + yellow dot (*Remind today*) or orange badge (*Promised today*). Other states: *Waiting until Oct 25*, *Next: Mon*, *Talk in person*; *Paid* rows are grey at the bottom.
+   - Sorted: action today first, then by next date; paid last.
+   - A floating **+** button to add a debt.
+2. **New debt** (one short form): **name**, **amount** (accepts "150k", "1.2jt"), **due date (optional)**. Optional, collapsed under "More": WhatsApp number (if empty, *Open in WhatsApp* lets you pick the contact), what it was for, reminder rhythm (prefilled from Settings).
+3. **Friend detail: a card log**, not a chat:
+   - Top: a **Next reminder** card: date, tone level, why ("because 'after payday ya'"), the draft in a plain text box (editable, **Regenerate**), and **Open in WhatsApp**. Pressing it records "Reminder sent" (with **Undo**). On a non-due day the card shows the next date and a **Remind now** button instead, which drafts the message on demand.
+   - Below: a stack of log cards, newest first, e.g. `💸 Lent Rp150k · Oct 12` · `📤 Reminder sent (gentle) · Oct 20` · `💬 Reply: "after payday ya" → Promise · Oct 25` · `💵 Paid Rp50k · Oct 26`.
+   - Actions: **Log reply**, **Partial payment**, **Paid**.
+   - No message bubbles and no "ask the AI" box: the app never talks to anyone.
+4. **Log reply**: one text box → shows how it was read ("Promise · after payday → Oct 25") with **Looks right** / **Fix date** (date picker).
+5. **Settings**: enable notifications (with an iPhone "Add to Home Screen" guide), default reminder rhythm, tone, default payday day, timezone (WIB / WITA / WIT).
+
+### 4.1 Visual direction (not an "AI app" look)
+
+- **Brand (@derbyps.dev):** dark mode by default. Purple `#9D4EDD`, Yellow `#FFC300`, Orange `#FF6B35`, Teal `#0F4C5C`. Teal is too dark for text: use it for surfaces and borders.
+- **Roles:** Purple = primary actions (Open in WhatsApp, +); Yellow = "Remind today" dot and money amounts; Orange = "Promised today", firm tone, overdue; Teal = cards and dividers. Off-white text on a near-black background.
+- **Motif: the kasbon book** — the warung debt notebook every Indonesian knows. Log cards look like torn receipt slips with monospace amounts; status changes appear as ink **rubber stamps** (`PROMISED`, `LUNAS` in orange when paid). Empty states and the header use a small hand-drawn ink line-art sloth, accents highlighting one detail only.
+- **Avoid:** purple-to-blue gradients, glassmorphism, sparkle "✨ AI" icons, chat bubbles, generic rounded SaaS cards. The model is never shown as a character; it only fills in text.
+- Fonts from Google Fonts: a characterful display face for headings and a monospace for amounts and dates (chosen during implementation).
 
 ## 5. Data model (SQLite)
 
-- `users(id, username, password_hash, is_demo, tone, payday_day, timezone, created_at)`
-- `debts(id, user_id, friend_name, phone, amount, remaining, item, lent_on, due_on, level, next_nudge_on, status, created_at)`; `status`: `open | talk | paid`
+- `users(id, username, password_hash, is_demo, tone, payday_day, timezone, default_rhythm, default_rhythm_day, created_at)`
+- `debts(id, user_id, friend_name, phone, amount, remaining, item, lent_on, due_on, rhythm, rhythm_day, level, firm_count, next_nudge_on, promise_on, status, created_at)`; `rhythm`: `weekly | biweekly | monthly`; `status`: `open | talk | paid`
 - `events(id, debt_id, kind, text, parsed_json, created_at)`; `kind`: `lent | nudge | excuse | partial | paid`
 - `push_subscriptions(id, user_id, endpoint, p256dh, auth)`
 - `push_log(user_id, date)`
