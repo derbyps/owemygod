@@ -182,3 +182,32 @@ def count_model_calls(conn, user_id: int | None, since: datetime) -> int:
 
 def log_model_call(conn, user_id: int) -> None:
     conn.execute("INSERT INTO model_calls (user_id, at) VALUES (?, ?)", (user_id, _now()))
+
+
+def add_push_subscription(conn, user_id: int, sub: dict) -> None:
+    conn.execute("INSERT INTO push_subscriptions (user_id, endpoint, p256dh, auth) VALUES (?, ?, ?, ?) "
+                 "ON CONFLICT(endpoint) DO UPDATE SET user_id = excluded.user_id, p256dh = excluded.p256dh, "
+                 "auth = excluded.auth", (user_id, sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"]))
+
+
+def list_push_subscriptions(conn, user_id: int) -> list[dict]:
+    rows = conn.execute("SELECT * FROM push_subscriptions WHERE user_id = ?", (user_id,))
+    return [{"id": r["id"], "endpoint": r["endpoint"], "keys": {"p256dh": r["p256dh"], "auth": r["auth"]}}
+            for r in rows]
+
+
+def delete_push_subscription(conn, sub_id: int) -> None:
+    conn.execute("DELETE FROM push_subscriptions WHERE id = ?", (sub_id,))
+
+
+def list_users(conn) -> list[dict]:
+    return [dict(r) for r in conn.execute("SELECT * FROM users")]
+
+
+def push_logged(conn, user_id: int, day: date) -> bool:
+    return conn.execute("SELECT 1 FROM push_log WHERE user_id = ? AND date = ?",
+                        (user_id, day.isoformat())).fetchone() is not None
+
+
+def log_push(conn, user_id: int, day: date) -> None:
+    conn.execute("INSERT OR IGNORE INTO push_log (user_id, date) VALUES (?, ?)", (user_id, day.isoformat()))

@@ -1,6 +1,8 @@
 """OweMyGod web app: a list of friends who owe you, gentle reminders, a log of their replies."""
 from __future__ import annotations
 
+import asyncio
+import contextlib
 import json
 import os
 import secrets
@@ -9,12 +11,12 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from fastapi import FastAPI, Form, HTTPException, Request
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
-from owemygod import db
+from owemygod import daily, db, push
 from owemygod.model_client import from_env
 from owemygod.money import CURRENCIES, format_amount, parse_amount, totals
 from owemygod.phone import normalize, wa_link
@@ -59,6 +61,7 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
     app.state.conn = db.connect(db_path)
     app.state.reader, app.state.writer, app.state.clock = reader, writer, clock
+    app.state.vapid_public, app.state.push_sender = None, None
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.filters["day"] = lambda iso: f"{datetime.fromisoformat(iso):%a, %b} {datetime.fromisoformat(iso).day}"
     templates.env.globals.update(badge_text=views.badge_text, fmt=format_amount, TONES=TONES, RHYTHMS=RHYTHMS,
@@ -317,6 +320,38 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         db.save_state(conn, debt_id, resume(db.load_state(d), today))
         return RedirectResponse(f"/debts/{debt_id}", status_code=303)
 
+    # ---- push ------------------------------------------------------------------------------------
+    @app.get("/sw.js")
+    def service_worker():
+        return FileResponse(HERE / "static" / "sw.js", media_type="text/javascript",
+                            headers={"Service-Worker-Allowed": "/", "Cache-Control": "no-cache"})
+
+    @app.get("/vapid-public-key")
+    def vapid_key():
+        return {"key": app.state.vapid_public}
+
+    @app.post("/push/subscribe", status_code=204)
+    async def subscribe(request: Request):
+        user = login_required(request)
+        sub = await request.json()
+        if not str(sub.get("endpoint", "")).startswith("https://") or not sub.get("keys"):
+            raise HTTPException(400)
+        db.add_push_subscription(conn, user["id"], sub)
+
+    @app.post("/push/test")
+    def push_test(request: Request):
+        user = login_required(request)
+        sent = 0
+        for sub in db.list_push_subscriptions(conn, user["id"]):
+            ok = app.state.push_sender and app.state.push_sender(
+                sub, {"title": "OweMyGod", "body": "Notifications work. See you at 09:00 when someone is due.",
+                      "url": "/"})
+            if ok:
+                sent += 1
+            elif ok is False:
+                db.delete_push_subscription(conn, sub["id"])
+        return {"sent": sent}
+
     # ---- settings ------------------------------------------------------------------------------
     @app.get("/settings")
     def settings_form(request: Request):
@@ -350,7 +385,39 @@ def app_from_env() -> FastAPI:
                      secret=os.environ.get("SECRET_KEY"),
                      demo_calls_per_hour=int(os.environ.get("OWEMYGOD_DEMO_MODEL_CALLS_PER_HOUR", "20")),
                      calls_per_day=int(os.environ.get("OWEMYGOD_MODEL_CALLS_PER_DAY", "500")))
+    private, public = os.environ.get("VAPID_PRIVATE_KEY"), os.environ.get("VAPID_PUBLIC_KEY")
+    subject = os.environ.get("VAPID_SUBJECT", "mailto:owemygod@example.com")
+    if private and public:
+        app.state.vapid_public = public
+        app.state.push_sender = lambda sub, payload: push.send(sub, payload, private, subject)
+
+    @app.on_event("startup")
+    async def _start_daily():
+        app.state.daily_task = asyncio.create_task(_daily_loop(app))
+
+    @app.on_event("shutdown")
+    async def _stop_daily():
+        app.state.daily_task.cancel()
+        with contextlib.suppress(asyncio.CancelledError):
+            await app.state.daily_task
+
     owner, pw = os.environ.get("OWNER_USERNAME"), os.environ.get("OWNER_PASSWORD")
     if owner and pw and not db.get_user_by_name(app.state.conn, owner):
         db.create_user(app.state.conn, owner, pw, timezone=os.environ.get("OWNER_TIMEZONE", "Asia/Makassar"))
     return app
+
+
+async def _daily_loop(app: FastAPI, every_seconds: int = 600) -> None:
+    """Every 10 minutes: send due morning nudges; hourly: clear demo sandboxes older than 24 h."""
+    ticks = 0
+    while True:
+        try:
+            now = app.state.clock()
+            if app.state.push_sender:
+                await asyncio.to_thread(daily.run_once, app.state.conn, now, app.state.push_sender)
+            if ticks % 6 == 0:
+                db.delete_old_demo_users(app.state.conn, now.replace(tzinfo=None) - timedelta(hours=24))
+        except Exception as e:  # noqa: BLE001  keep the loop alive; the next tick retries
+            print(f"[daily] {e!r}")
+        ticks += 1
+        await asyncio.sleep(every_seconds)

@@ -132,3 +132,31 @@ def test_settings_saved(auth, app):
                                  "default_rhythm": "weekly", "default_rhythm_day": "6"})
     u = db.get_user(app.state.conn, 1)
     assert (u["tone"], u["payday_day"], u["timezone"], u["default_rhythm_day"]) == ("english", 1, "Asia/Makassar", 6)
+
+
+def test_vapid_key_route(app, client):
+    app.state.vapid_public = "PUBKEY"
+    assert client.get("/vapid-public-key").json() == {"key": "PUBKEY"}
+
+
+def test_subscribe_and_test_push(app, auth):
+    sent = []
+    app.state.push_sender = lambda sub, payload: sent.append((sub["endpoint"], payload)) or True
+    r = auth.post("/push/subscribe", json={"endpoint": "https://push/x", "keys": {"p256dh": "k", "auth": "a"}})
+    assert r.status_code == 204
+    assert auth.post("/push/test").json() == {"sent": 1}
+    assert sent[0][0] == "https://push/x" and "OweMyGod" in sent[0][1]["title"]
+
+
+def test_push_test_without_subscription(app, auth):
+    app.state.push_sender = lambda sub, payload: True
+    assert auth.post("/push/test").json() == {"sent": 0}
+
+
+def test_service_worker_served_at_root(client):
+    r = client.get("/sw.js")
+    assert r.status_code == 200 and "javascript" in r.headers["content-type"] and "showNotification" in r.text
+
+
+def test_manifest_served(client):
+    assert client.get("/static/manifest.webmanifest").json()["display"] == "standalone"
