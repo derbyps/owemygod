@@ -26,11 +26,13 @@
           {% for k, v in RHYTHMS.items() %}<option value="{{ k }}" {% if k == user.default_rhythm %}selected{% endif %}>{{ v }}</option>{% endfor %}
         </select>
       </label>
-      <label>On <span class="hint">(weekday, or day of month for monthly)</span>
-        <select name="rhythm_day">
+      <label>Weekly or every 2 weeks: on
+        <select name="rhythm_weekday">
           {% for d in WEEKDAYS %}<option value="{{ loop.index0 }}" {% if loop.index0 == user.default_rhythm_day %}selected{% endif %}>{{ d }}</option>{% endfor %}
-          {% for n in range(1, 32) %}<option value="{{ n }}">Day {{ n }} of the month</option>{% endfor %}
         </select>
+      </label>
+      <label>Monthly: on day
+        <input name="rhythm_monthday" type="number" min="1" max="31" value="{{ user.payday_day }}">
       </label>
     </details>
     <button class="btn btn-primary">Save</button>

@@ -7,6 +7,7 @@ from __future__ import annotations
 import re
 
 CURRENCIES = ("IDR", "USD")
+MAX_AMOUNT = 10**12
 _SUFFIX = {"k": 1_000, "rb": 1_000, "ribu": 1_000, "jt": 1_000_000, "juta": 1_000_000}
 _IDR = re.compile(r"^(\d+(?:[.,]\d+)?)(k|rb|ribu|jt|juta)$|^(\d{1,3}(?:[.,]\d{3})+|\d+)$")
 _USD = re.compile(r"^(\d+)(?:[.,](\d{1,2}))?$")
@@ -29,6 +30,8 @@ def parse_amount(s: str, currency: str = "IDR") -> int:
             n = int(re.sub(r"[.,]", "", m.group(3)))
     if n <= 0:
         raise ValueError("amount must be more than zero")
+    if n > MAX_AMOUNT:
+        raise ValueError("amount is too large")
     return n
 
 

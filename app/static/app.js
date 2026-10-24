@@ -53,7 +53,14 @@
   });
 
   test.addEventListener("click", async () => {
-    const { sent } = await (await fetch("/push/test", { method: "POST" })).json();
-    say(sent ? "Test sent. Check your notifications." : "No device is subscribed yet. Turn notifications on first.");
+    try {
+      const r = await fetch("/push/test", { method: "POST" });
+      const { sent, failed } = await r.json();
+      if (sent) say("Test sent. Check your notifications.");
+      else if (failed) say("The push service didn't answer. Try again in a minute.");
+      else say("No device is subscribed yet. Turn notifications on first.");
+    } catch (e) {
+      say("Couldn't send the test (" + e.message + "). Try again in a minute.");
+    }
   });
 })();

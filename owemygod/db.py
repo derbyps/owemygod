@@ -12,7 +12,7 @@ from .schedule import DebtState, initial_state
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
-  id INTEGER PRIMARY KEY, username TEXT UNIQUE NOT NULL, password_hash TEXT NOT NULL,
+  id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT UNIQUE NOT NULL, password_hash TEXT NOT NULL,
   is_demo INTEGER NOT NULL DEFAULT 0, tone TEXT NOT NULL DEFAULT 'jaksel', payday_day INTEGER NOT NULL DEFAULT 25,
   timezone TEXT NOT NULL DEFAULT 'Asia/Jakarta', default_rhythm TEXT NOT NULL DEFAULT 'weekly',
   default_rhythm_day INTEGER NOT NULL DEFAULT 0, created_at TEXT NOT NULL);
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS events (
   kind TEXT NOT NULL, text TEXT, parsed_json TEXT, created_at TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS push_subscriptions (
   id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  endpoint TEXT UNIQUE NOT NULL, p256dh TEXT NOT NULL, auth TEXT NOT NULL);
+  endpoint TEXT NOT NULL, p256dh TEXT NOT NULL, auth TEXT NOT NULL, UNIQUE (user_id, endpoint));
 CREATE TABLE IF NOT EXISTS push_log (
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, date TEXT NOT NULL,
   PRIMARY KEY (user_id, date));
@@ -186,7 +186,7 @@ def log_model_call(conn, user_id: int) -> None:
 
 def add_push_subscription(conn, user_id: int, sub: dict) -> None:
     conn.execute("INSERT INTO push_subscriptions (user_id, endpoint, p256dh, auth) VALUES (?, ?, ?, ?) "
-                 "ON CONFLICT(endpoint) DO UPDATE SET user_id = excluded.user_id, p256dh = excluded.p256dh, "
+                 "ON CONFLICT(user_id, endpoint) DO UPDATE SET p256dh = excluded.p256dh, "
                  "auth = excluded.auth", (user_id, sub["endpoint"], sub["keys"]["p256dh"], sub["keys"]["auth"]))
 
 

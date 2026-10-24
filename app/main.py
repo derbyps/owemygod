@@ -72,7 +72,17 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     # ---- helpers -------------------------------------------------------------------------------
     def user_or_redirect(request: Request) -> dict | None:
         uid = request.session.get("uid")
-        return db.get_user(conn, uid) if uid else None
+        user = db.get_user(conn, uid) if uid else None
+        if user and user["created_at"] != request.session.get("uc"):
+            return None  # the account this cookie was issued for no longer exists
+        return user
+
+    def sign_in(request: Request, uid: int) -> None:
+        request.session.clear()
+        request.session.update(uid=uid, uc=db.get_user(conn, uid)["created_at"])
+
+    def bad_request(message: str) -> HTMLResponse:
+        return HTMLResponse(f"<p>{message}</p><p><a href='javascript:history.back()'>Go back</a></p>", 400)
 
     def today_for(user: dict) -> date:
         return app.state.clock().astimezone(ZoneInfo(user["timezone"])).date()
@@ -143,7 +153,7 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         uid = db.check_password(conn, username.strip(), password)
         if not uid:
             return page(request, "login.html", 401, error="Wrong username or password.")
-        request.session["uid"] = uid
+        sign_in(request, uid)
         return RedirectResponse("/", status_code=303)
 
     @app.post("/logout")
@@ -156,7 +166,7 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         uid = db.create_user(conn, f"demo-{secrets.token_hex(6)}", secrets.token_hex(16), is_demo=True)
         user = db.get_user(conn, uid)
         seed_demo(conn, uid, today_for(user))
-        request.session["uid"] = uid
+        sign_in(request, uid)
         return RedirectResponse("/", status_code=303)
 
     # ---- home & debts --------------------------------------------------------------------------
@@ -180,10 +190,10 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     @app.post("/debts/new")
     def new_debt(request: Request, friend_name: str = Form(...), amount: str = Form(...),
                  currency: str = Form("IDR"), due_on: str = Form(""), phone: str = Form(""), item: str = Form(""),
-                 rhythm: str = Form(""), rhythm_day: str = Form("")):
+                 rhythm: str = Form(""), rhythm_weekday: str = Form(""), rhythm_monthday: str = Form("")):
         user = login_required(request)
         form = dict(friend_name=friend_name, amount=amount, currency=currency, due_on=due_on, phone=phone,
-                    item=item, rhythm=rhythm, rhythm_day=rhythm_day)
+                    item=item, rhythm=rhythm, rhythm_weekday=rhythm_weekday, rhythm_monthday=rhythm_monthday)
         currency = currency if currency in CURRENCIES else "IDR"
         try:
             value = parse_amount(amount, currency)
@@ -194,8 +204,19 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         if not name:
             return page(request, "new.html", 400, user=user, form=form, error="Name: who owes you?")
         rhythm = rhythm if rhythm in RHYTHMS else user["default_rhythm"]
-        rday = int(rhythm_day) if rhythm_day.isdigit() else user["default_rhythm_day"]
-        due = date.fromisoformat(due_on) if due_on else None
+        if rhythm == "monthly":
+            rday = int(rhythm_monthday) if rhythm_monthday.isdigit() else user["payday_day"]
+            valid = 1 <= rday <= 31
+        else:
+            default = user["default_rhythm_day"] if 0 <= user["default_rhythm_day"] <= 6 else 0
+            rday = int(rhythm_weekday) if rhythm_weekday.isdigit() else default
+            valid = 0 <= rday <= 6
+        if not valid:
+            return page(request, "new.html", 400, user=user, form=form, error="Reminder day: pick a valid day.")
+        try:
+            due = date.fromisoformat(due_on) if due_on else None
+        except ValueError:
+            return page(request, "new.html", 400, user=user, form=form, error="Due date: pick a date.")
         did = db.create_debt(conn, user["id"], friend_name=name, amount=value, currency=currency, due_on=due,
                              phone=normalize(phone), item=item.strip()[:80] or None, rhythm=rhythm,
                              rhythm_day=rday, today=today_for(user))
@@ -233,8 +254,9 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         today = today_for(user)
         d = owned_debt(user, debt_id)
         s = fresh_state(d, today)
+        after = on_reminder_sent(s, today)
         db.add_event(conn, debt_id, "nudge", text, {"level": s.level, "before": db.state_to_json(s)})
-        db.save_state(conn, debt_id, on_reminder_sent(s, today))
+        db.save_state(conn, debt_id, after)
         db.save_draft(conn, debt_id, None, None)
         number = None if user["is_demo"] else d["phone"]
         return RedirectResponse(wa_link(number, text), status_code=303)
@@ -270,9 +292,14 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         user = login_required(request)
         today = today_for(user)
         d = owned_debt(user, debt_id)
-        r = ReplyRead.model_validate_json(read)
+        try:
+            r = ReplyRead.model_validate_json(read)
+            resolved = date.fromisoformat(fixed_date) if fixed_date else None
+        except ValueError:
+            return bad_request("That reply couldn't be saved. Log it again.")
+        if resolved and resolved < today:
+            return bad_request("Pick today or a later date.")
         if fixed_date:
-            resolved = date.fromisoformat(fixed_date)
             if r.kind != "promise":
                 r = ReplyRead(kind="promise", when={"type": "day_of_month", "day": resolved.day})
         else:
@@ -300,6 +327,8 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
             return RedirectResponse(f"/debts/{debt_id}?error=amount", status_code=303)
         value = min(value, d["remaining"])
         db.add_event(conn, debt_id, "partial", None, {"amount": value})
+        s = fresh_state(d, today_for(user))
+        db.save_state(conn, debt_id, DebtState(**{**s.__dict__, "firm_count": 0}))
         if db.record_payment(conn, debt_id, value) == 0:
             _paid_state(user, debt_id, today_for(user))
         return RedirectResponse(f"/debts/{debt_id}", status_code=303)
@@ -341,16 +370,20 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     @app.post("/push/test")
     def push_test(request: Request):
         user = login_required(request)
-        sent = 0
+        sent = failed = 0
         for sub in db.list_push_subscriptions(conn, user["id"]):
-            ok = app.state.push_sender and app.state.push_sender(
-                sub, {"title": "OweMyGod", "body": "Notifications work. See you at 09:00 when someone is due.",
-                      "url": "/"})
+            try:
+                ok = app.state.push_sender and app.state.push_sender(
+                    sub, {"title": "OweMyGod", "body": "Notifications work. See you at 09:00 when someone is due.",
+                          "url": "/"})
+            except Exception:  # noqa: BLE001  the push service is down; tell the button, don't crash
+                failed += 1
+                continue
             if ok:
                 sent += 1
             elif ok is False:
                 db.delete_push_subscription(conn, sub["id"])
-        return {"sent": sent}
+        return {"sent": sent, "failed": failed} if failed else {"sent": sent}
 
     # ---- settings ------------------------------------------------------------------------------
     @app.get("/settings")

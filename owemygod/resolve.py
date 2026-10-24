@@ -17,6 +17,7 @@ def _add_month(d: date) -> tuple[int, int]:
 
 def next_day_of_month(day: int, today: date) -> date:
     """The next date with this day of month, today included; clamps 31 to short months."""
+    day = max(1, min(day, 31))
     this = _clamped(today.year, today.month, day)
     return this if this >= today else _clamped(*_add_month(today), day)
 
