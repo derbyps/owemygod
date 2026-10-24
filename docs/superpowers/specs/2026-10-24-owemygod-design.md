@@ -12,12 +12,14 @@ Deadline: 2026-10-25 23:59 PDT (= 2026-10-26 13:59 WIB / 14:59 WITA)
 - A **web app**, not a chat bot: a **list of friends who owe you**. A row looks **"unread"** on the day you should follow up.
 - A **D-1 reminder** so you don't forget who is due tomorrow, as a **push notification** on the phone (Android and iPhone).
 - A **"Send now"** button. Sending must be legal and seamless: no unofficial WhatsApp automation.
-- Excuses are typed as a short note ("lagi buat beli susu, katanya minggu depan").
+- The friend's **reply** (excuse) is logged as a short note ("lagi buat beli susu, katanya minggu depan"). Logged replies refine the *next* reminder: its date and its wording. This is a log, **not a chatbot**.
+- The detail page reads like a **log** (a tracking timeline), never chat bubbles.
+- The daily push arrives at **09:00 WITA** for the author.
 - **English UI**: the target user is a South Jakarta ("Jaksel") English-Indonesian speaker.
 - Why open matters: friends' phone numbers and money excuses are personal; they should not go to a general AI assistant.
 
 **Assumptions (flag if wrong)**
-- "Send now" opens WhatsApp's official click-to-chat link with the text prefilled; the user presses send. The app then records the nudge.
+- "Send now" (labelled **Open in WhatsApp**) opens WhatsApp's official click-to-chat link with the text prefilled; the user presses send. The app then records the nudge.
 - Single real user (the author) behind a password. Judges use per-visitor demo sandboxes.
 - Push is the only notification channel; no email.
 
@@ -68,13 +70,13 @@ Output (JSON, validated with pydantic):
   - `{"type": "payday"}`: abis gajian, after payday
   - `{"type": "month_start"}` / `{"type": "month_end"}`: awal bulan / akhir bulan
 
-**Code resolves** the expression to a calendar date (`resolve.py`): `next_week` → Monday of next week; `payday` → the friend's payday setting (default 25th) or the next one if passed; `month_start` → the 1st of next month; `day_of_month` → the next occurrence. All dates in Asia/Jakarta.
+**Code resolves** the expression to a calendar date (`resolve.py`): `next_week` → Monday of next week; `payday` → the friend's payday setting (default 25th) or the next one if passed; `month_start` → the 1st of next month; `day_of_month` → the next occurrence. All dates in the user's timezone.
 
 `claims_paid` never marks a debt paid; it shows "They say they've paid. Check your bank?" with a **Paid** button.
 
 ### 3.2 Nudge writer (base model, no fine-tune)
 
-Input: escalation level (1 gentle, 2 playful, 3 firm), tone, what the money was for, days since the loan, the latest excuse text. Output: one message using placeholders `{name}` and `{amount}`; code fills them in.
+Input: escalation level (1 gentle, 2 playful, 3 firm), tone, what the money was for, days since the loan, and the **last 2 logged replies** with how they were read (so the next message can refer to them: "udah gajian kan? 😄"). Output: one message using placeholders `{name}` and `{amount}`; code fills them in.
 
 Guards (code): must contain `{amount}`; ≤ 300 characters; a blocklist of threats and insults; otherwise use a fixed template for that level and tone. If the model is unreachable, templates are used and the UI says so.
 
@@ -88,21 +90,25 @@ Guards (code): must contain `{amount}`; ≤ 300 characters; a blocklist of threa
 
 ### 3.4 Daily job (in-process)
 
-An asyncio task checks every 10 minutes; once per day after 08:00 WIB per user it sends one push: "Today: Budi, Sari · Tomorrow: Andi". A `push_log(user_id, date)` row makes it idempotent across restarts.
+An asyncio task checks every 10 minutes; once per day after **09:00 in the user's timezone** (author: Asia/Makassar, WITA; default Asia/Jakarta) it sends one push: "Today: Budi, Sari · Tomorrow: Andi". A `push_log(user_id, date)` row makes it idempotent across restarts.
 
 ## 4. Screens (English UI, mobile-first)
 
 1. **List (home)**: "You're owed Rp1.25jt". Rows: name, amount, what for, status chip:
    **● Due today** (bold, unread dot) · **Tomorrow** · **Waiting until Oct 25** · **Talk in person** · **Paid** (grey, at the bottom).
    Sorted: due today, tomorrow, waiting, talk in person, paid.
-2. **Friend detail**: timeline (lent, nudges sent, excuses with how they were read), "Next nudge: Thu, because 'after payday ya'", editable draft message, buttons **Send now**, **Log excuse**, **Partial payment**, **Paid**.
-3. **Log excuse**: one text box → shows how it was read ("Promise · after payday → Oct 25") with **Looks right** / **Fix date** (manual date picker).
+2. **Friend detail** (a log, not a chat):
+   - Top: a **Next reminder** card: date, level, why ("because 'after payday ya'"), the draft message in a plain text box (editable, with **Regenerate**), and the button **Open in WhatsApp**. Pressing it records "Reminder sent" (with **Undo**).
+   - Below: a vertical tracking timeline with icons, newest first, e.g. `💸 Lent Rp150k · Oct 12` · `📤 Reminder sent (gentle) · Oct 20` · `💬 Reply: "after payday ya" → Promise · Oct 25` · `💵 Paid Rp50k · Oct 26`.
+   - Buttons: **Log reply**, **Partial payment**, **Paid**.
+   - No message bubbles, no input box that "answers" — the app never talks to the friend or to the user like a chatbot.
+3. **Log reply**: one text box → shows how it was read ("Promise · after payday → Oct 25") with **Looks right** / **Fix date** (manual date picker).
 4. **Add debt**: name, WhatsApp number, amount, what for, date lent, due date (default: today).
-5. **Settings**: enable notifications (with an iPhone "Add to Home Screen" guide), tone, default payday day.
+5. **Settings**: enable notifications (with an iPhone "Add to Home Screen" guide), tone, default payday day, timezone (WIB / WITA / WIT).
 
 ## 5. Data model (SQLite)
 
-- `users(id, username, password_hash, is_demo, tone, payday_day, created_at)`
+- `users(id, username, password_hash, is_demo, tone, payday_day, timezone, created_at)`
 - `debts(id, user_id, friend_name, phone, amount, remaining, item, lent_on, due_on, level, next_nudge_on, status, created_at)`; `status`: `open | talk | paid`
 - `events(id, debt_id, kind, text, parsed_json, created_at)`; `kind`: `lent | nudge | excuse | partial | paid`
 - `push_subscriptions(id, user_id, endpoint, p256dh, auth)`
@@ -111,7 +117,7 @@ An asyncio task checks every 10 minutes; once per day after 08:00 WIB per user i
 ## 6. Demo for judges
 
 - **Try the demo** creates a sandbox user with 4 fictional friends in different states (due today, tomorrow, waiting after a payday excuse, talk in person). Sandboxes older than 24 h are deleted.
-- In demo mode, **Send now** opens `wa.me/?text=…` with no number; the visitor picks a contact.
+- In demo mode, **Open in WhatsApp** opens `wa.me/?text=…` with no number; the visitor picks a contact.
 - **Test notification** button sends a push to the visitor's own device.
 - Caps: model calls per demo user per hour and per day overall (env vars), like BoldPrint.
 - The post includes a GIF/video of the full flow on a phone.
