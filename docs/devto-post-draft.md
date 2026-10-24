@@ -92,7 +92,7 @@ Both remaining misses are one day early, and both are genuinely tricky: *"tgl 25
 kan ya? senin deh"* (it kept the 25th, not the corrected Monday) and *"akhir bulan ya bro tgl 28/29"* (it picked the
 28th). That's why the app always shows how it read a reply and lets you fix the date in one tap.
 
-![Too-early reminders by system]([[upload eval/out/chart.png]])
+![Too-early reminders by system on each test set](https://raw.githubusercontent.com/derbyps/owemygod/main/eval/out/chart.png)
 
 ### The app
 
