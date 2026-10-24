@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body_class %}page-reply{% endblock %}
+{% block body %}
+<header class="top"><a class="back" href="/debts/{{ d.id }}">← {{ d.friend_name }}</a></header>
+<main>
+  <section class="card slip">
+    <p class="quote">“{{ text }}”</p>
+    <p class="read-result">
+      <span class="stamp stamp-{{ read.kind }}">{{ kind_text }}</span>
+      {% if resolved %}<span class="resolved">{{ when_text }} → <b>{{ resolved.strftime('%a, %b') }} {{ resolved.day }}</b></span>{% endif %}
+    </p>
+    {% if read.kind == 'claims_paid' %}<p class="why">They say they've paid. Check your bank?</p>{% endif %}
+    {% if source == 'rules' %}<p class="hint">Read by rules (model unavailable). Check the date.</p>{% endif %}
+  </section>
+  {% if read.kind == 'claims_paid' %}
+  <form method="post" action="/debts/{{ d.id }}/paid"><button class="btn btn-primary">It's in. Mark paid</button></form>
+  {% endif %}
+  <form method="post" action="/debts/{{ d.id }}/reply/confirm" class="form">
+    <input type="hidden" name="text" value="{{ text }}">
+    <input type="hidden" name="read" value="{{ read_json }}">
+    <input type="hidden" name="source" value="{{ source }}">
+    <button class="btn {{ 'btn-ghost' if read.kind == 'claims_paid' else 'btn-primary' }}">{{ 'Not yet, just log it' if read.kind == 'claims_paid' else 'Looks right' }}</button>
+    <details>
+      <summary>Fix date</summary>
+      <label>They'll pay on <input type="date" name="fixed_date" min="{{ today.isoformat() }}"></label>
+      <button class="btn btn-secondary">Save with this date</button>
+    </details>
+  </form>
+</main>
+{% endblock %}

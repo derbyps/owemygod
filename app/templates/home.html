@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body_class %}page-home{% endblock %}
+{% block body %}
+<header class="top">
+  <div>
+    <p class="eyebrow">You're owed</p>
+    <h1 class="total">{{ total }}</h1>
+  </div>
+  <a class="icon-link" href="/settings" aria-label="Settings">⚙</a>
+</header>
+{% if user.is_demo %}<p class="demo-note">Demo sandbox · fictional friends · <a href="/settings">turn on notifications</a></p>{% endif %}
+<main>
+  {% if rows %}
+  <ul class="list" aria-label="Friends who owe you">
+    {% for r in rows %}
+    <li>
+      <a class="row badge-{{ r.badge }}{% if r.badge in ('remind', 'promised') %} unread{% endif %}" href="/debts/{{ r.id }}">
+        <span class="avatar" aria-hidden="true">{{ r.initial }}</span>
+        <span class="who">
+          <span class="name">{{ r.name }}</span>
+          <span class="preview">{{ r.preview }}</span>
+        </span>
+        <span class="meta">
+          <span class="amount">{{ r.amount_text }}</span>
+          <span class="badge">{{ badge_text(r) }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="empty">
+    <img class="sloth" src="/static/sloth.svg" alt="" width="200" height="150">
+    <p>Nobody owes you anything. Enjoy it while it lasts.</p>
+  </div>
+  {% endif %}
+</main>
+<a class="fab" href="/debts/new" aria-label="Add a debt">+</a>
+{% endblock %}

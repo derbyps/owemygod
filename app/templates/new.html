@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body_class %}page-new{% endblock %}
+{% block body %}
+<header class="top"><a class="back" href="/">← Back</a><h1>New debt</h1></header>
+<main>
+  <form method="post" action="/debts/new" class="card form slip">
+    {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+    <label>Who owes you? <input name="friend_name" value="{{ form.friend_name or '' }}" required maxlength="40" placeholder="Budi" autofocus></label>
+    <div class="amount-field">
+      <label>How much? <input name="amount" value="{{ form.amount or '' }}" required inputmode="decimal" placeholder="150k"></label>
+      <label>Currency
+        <select name="currency">
+          <option value="IDR" {% if form.currency != 'USD' %}selected{% endif %}>Rp</option>
+          <option value="USD" {% if form.currency == 'USD' %}selected{% endif %}>$</option>
+        </select>
+      </label>
+    </div>
+    <label>Due date <span class="hint">(optional)</span> <input type="date" name="due_on" value="{{ form.due_on or '' }}"></label>
+    <details>
+      <summary>More</summary>
+      <label>WhatsApp number <span class="hint">(optional — leave empty to pick the contact in WhatsApp)</span>
+        <input name="phone" value="{{ form.phone or '' }}" inputmode="tel" placeholder="0812…"></label>
+      <label>What was it for? <input name="item" value="{{ form.item or '' }}" maxlength="80" placeholder="concert tickets"></label>
+      <label>Remind
+        <select name="rhythm">
+          {% for k, v in RHYTHMS.items() %}<option value="{{ k }}" {% if k == user.default_rhythm %}selected{% endif %}>{{ v }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>On <span class="hint">(weekday, or day of month for monthly)</span>
+        <select name="rhythm_day">
+          {% for d in WEEKDAYS %}<option value="{{ loop.index0 }}" {% if loop.index0 == user.default_rhythm_day %}selected{% endif %}>{{ d }}</option>{% endfor %}
+          {% for n in range(1, 32) %}<option value="{{ n }}">Day {{ n }} of the month</option>{% endfor %}
+        </select>
+      </label>
+    </details>
+    <button class="btn btn-primary">Save</button>
+  </form>
+</main>
+{% endblock %}

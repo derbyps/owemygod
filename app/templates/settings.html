@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body_class %}page-settings{% endblock %}
+{% block body %}
+<header class="top"><a class="back" href="/">← Back</a><h1>Settings</h1></header>
+<main>
+  <section class="card" id="push">
+    <h2>Morning nudges</h2>
+    <p class="why">One notification at 09:00 when someone is due or promised to pay.</p>
+    <p class="ios-guide hint" hidden>On iPhone: tap <b>Share</b> → <b>Add to Home Screen</b>, open OweMyGod from the home screen, then come back here.</p>
+    <button class="btn btn-primary" id="enable-push" type="button">Turn on notifications</button>
+    <button class="btn btn-ghost" id="test-push" type="button" hidden>Send a test notification</button>
+    <p class="hint" id="push-status" role="status"></p>
+  </section>
+  <form method="post" action="/settings" class="card form">
+    {% if saved %}<p class="ok" role="status">Saved.</p>{% endif %}
+    <label>Message tone
+      <select name="tone">{% for k, v in TONES.items() %}<option value="{{ k }}" {% if k == user.tone %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    </label>
+    <label>Default reminder
+      <select name="default_rhythm">{% for k, v in RHYTHMS.items() %}<option value="{{ k }}" {% if k == user.default_rhythm %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    </label>
+    <label>On
+      <select name="default_rhythm_day">{% for d in WEEKDAYS %}<option value="{{ loop.index0 }}" {% if loop.index0 == user.default_rhythm_day %}selected{% endif %}>{{ d }}</option>{% endfor %}</select>
+    </label>
+    <label>Payday (day of month) <input name="payday_day" type="number" min="1" max="31" value="{{ user.payday_day }}"></label>
+    <label>Time zone
+      <select name="timezone">{% for k, v in TIMEZONES.items() %}<option value="{{ k }}" {% if k == user.timezone %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    </label>
+    <button class="btn btn-primary">Save</button>
+  </form>
+  <form method="post" action="/logout"><button class="btn btn-ghost">Log out</button></form>
+</main>
+{% endblock %}

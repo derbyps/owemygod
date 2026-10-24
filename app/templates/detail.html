@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block body_class %}page-detail{% endblock %}
+{% block body %}
+<header class="top"><a class="back" href="/">← Back</a></header>
+<main>
+  <section class="hero">
+    <span class="avatar big" aria-hidden="true">{{ d.friend_name[:1]|upper }}</span>
+    <h1>{{ d.friend_name }}</h1>
+    <p class="amount big">{{ fmt(d.remaining, d.currency) }}{% if d.remaining != d.amount %} <small>of {{ fmt(d.amount, d.currency) }}</small>{% endif %}</p>
+    {% if d.item %}<p class="item">for {{ d.item }}</p>{% endif %}
+    {% if s.status == 'paid' %}<span class="stamp stamp-paid">LUNAS</span>
+    {% elif action == 'promised' %}<span class="stamp stamp-promised">PROMISED</span>{% endif %}
+  </section>
+
+  {% if s.status == 'open' %}
+  <section id="reminder" class="card reminder {% if action == 'remind' %}due{% endif %}">
+    {% if action == 'promised' %}
+      <h2>Promised to pay today</h2>
+      <p class="why">Because they said: “{{ last_reply.text if last_reply else '' }}”. Mark it paid when the money lands; if not, a {{ LEVEL_NAMES[s.level + 1 if s.level < 3 else 3] }} reminder is due tomorrow.</p>
+    {% elif has_draft %}
+      <h2>{% if action == 'remind' %}Reminder due today{% else %}Reminder{% endif %} <span class="level level-{{ s.level }}">{{ LEVEL_NAMES[s.level] }}</span></h2>
+      {% if last_reply and action == 'remind' %}<p class="why">After: “{{ last_reply.text }}”</p>{% endif %}
+      <form method="post" action="/debts/{{ d.id }}/sent" class="send">
+        <label class="sr-only" for="msg">Message</label>
+        <textarea id="msg" name="text" rows="4" maxlength="600">{{ d.draft }}</textarea>
+        {% if d.draft_source == 'template' %}<p class="hint">Written from a template (model unavailable).</p>{% endif %}
+        <button class="btn btn-primary btn-wa">Open in WhatsApp</button>
+      </form>
+      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-ghost">↻ Regenerate</button></form>
+    {% else %}
+      <h2>Next reminder: {{ badge_text(row)|replace('Next: ', '')|replace('Waiting until ', '') }}</h2>
+      <p class="why">{% if s.promise_on %}Waiting for their promise ({{ s.promise_on.strftime('%a %b') }} {{ s.promise_on.day }}).{% else %}{{ RHYTHMS[s.rhythm] }}, {{ LEVEL_NAMES[s.level] }} tone.{% endif %}</p>
+      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-secondary">Remind now</button></form>
+    {% endif %}
+  </section>
+  {% elif s.status == 'talk' %}
+  <section class="card reminder talk">
+    <h2>Talk in person</h2>
+    <p class="why">Three firm reminders, no answer. Messages won't fix this one; coffee might.</p>
+    <form method="post" action="/debts/{{ d.id }}/resume"><button class="btn btn-ghost">Resume reminders</button></form>
+  </section>
+  {% endif %}
+
+  {% if s.status != 'paid' %}
+  <section class="actions">
+    <details class="action">
+      <summary class="btn btn-secondary">Log reply</summary>
+      <form method="post" action="/debts/{{ d.id }}/reply" class="card form">
+        <label>What did they say? <textarea name="text" rows="2" required maxlength="500" placeholder="after payday ya"></textarea></label>
+        <button class="btn btn-primary">Read it</button>
+      </form>
+    </details>
+    <details class="action">
+      <summary class="btn btn-ghost">Partial payment</summary>
+      <form method="post" action="/debts/{{ d.id }}/partial" class="card form">
+        <label>How much came in? <input name="amount" required inputmode="decimal" placeholder="{{ '50k' if d.currency == 'IDR' else '10' }}"></label>
+        <button class="btn btn-primary">Save</button>
+      </form>
+    </details>
+    <form method="post" action="/debts/{{ d.id }}/paid" class="action"><button class="btn btn-ghost">Paid in full</button></form>
+  </section>
+  {% endif %}
+
+  <section class="log" aria-label="History">
+    <h2 class="eyebrow">Kasbon log</h2>
+    <ol>
+      {% for e in events %}
+      <li class="slip ev-{{ e.kind }}">
+        <span class="when">{{ e.created_at[:10] }}</span>
+        {% if e.kind == 'lent' %}💸 Lent <b class="amount">{{ fmt(d.amount, d.currency) }}</b>{% if e.text %} for {{ e.text }}{% endif %}
+        {% elif e.kind == 'nudge' %}📤 Reminder sent <span class="level level-{{ e.parsed.level }}">{{ LEVEL_NAMES[e.parsed.level] }}</span>
+          <p class="quote">{{ e.text }}</p>
+          {% if loop.first and s.status == 'open' %}<form method="post" action="/events/{{ e.id }}/undo" class="inline"><button class="link">Undo</button></form>{% endif %}
+        {% elif e.kind == 'excuse' %}💬 Reply <p class="quote">“{{ e.text }}”</p>
+          <span class="read">→ {{ {'promise': 'Promise', 'vague': 'No date yet', 'claims_paid': "Says they've paid"}[e.parsed.kind] }}{% if e.parsed.resolved %} · {{ e.parsed.resolved }}{% endif %}{% if e.parsed.source == 'rules' %} · read by rules{% endif %}</span>
+        {% elif e.kind == 'partial' %}💵 Paid <b class="amount">{{ fmt(e.parsed.amount, d.currency) }}</b>
+        {% elif e.kind == 'paid' %}✅ Paid in full
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+</main>
+{% endblock %}

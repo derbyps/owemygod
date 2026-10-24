@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS debts (
   friend_name TEXT NOT NULL, phone TEXT, currency TEXT NOT NULL DEFAULT 'IDR', amount INTEGER NOT NULL,
   remaining INTEGER NOT NULL, item TEXT, lent_on TEXT NOT NULL, due_on TEXT,
   rhythm TEXT NOT NULL, rhythm_day INTEGER NOT NULL, level INTEGER NOT NULL, firm_count INTEGER NOT NULL,
-  next_nudge_on TEXT NOT NULL, promise_on TEXT, status TEXT NOT NULL, created_at TEXT NOT NULL);
+  next_nudge_on TEXT NOT NULL, promise_on TEXT, status TEXT NOT NULL, created_at TEXT NOT NULL,
+  draft TEXT, draft_on TEXT, draft_source TEXT);
 CREATE TABLE IF NOT EXISTS events (
   id INTEGER PRIMARY KEY, debt_id INTEGER NOT NULL REFERENCES debts(id) ON DELETE CASCADE,
   kind TEXT NOT NULL, text TEXT, parsed_json TEXT, created_at TEXT NOT NULL);
@@ -163,3 +164,19 @@ def record_payment(conn, debt_id: int, amount: int) -> int:
 
 def delete_old_demo_users(conn, older_than: datetime) -> None:
     conn.execute("DELETE FROM users WHERE is_demo = 1 AND created_at < ?", (older_than.isoformat(),))
+
+
+def save_draft(conn, debt_id: int, text: str | None, on: date | None, source: str | None = None) -> None:
+    conn.execute("UPDATE debts SET draft = ?, draft_on = ?, draft_source = ? WHERE id = ?",
+                 (text, on.isoformat() if on else None, source, debt_id))
+
+
+def count_model_calls(conn, user_id: int | None, since: datetime) -> int:
+    q, args = "SELECT COUNT(*) FROM model_calls WHERE at >= ?", [since.isoformat()]
+    if user_id is not None:
+        q, args = q + " AND user_id = ?", args + [user_id]
+    return conn.execute(q, args).fetchone()[0]
+
+
+def log_model_call(conn, user_id: int) -> None:
+    conn.execute("INSERT INTO model_calls (user_id, at) VALUES (?, ?)", (user_id, _now()))

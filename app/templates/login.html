@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body_class %}page-login{% endblock %}
+{% block body %}
+<main class="login">
+  <img class="sloth" src="/static/sloth.svg" alt="" width="160" height="120">
+  <h1 class="brand">OweMyGod</h1>
+  <p class="tagline">Chasing friend debts slowly, <em>which is</em> the only way to stay friends.</p>
+  <form method="post" action="/login" class="card form">
+    {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+    <label>Username <input name="username" autocomplete="username" required></label>
+    <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+    <button class="btn btn-primary">Log in</button>
+  </form>
+  <form method="post" action="/demo" class="demo">
+    <button class="btn btn-ghost">Try the demo →</button>
+    <small>Fictional friends, your own sandbox, gone after 24 hours.</small>
+  </form>
+</main>
+{% endblock %}
