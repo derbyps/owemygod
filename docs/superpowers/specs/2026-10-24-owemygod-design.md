@@ -50,7 +50,7 @@ Deadline: 2026-10-25 23:59 PDT (= 2026-10-26 13:59 WIB / 14:59 WITA)
 | Sending | `https://wa.me/<number>?text=…` (demo: `https://wa.me/?text=…`) | Official, legal; the user presses send |
 | UI | FastAPI + server-rendered HTML + a little vanilla JS, mobile-first | Small, fast to build, installable as a PWA |
 | Language | English UI; excuses and nudges in Jaksel code-mix (tone options: Jaksel mix / English / Bahasa) | Matches the target user; code-mixed casual tone is where a model beats templates |
-| Money format | `Rp150k`, `Rp1.2jt` | How the target user writes it |
+| Money format | Currency per debt: `IDR` → `Rp150k`, `Rp1.2jt`; `USD` → `$40`, `$12.50`. Stored as integer minor units (rupiah / cents) | How the target user writes it; Rp and $ only for now |
 
 ## 3. What the model does vs. what code does
 
@@ -107,12 +107,12 @@ An asyncio task checks every 10 minutes; once per day after **09:00 in the user'
 ## 4. Screens (English UI, mobile-first)
 
 1. **Home: a chat-list look** (like WhatsApp's list of chats — familiar, *not* a chatbot):
-   - Header: "You're owed Rp1.25jt".
+   - Header: "You're owed Rp1.25jt · $40" (one total per currency).
    - Each row: an initial avatar, name, amount, and a one-line preview of the latest log entry (`💬 "after payday ya"`, `📤 Reminder sent Mon`); on the right, the date and a badge.
    - **Unread style = action needed today**: bold row + yellow dot (*Remind today*) or orange badge (*Promised today*). Other states: *Waiting until Oct 25*, *Next: Mon*, *Talk in person*; *Paid* rows are grey at the bottom.
    - Sorted: action today first, then by next date; paid last.
    - A floating **+** button to add a debt.
-2. **New debt** (one short form): **name**, **amount** (accepts "150k", "1.2jt"), **due date (optional)**. Optional, collapsed under "More": WhatsApp number (if empty, *Open in WhatsApp* lets you pick the contact), what it was for, reminder rhythm (prefilled from Settings).
+2. **New debt** (one short form): **name**, **amount** with a currency dropdown **Rp / $** (Rp accepts "150k", "1.2jt"; $ accepts "12.5", "$40"), **due date (optional)**. Optional, collapsed under "More": WhatsApp number (if empty, *Open in WhatsApp* lets you pick the contact), what it was for, reminder rhythm (prefilled from Settings).
 3. **Friend detail: a card log**, not a chat:
    - Top: a **Next reminder** card: date, tone level, why ("because 'after payday ya'"), the draft in a plain text box (editable, **Regenerate**), and **Open in WhatsApp**. Pressing it records "Reminder sent" (with **Undo**). On a non-due day the card shows the next date and a **Remind now** button instead, which drafts the message on demand.
    - Below: a stack of log cards, newest first, e.g. `💸 Lent Rp150k · Oct 12` · `📤 Reminder sent (gentle) · Oct 20` · `💬 Reply: "after payday ya" → Promise · Oct 25` · `💵 Paid Rp50k · Oct 26`.
@@ -132,7 +132,7 @@ An asyncio task checks every 10 minutes; once per day after **09:00 in the user'
 ## 5. Data model (SQLite)
 
 - `users(id, username, password_hash, is_demo, tone, payday_day, timezone, default_rhythm, default_rhythm_day, created_at)`
-- `debts(id, user_id, friend_name, phone, amount, remaining, item, lent_on, due_on, rhythm, rhythm_day, level, firm_count, next_nudge_on, promise_on, status, created_at)`; `rhythm`: `weekly | biweekly | monthly`; `status`: `open | talk | paid`
+- `debts(id, user_id, friend_name, phone, currency, amount, remaining, item, lent_on, due_on, rhythm, rhythm_day, level, firm_count, next_nudge_on, promise_on, status, created_at)`; `rhythm`: `weekly | biweekly | monthly`; `status`: `open | talk | paid`
 - `events(id, debt_id, kind, text, parsed_json, created_at)`; `kind`: `lent | nudge | excuse | partial | paid`
 - `push_subscriptions(id, user_id, endpoint, p256dh, auth)`
 - `push_log(user_id, date)`
