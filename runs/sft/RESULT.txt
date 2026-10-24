@@ -1,0 +1,2 @@
+state_path=tinker://23803035-d1a8-5813-ac15-387aa0781778:train:0/weights/sft-final
+sampler_path=tinker://23803035-d1a8-5813-ac15-387aa0781778:train:0/sampler_weights/sft-final

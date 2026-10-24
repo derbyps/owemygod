@@ -39,3 +39,26 @@ def test_code_mixed():
 def test_replies_vary():
     rows = generate(500, seed=5)
     assert len({r["reply"] for r in rows}) > 450
+
+
+def test_rl_pool_is_separate_from_train_and_test():
+    from data.gen_dataset import RL_FAMILIES
+    assert RL_FAMILIES and not RL_FAMILIES & TRAIN_FAMILIES and not RL_FAMILIES & HELDOUT_FAMILIES
+
+
+def test_explicit_date_with_payday_is_labelled_as_the_date():
+    rows = [r for r in generate(3000, seed=8) if r["family"] == "pay_date"]
+    assert rows and all(r["target"]["when"]["type"] == "day_of_month" for r in rows)
+
+
+def test_mid_month_is_the_15th():
+    rows = [r for r in generate(3000, seed=9) if r["family"] == "mid_month"]
+    assert rows and all(r["target"]["when"] == {"type": "day_of_month", "day": 15} for r in rows)
+
+
+def test_typos_never_touch_digits():
+    from data.gen_dataset import _typo
+    import random
+    rng = random.Random(0)
+    for _ in range(500):
+        assert "".join(c for c in _typo("tgl 28 ya", rng) if c.isdigit()) == "28"

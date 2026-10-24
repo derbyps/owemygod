@@ -1,0 +1,800 @@
+{"id": "syn-2-0", "today": "2026-02-16", "family": "paid_en", "reply": "Omg sorrry already sent it 🙇", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-1", "today": "2026-09-18", "family": "paid_id", "reply": "udah tf semalem 🙏", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-2", "today": "2026-08-05", "family": "paid_id", "reply": "Cek deh udah masuk ya 😭", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-3", "today": "2026-08-17", "family": "paid_en", "reply": "I paid you yesterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-4", "today": "2026-03-24", "family": "paid_id", "reply": "barusan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-5", "today": "2026-12-05", "family": "pay_id", "reply": "gaji turun aku langsung tf 🥲", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-6", "today": "2026-05-18", "family": "vague_time_words", "reply": "duh gajian kemarin udah abis literally, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-7", "today": "2026-09-20", "family": "vague_month", "reply": "bulan ini banyak cicilan, nanti yya", "target": {"kind": "vague"}}
+{"id": "syn-2-8", "today": "2026-01-31", "family": "me_id", "reply": "iya iya, minggu ini gak bisa, akkhir bulan ini aja ya ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-9", "today": "2026-12-11", "family": "nw_en", "reply": "duh next week ya promise 😭", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-10", "today": "2026-01-23", "family": "rl_mid_month", "reply": "minggu ini kayaknya gak sempet, tgl 15an pasti beb", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-11", "today": "2026-05-16", "family": "dom_id", "reply": "Paling lambat tgl 25 beb", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 25}}}
+{"id": "syn-2-12", "today": "2026-09-07", "family": "paid_id", "reply": "Maaf ya, udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-13", "today": "2026-05-10", "family": "dom_id", "reply": "Duh tadinya mingggu ini, tapi tanggal 2 aja ya 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 2}}}
+{"id": "syn-2-14", "today": "2026-12-30", "family": "rl_pay_date", "reply": "Pas payday tgl 12 deh janji ya 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 12}}}
+{"id": "syn-2-15", "today": "2026-01-11", "family": "me_id", "reply": "minggu ini kayaknya gak sempet, akhir bulan pasti literally", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-16", "today": "2026-01-11", "family": "rel_mixed", "reply": "in 4 dys ya, which is pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-17", "today": "2026-12-20", "family": "pay_date", "reply": "Aduh lupa, abis gajian tgl 12 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 12}}}
+{"id": "syn-2-18", "today": "2026-08-26", "family": "rel_id", "reply": "duh, today gak bisa, besok siang aja ya 🙇", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-19", "today": "2026-07-22", "family": "pay_id", "reply": "Tomorrow kayaknya gak sempet, nunggu gajian pasti", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-20", "today": "2026-05-29", "family": "vague_month", "reply": "bulan ini banyak cicilan, nanti ya beb 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-21", "today": "2026-09-09", "family": "vague_month", "reply": "omg sorry, bulan ini banyak cicilan, nanti ya lliterally", "target": {"kind": "vague"}}
+{"id": "syn-2-22", "today": "2026-04-01", "family": "pay_id", "reply": "gaji turun ya 🥲", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-23", "today": "2026-08-13", "family": "vague_id", "reply": "kapan2 deh promise", "target": {"kind": "vague"}}
+{"id": "syn-2-24", "today": "2026-09-21", "family": "nw_en", "reply": "next week ya promise", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-25", "today": "2026-01-16", "family": "rel_en", "reply": "iya iya, in 4 days ya promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-26", "today": "2026-12-04", "family": "paid_id", "reply": "Udah aku transfer kok 🙇", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-27", "today": "2026-01-06", "family": "rl_pay_month", "reply": "akhir bulan nunggu gaji gw tf ok", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-28", "today": "2026-07-19", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini ssori ok", "target": {"kind": "vague"}}
+{"id": "syn-2-29", "today": "2026-09-20", "family": "nw_id", "reply": "sorry bro minggu ini gak bisa, pekan depan aja ya 🙇", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-30", "today": "2026-09-15", "family": "nw_id", "reply": "eh iya, minggu depann ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-31", "today": "2026-12-12", "family": "rel_en", "reply": "I'll pay you the day after tomorrow ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-32", "today": "2026-09-13", "family": "vague_id", "reply": "duh nanti aku kabarin", "target": {"kind": "vague"}}
+{"id": "syn-2-33", "today": "2026-12-01", "family": "paid_id", "reply": "Barusan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-34", "today": "2026-09-16", "family": "vague_en", "reply": "Hehe iya soon ya", "target": {"kind": "vague"}}
+{"id": "syn-2-35", "today": "2026-07-06", "family": "pay_me", "reply": "sorry bro tadinya tomorrow, tapi akhir bulan sekalian gajian turun aja ya 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-36", "today": "2026-03-23", "family": "paid_id", "reply": "udah aku transfer kok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-37", "today": "2026-04-30", "family": "mid_month", "reply": "ntar pas tengah bulan deh promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-38", "today": "2026-12-27", "family": "wd_id", "reply": "Paling hari sabtu deh 😭", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-39", "today": "2026-04-06", "family": "me_en", "reply": "omg sorry, end of month ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-40", "today": "2026-11-01", "family": "nw_en", "reply": "maaf ya, I'll pay you sometime next week", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-41", "today": "2026-05-09", "family": "pay_id", "reply": "minggu ini? duh gabisa, nunggu gajian deh beb", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-42", "today": "2026-08-09", "family": "me_en", "reply": "end of month ya promise literally 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-43", "today": "2026-10-06", "family": "pay_en", "reply": "when I get paid for sure", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-44", "today": "2026-08-20", "family": "me_id", "reply": "eh iya, paling akhir bulan 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-45", "today": "2026-12-09", "family": "pay_ms", "reply": "early next month sekalian gajian deh promise 😭", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-46", "today": "2026-01-25", "family": "dom_id", "reply": "Paling lambat tanggal 7 beb", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 7}}}
+{"id": "syn-2-47", "today": "2026-01-28", "family": "ms_id", "reply": "tanggal muda aku ganti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-48", "today": "2026-03-19", "family": "me_id", "reply": "omg sorry, not tomorrow sorry, akhir bulan ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-49", "today": "2026-05-24", "family": "rel_id", "reply": "Besok pagi ya pasti promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-50", "today": "2026-11-17", "family": "mid_month", "reply": "ntarr mid-month deh 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-51", "today": "2026-11-22", "family": "paid_en", "reply": "check your account, sent deh", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-52", "today": "2026-03-22", "family": "ms_id", "reply": "Eh iya tunggu begitu ganti bulan ya bro", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-53", "today": "2026-04-20", "family": "dom_en", "reply": "by the 14th ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 14}}}
+{"id": "syn-2-54", "today": "2026-08-18", "family": "ms_en", "reply": "hehe iya I'll pay first thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-55", "today": "2026-11-06", "family": "pay_id", "reply": "Iya iya tunggu pas gajian dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-56", "today": "2026-01-30", "family": "pay_en", "reply": "I'll send it when i get paid basically", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-57", "today": "2026-03-25", "family": "mid_month", "reply": "ntar pertengahan bulan deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-58", "today": "2026-04-14", "family": "nw_en", "reply": "Sometime next week for sure bro 😭", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-59", "today": "2026-03-03", "family": "pay_ms", "reply": "Hehe iya, early next month sekalian gajian gw lunasin promise", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-60", "today": "2026-07-18", "family": "dom_id", "reply": "maaf ya not besok sorry, tgl 23 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 23}}}
+{"id": "syn-2-61", "today": "2026-01-16", "family": "dom_en", "reply": "Lagi tight banget, besok? duh gabisa, 16th deh bro", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-62", "today": "2026-03-11", "family": "wd_en", "reply": "I'll send it thursday", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-63", "today": "2026-02-24", "family": "paid_id", "reply": "kemarin abis bayar kos, udh tf semalem 🙇", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-64", "today": "2026-01-05", "family": "rl_pay_month", "reply": "Ujung bulan pas gajian ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-65", "today": "2026-10-31", "family": "dom_en", "reply": "25th promise ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 25}}}
+{"id": "syn-2-66", "today": "2026-07-04", "family": "me_en", "reply": "Duh, besok kayaknya gak sempet, before the month ends pasti 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-67", "today": "2026-08-07", "family": "paid_id", "reply": "omg sorry, cek deh udah masuk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-68", "today": "2026-11-03", "family": "pay_ms", "reply": "maaf ya, awal bulan pas gajian gw lunasin sih", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-69", "today": "2026-08-29", "family": "rel_en", "reply": "In 3 days for sure", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-70", "today": "2026-06-04", "family": "vague_month", "reply": "lg tight bgt bulan ini, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-71", "today": "2026-09-25", "family": "vague_id", "reply": "sabar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-72", "today": "2026-08-03", "family": "paid_id", "reply": "udah aku transfer kok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-73", "today": "2026-08-25", "family": "rl_pay_date", "reply": "tadinya tomorrow, tapi gajian kan tgl 20, pas itu aja ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-74", "today": "2026-04-30", "family": "mid_month", "reply": "ntar pas tengah bulan deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-75", "today": "2026-05-16", "family": "rl_pay_month", "reply": "aduh lupa, ujung bulan pas gajian gw tf 🙇", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-76", "today": "2026-02-11", "family": "vague_id", "reply": "ssabar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-77", "today": "2026-09-10", "family": "pay_date", "reply": "tgl 5 pas gajian ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "syn-2-78", "today": "2026-11-10", "family": "nw_en", "reply": "I'll pay you next week", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-79", "today": "2026-07-07", "family": "rl_mid_month", "reply": "Hehe iya mid month gw bayar", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-80", "today": "2026-10-28", "family": "nw_id", "reply": "tadinya minggu ini, tapi minggu dpn aja ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-81", "today": "2026-03-10", "family": "dom_en", "reply": "Abis beli susu, i'll pay on the 30th 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 30}}}
+{"id": "syn-2-82", "today": "2026-03-01", "family": "pay_id", "reply": "sorry bro, tunggu abis gajian dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-83", "today": "2026-09-05", "family": "mid_month", "reply": "Mid-month gw tf 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-84", "today": "2026-12-23", "family": "paid_en", "reply": "I paid you yesterday ok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-85", "today": "2026-04-08", "family": "me_id", "reply": "maaf ya akhir bulan ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-86", "today": "2026-03-09", "family": "pay_id", "reply": "gaji turun tgl 1 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 1}}}
+{"id": "syn-2-87", "today": "2026-12-13", "family": "vague_month", "reply": "Bulan ini banyak cicilan, nanti ya deh", "target": {"kind": "vague"}}
+{"id": "syn-2-88", "today": "2026-03-15", "family": "me_en", "reply": "Before the month ends ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-89", "today": "2026-06-21", "family": "nw_en", "reply": "kemarin abis bayar kos, next week for sure bro", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-90", "today": "2026-12-03", "family": "paid_en", "reply": "eh iya, already sent it", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-91", "today": "2026-02-14", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini sori 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-92", "today": "2026-03-08", "family": "pay_en", "reply": "hehe iya, after payday for sure ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-93", "today": "2026-08-05", "family": "pay_en", "reply": "minggu ini? duh gabisa, after payday deh sih", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-94", "today": "2026-08-05", "family": "me_id", "reply": "sorry bgt ya, ujung bulan ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-95", "today": "2026-10-19", "family": "vague_id", "reply": "kapan2 deh 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-96", "today": "2026-07-21", "family": "vague_id", "reply": "kapan2 deh", "target": {"kind": "vague"}}
+{"id": "syn-2-97", "today": "2026-02-06", "family": "rel_tonight", "reply": "tar sore gw lunasin", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-98", "today": "2026-03-22", "family": "nw_id", "reply": "pekan depan ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-99", "today": "2026-02-06", "family": "vague_en", "reply": "working on it promise 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-100", "today": "2026-08-12", "family": "rl_vague_month", "reply": "eh iya cicilan numpuk bulan ini sori sih", "target": {"kind": "vague"}}
+{"id": "syn-2-101", "today": "2026-09-14", "family": "paid_en", "reply": "I paid you yesterday 💸", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-102", "today": "2026-01-29", "family": "paid_en", "reply": "Maaf ya i paid you yesterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-103", "today": "2026-07-08", "family": "ms_id", "reply": "Tanggal muda aku ganti beb 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-104", "today": "2026-08-05", "family": "mid_month", "reply": "Aduh lupa nunggu pertengahan bulan ya 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-105", "today": "2026-09-01", "family": "rel_tonight", "reply": "sblm tidur deh, lg di luar ya 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-106", "today": "2026-01-16", "family": "vague_time_words", "reply": "iya iya, nunggu THR ya 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-107", "today": "2026-11-21", "family": "wd_en", "reply": "Besok? duh gabisa, saturday deh", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-108", "today": "2026-01-25", "family": "nw_en", "reply": "next week for sure bro 🙏", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-109", "today": "2026-02-12", "family": "wd_id", "reply": "duh, besok? duh gabisa, sabtu deh bro 😭", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-110", "today": "2026-10-05", "family": "pay_date", "reply": "Abis gajian tgl 25 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 25}}}
+{"id": "syn-2-111", "today": "2026-08-05", "family": "rl_pay_date", "reply": "pass payday tgl 20 deh janji ok", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-112", "today": "2026-01-16", "family": "rel_id", "reply": "besok pagi ya pasti ok 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-113", "today": "2026-06-16", "family": "rel_id", "reply": "hehe iya, malem ini aku transfer ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-114", "today": "2026-01-14", "family": "rl_vague_month", "reply": "eh iya bulan ini lg berat bgt, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-115", "today": "2026-03-05", "family": "vague_en", "reply": "I'll pay you back, promise bro", "target": {"kind": "vague"}}
+{"id": "syn-2-116", "today": "2026-11-02", "family": "vague_en", "reply": "abis beli susu, working on it 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-117", "today": "2026-08-28", "family": "vague_month", "reply": "lg tight bgt bulan ini, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-118", "today": "2026-05-04", "family": "me_en", "reply": "Iya iya end of the month ya promise 🙇", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-119", "today": "2026-04-12", "family": "nw_en", "reply": "sometime next week ya promise ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-120", "today": "2026-12-21", "family": "wd_id", "reply": "Paling hari selasa deh promise", "target": {"kind": "promise", "when": {"type": "weekday", "day": "tue"}}}
+{"id": "syn-2-121", "today": "2026-05-03", "family": "pay_ms", "reply": "awal bulann depan sekalian gaji masuk ya sih 😅", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-122", "today": "2026-01-31", "family": "rl_vague_month", "reply": "duh, bulan ini lg berat bgt, ntar ya 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-123", "today": "2026-11-09", "family": "vague_time_words", "reply": "Iya iya, nunggu thr ya", "target": {"kind": "vague"}}
+{"id": "syn-2-124", "today": "2026-09-26", "family": "vague_month", "reply": "ntar dlu ya, pengeluaran bulan ini gila 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-125", "today": "2026-04-21", "family": "rel_mixed", "reply": "in 3 days ya, which is pasti sih 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-126", "today": "2026-06-21", "family": "dom_en", "reply": "I'll pay on the 24th 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 24}}}
+{"id": "syn-2-127", "today": "2026-03-14", "family": "nw_en", "reply": "Sometime next week ya promise 🥲", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-128", "today": "2026-03-18", "family": "rl_pay_date", "reply": "Omg sorry 23 aja pas gaji masuk deh janji bro", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 23}}}
+{"id": "syn-2-129", "today": "2026-08-27", "family": "paid_id", "reply": "sorry bgt ya cek deh udah masuk deh", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-130", "today": "2026-08-02", "family": "vague_id", "reply": "sorry bgt ya nnti ya 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-131", "today": "2026-01-26", "family": "pay_en", "reply": "Sorry bro gajian tgl 28, langsung aku tf", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 28}}}
+{"id": "syn-2-132", "today": "2026-08-27", "family": "vague_time_words", "reply": "gajian kemarin udah abis literally, nanti ya deh", "target": {"kind": "vague"}}
+{"id": "syn-2-133", "today": "2026-10-25", "family": "wd_en", "reply": "this monday ya promise basically 😅", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "syn-2-134", "today": "2026-11-07", "family": "ms_id", "reply": "sorry bgt ya, awal bulan ya 😅", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-135", "today": "2026-08-09", "family": "wd_en", "reply": "iya iya, by this sunday for sure ok 😭", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sun"}}}
+{"id": "syn-2-136", "today": "2026-12-23", "family": "wd_en", "reply": "kemarin abis bayar kos, besok gak bisa, this wednesday aja ya bro 😅", "target": {"kind": "promise", "when": {"type": "weekday", "day": "wed"}}}
+{"id": "syn-2-137", "today": "2026-06-24", "family": "pay_ms", "reply": "awal bulan pas gajian gw lunasin", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-138", "today": "2026-08-07", "family": "nw_en", "reply": "next week for sure bro basically", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-139", "today": "2026-06-02", "family": "nw_id", "reply": "minggu depan pasti deh", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-140", "today": "2026-04-26", "family": "rel_tonight", "reply": "Ntar malem ya gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-141", "today": "2026-09-06", "family": "rel_mixed", "reply": "Sorry, in 3 days aku transfer sih", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-142", "today": "2026-04-29", "family": "ms_en", "reply": "I'll pay first thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-143", "today": "2026-12-22", "family": "pay_id", "reply": "gaji turun aku langsung tf 🙇", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-144", "today": "2026-10-01", "family": "wd_en", "reply": "besok kayaknya gak sempet, weekend ini pasti beb 😭", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-145", "today": "2026-03-21", "family": "vague_id", "reply": "sabar ya promise", "target": {"kind": "vague"}}
+{"id": "syn-2-146", "today": "2026-04-04", "family": "ms_en", "reply": "Aduh lupa, besok? duh gabisa, early next month deh deh 😅", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-147", "today": "2026-11-20", "family": "rel_id", "reply": "duh, hari ini kayaknya gak sempet, 5 hari lagi pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-148", "today": "2026-09-16", "family": "rl_pay_month", "reply": "lagi tight banget, ujung bulan pas gajian ya 😅", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-149", "today": "2026-01-02", "family": "wd_en", "reply": "abis beli susu, I'll send it this thursday promise", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-150", "today": "2026-07-17", "family": "vague_month", "reply": "sorry bro, lg tight bgt bulan ini, ntar ya sih", "target": {"kind": "vague"}}
+{"id": "syn-2-151", "today": "2026-06-14", "family": "vague_time_words", "reply": "kemarin abis bayar kos next week? hmm not sure yet", "target": {"kind": "vague"}}
+{"id": "syn-2-152", "today": "2026-11-13", "family": "vague_time_words", "reply": "duh, nunggu THR ya ya 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-153", "today": "2026-03-08", "family": "pay_me", "reply": "lagi tight banget, akhir bulan pas gajian gw bayar deh 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-154", "today": "2026-06-22", "family": "nw_en", "reply": "I'll pay you next week sih", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-155", "today": "2026-01-26", "family": "rel_en", "reply": "sending it in 4 days ok 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-156", "today": "2026-04-27", "family": "rl_vague_month", "reply": "duh, minggu-minggu ini lg kacau, nanti ya deh", "target": {"kind": "vague"}}
+{"id": "syn-2-157", "today": "2026-08-13", "family": "rel_id", "reply": "abis beli susu 2 hari lagi deh aku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-158", "today": "2026-03-03", "family": "pay_ms", "reply": "omg sorryy, awal bulan pas gajian gw lunasin 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-159", "today": "2026-10-16", "family": "vague_en", "reply": "Iya iya i'll pay you back, promise", "target": {"kind": "vague"}}
+{"id": "syn-2-160", "today": "2026-10-26", "family": "ms_en", "reply": "I'll pay earlly next month 🙇", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-161", "today": "2026-02-07", "family": "paid_en", "reply": "sorry bro already sent it", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-162", "today": "2026-12-10", "family": "mid_month", "reply": "kemarin abis bayar kos tengah bulan gw tf 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-163", "today": "2026-07-28", "family": "pay_id", "reply": "aduh lupa nunggu gajian aku langsung tf", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-164", "today": "2026-07-29", "family": "rl_vague_month", "reply": "cicilan numpuk blan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-165", "today": "2026-03-12", "family": "rl_vague_month", "reply": "sorry bro bulan ini lg berat bgt, ntar ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-166", "today": "2026-11-23", "family": "paid_en", "reply": "check your account, sent bro", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-167", "today": "2026-04-22", "family": "vague_month", "reply": "Bulan ini banyak cicilan, nanti ya 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-168", "today": "2026-10-17", "family": "dom_id", "reply": "tgl 11 ya 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 11}}}
+{"id": "syn-2-169", "today": "2026-06-26", "family": "dom_id", "reply": "aduh lupa paling lambat tanggal 13", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 13}}}
+{"id": "syn-2-170", "today": "2026-06-12", "family": "rel_en", "reply": "Sending it in 4 days", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-171", "today": "2026-10-13", "family": "wd_id", "reply": "tomorrow? duh gabisa, hari kamis deh", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-172", "today": "2026-05-28", "family": "rel_en", "reply": "abis beli susu sending it later today", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-173", "today": "2026-01-14", "family": "rl_vague_month", "reply": "Hehe iya, cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-174", "today": "2026-07-27", "family": "pay_id", "reply": "duh tunggu abis gajian dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-175", "today": "2026-04-16", "family": "rl_pay_date", "reply": "kemarin abis bayar kos tomorrow kayaknya gak sempet, pas payday tgl 4 pasti", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 4}}}
+{"id": "syn-2-176", "today": "2026-05-05", "family": "me_id", "reply": "akhir bulan ini ya bro", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-177", "today": "2026-04-24", "family": "vague_month", "reply": "minggu2 ini deh, nunggu duit masuk", "target": {"kind": "vague"}}
+{"id": "syn-2-178", "today": "2026-04-09", "family": "vague_en", "reply": "Sorry, i havn't forgotten", "target": {"kind": "vague"}}
+{"id": "syn-2-179", "today": "2026-09-30", "family": "nw_id", "reply": "Aduh lupa minggu dpn pasti basically 🙇", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-180", "today": "2026-06-28", "family": "wd_id", "reply": "duh, paling hari kamis deh promise 🙇", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-181", "today": "2026-04-14", "family": "ms_en", "reply": "Tadinya minggu ini, tapi first thing next month aja ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-182", "today": "2026-11-02", "family": "vague_id", "reply": "sorry bgt ya nanti ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-183", "today": "2026-02-28", "family": "me_id", "reply": "akhir bulan aku transfer 🥲", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-184", "today": "2026-05-11", "family": "vague_month", "reply": "lg tight bgt bulan ini, ntar ya bro", "target": {"kind": "vague"}}
+{"id": "syn-2-185", "today": "2026-12-24", "family": "vague_id", "reply": "kemarin abis bayar kos pasti diganti kok 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-186", "today": "2026-07-11", "family": "mid_month", "reply": "Sorry bgt ya nnggu pertengahan bulan ya deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-187", "today": "2026-06-30", "family": "dom_en", "reply": "tadinya minggu ini, tapi 18th aja ya literally", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 18}}}
+{"id": "syn-2-188", "today": "2026-12-27", "family": "ms_en", "reply": "I'll pay early next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-189", "today": "2026-07-23", "family": "paid_en", "reply": "hehe iya check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-190", "today": "2026-09-08", "family": "nw_en", "reply": "Next week ya promise ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-191", "today": "2026-01-14", "family": "vague_en", "reply": "working on it", "target": {"kind": "vague"}}
+{"id": "syn-2-192", "today": "2026-02-16", "family": "ms_en", "reply": "I'll pay early next month sih", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-193", "today": "2026-03-18", "family": "nw_id", "reply": "Maaf ya, minggu dpn aku ganti deh", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-194", "today": "2026-05-01", "family": "vague_en", "reply": "hehe iya sorry, I haven't forgotten 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-195", "today": "2026-09-08", "family": "wd_id", "reply": "Iya iya hari sabtu aku transfer ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-196", "today": "2026-12-07", "family": "rl_pay_date", "reply": "pas payday tgl 22 ya 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 22}}}
+{"id": "syn-2-197", "today": "2026-05-06", "family": "pay_date", "reply": "Omg sorry, tgl 5 pas gajian ya 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "syn-2-198", "today": "2026-11-10", "family": "me_en", "reply": "lagi tight banget, end of month ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-199", "today": "2026-06-27", "family": "vague_en", "reply": "sorry, I haven't forgotten", "target": {"kind": "vague"}}
+{"id": "syn-2-200", "today": "2026-12-24", "family": "pay_en", "reply": "Eh iya when i get paid ya promise", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-201", "today": "2026-09-18", "family": "paid_en", "reply": "check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-202", "today": "2026-01-27", "family": "rl_mid_month", "reply": "kemarin abis bayar kos, pertengahan bulan nanti gw bayar 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-203", "today": "2026-04-07", "family": "paid_id", "reply": "udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-204", "today": "2026-09-07", "family": "nw_en", "reply": "I'll pay you sometime next week", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-205", "today": "2026-04-16", "family": "vague_id", "reply": "aku usahain ya ok", "target": {"kind": "vague"}}
+{"id": "syn-2-206", "today": "2026-09-03", "family": "rl_mid_month", "reply": "Tgl 15an ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-207", "today": "2026-09-30", "family": "me_id", "reply": "Minggu ini gak bisa, ujung bulan aja ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-208", "today": "2026-01-31", "family": "rl_mid_month", "reply": "Pertengahan bulan nanti ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-209", "today": "2026-12-10", "family": "vague_en", "reply": "I'll pay you back, promise bro", "target": {"kind": "vague"}}
+{"id": "syn-2-210", "today": "2026-02-08", "family": "me_en", "reply": "omg sorry I'll pay you end of the month", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-211", "today": "2026-04-27", "family": "pay_date", "reply": "sorry bro, tgl 23 pas gajian ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 23}}}
+{"id": "syn-2-212", "today": "2026-04-06", "family": "ms_id", "reply": "sorry bro tanggal muda ya bro 😭", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-213", "today": "2026-04-08", "family": "wd_id", "reply": "paling hri jumat deh", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "syn-2-214", "today": "2026-10-23", "family": "dom_id", "reply": "duh, tgl 13 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 13}}}
+{"id": "syn-2-215", "today": "2026-11-29", "family": "rel_en", "reply": "maaf ya, I'll payy you in 3 days", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-216", "today": "2026-06-20", "family": "paid_id", "reply": "aduh lupa, udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-217", "today": "2026-10-23", "family": "vague_time_words", "reply": "kalau project cair aku tf deh", "target": {"kind": "vague"}}
+{"id": "syn-2-218", "today": "2026-04-21", "family": "me_en", "reply": "I'll pay you before the month ends deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-219", "today": "2026-11-29", "family": "me_id", "reply": "akhir bulan aku transfer", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-220", "today": "2026-12-10", "family": "paid_en", "reply": "hehe iya, I paid you yesterdday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-221", "today": "2026-04-15", "family": "vague_id", "reply": "nanti ya sih", "target": {"kind": "vague"}}
+{"id": "syn-2-222", "today": "2026-07-01", "family": "rel_id", "reply": "eh iya, today kayaknya gak sempet, besok siang pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-223", "today": "2026-12-09", "family": "pay_date", "reply": "kemarin abis bayar kos, tgl 20 pas gajian lgsg lunas", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-224", "today": "2026-03-01", "family": "pay_id", "reply": "tunggu gaji turun dulu ya bro", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-225", "today": "2026-12-05", "family": "ms_en", "reply": "Early next month ya promise 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-226", "today": "2026-08-05", "family": "paid_en", "reply": "already sent it 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-227", "today": "2026-09-07", "family": "pay_me", "reply": "Akhir bulan ps gajian gw bayar basically", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-228", "today": "2026-08-11", "family": "rel_tonight", "reply": "Kemarin abis bayar kos tar malam deh, lg di luar", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-229", "today": "2026-08-10", "family": "nw_en", "reply": "next week for sure bro", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-230", "today": "2026-09-29", "family": "dom_id", "reply": "Tgl 27 aku transfer", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 27}}}
+{"id": "syn-2-231", "today": "2026-02-07", "family": "vague_time_words", "reply": "eh iya next week? hmm not sure yet sih", "target": {"kind": "vague"}}
+{"id": "syn-2-232", "today": "2026-11-13", "family": "pay_ms", "reply": "duh, awal bulan pas gajian gw lunasin ya 😅", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-233", "today": "2026-04-09", "family": "dom_en", "reply": "duh, 19th promise ok 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 19}}}
+{"id": "syn-2-234", "today": "2026-02-18", "family": "vague_month", "reply": "Maaf ya, minggu2 ini deh, nunggu duit masuk", "target": {"kind": "vague"}}
+{"id": "syn-2-235", "today": "2026-02-28", "family": "rel_id", "reply": "2 hari lagi deh aku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-236", "today": "2026-05-12", "family": "rl_vague_month", "reply": "duh, bulan ini lg berat bgt, ntar ya 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-237", "today": "2026-03-24", "family": "pay_en", "reply": "I'll send it after payday", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-238", "today": "2026-05-21", "family": "vague_time_words", "reply": "iya iya next week? hmm not sure yet", "target": {"kind": "vague"}}
+{"id": "syn-2-239", "today": "2026-06-23", "family": "rl_vague_month", "reply": "Bulan ini lg berat bgt, ntar ya ya", "target": {"kind": "vague"}}
+{"id": "syn-2-240", "today": "2026-01-10", "family": "me_en", "reply": "end of the month ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-241", "today": "2026-09-19", "family": "rel_en", "reply": "Abis beli susu tonight ya promise 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-242", "today": "2026-08-16", "family": "nw_en", "reply": "iya iya, sometime next week for sur bro ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-243", "today": "2026-01-15", "family": "nw_id", "reply": "sorry bro, minggu depan ya bro", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-244", "today": "2026-01-08", "family": "pay_date", "reply": "Tadinya besok, tapi abs gajian tgl 8 aja ya literally", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 8}}}
+{"id": "syn-2-245", "today": "2026-05-29", "family": "rel_id", "reply": "aduh luppa 5 hari lagi deh aku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-246", "today": "2026-11-12", "family": "rl_mid_month", "reply": "minggu ini kayaknya gak sempet, mid month pasti beb", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-247", "today": "2026-10-29", "family": "pay_id", "reply": "pas gajian aku langsung tf 💸", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-248", "today": "2026-04-16", "family": "paid_id", "reply": "udah aku transfer kok bro", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-249", "today": "2026-04-30", "family": "nw_en", "reply": "lagi tight banget, next week ya promise", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-250", "today": "2026-08-25", "family": "paid_en", "reply": "already sent it", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-251", "today": "2026-04-01", "family": "pay_me", "reply": "iya iya akhir bulan sekalian gajian turun ya sih", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-252", "today": "2026-06-27", "family": "vague_time_words", "reply": "kemarin abis bayar kos gajian kemarin udah abis literally, nanti ya 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-253", "today": "2026-04-07", "family": "rl_pay_month", "reply": "hehe iya, akhir bulan nunggu gaji gw tf 🥲", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-254", "today": "2026-12-04", "family": "wd_id", "reply": "hari jumat ini ya bro", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "syn-2-255", "today": "2026-08-27", "family": "me_id", "reply": "tadinya minggu ini, tapi akhir bulan ini aja ya ok", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-256", "today": "2026-05-10", "family": "rel_mixed", "reply": "Later today literally langsung aku tf 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-257", "today": "2026-08-10", "family": "mid_month", "reply": "Nunggu pas tengah bulan ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-258", "today": "2026-05-28", "family": "dom_en", "reply": "omg sorry 23rd promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 23}}}
+{"id": "syn-2-259", "today": "2026-06-19", "family": "rel_tonight", "reply": "sblm tidur gw lunasin", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-260", "today": "2026-11-11", "family": "me_en", "reply": "maaf ya besok? duh gabisa, end of the month deh deh 😅", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-261", "today": "2026-10-07", "family": "rel_en", "reply": "duh, in 2 days ya promise promis 💸", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-262", "today": "2026-07-31", "family": "vague_id", "reply": "hehe iya, kapan2 deh promise", "target": {"kind": "vague"}}
+{"id": "syn-2-263", "today": "2026-07-01", "family": "rel_mixed", "reply": "The day after tomorrow ya, which is pasti 💸", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-264", "today": "2026-08-19", "family": "vague_month", "reply": "sorry bro, lg tight bgt bulan ini, ntar ya basically", "target": {"kind": "vague"}}
+{"id": "syn-2-265", "today": "2026-03-06", "family": "paid_en", "reply": "check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-266", "today": "2026-06-15", "family": "nw_id", "reply": "hehe iya minggu deppan aku ganti 🙏", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-267", "today": "2026-07-22", "family": "rl_vague_month", "reply": "minggu-minggu ini lg kacau, nanti ya ok 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-268", "today": "2026-04-10", "family": "vague_id", "reply": "sabar ya ya", "target": {"kind": "vague"}}
+{"id": "syn-2-269", "today": "2026-10-20", "family": "paid_id", "reply": "maaf ya, udah aku transfer kok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-270", "today": "2026-11-18", "family": "dom_id", "reply": "Paling lambat tanggal 16 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-271", "today": "2026-08-28", "family": "me_en", "reply": "by end of the month 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-272", "today": "2026-10-20", "family": "rel_en", "reply": "sorry bgt ya I'll pay you the day after tomorrow 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-273", "today": "2026-11-15", "family": "nw_id", "reply": "not minggu ini sorry, minggu dpn ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-274", "today": "2026-01-10", "family": "wd_en", "reply": "Eh iya, by thursday for sure", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-275", "today": "2026-10-01", "family": "paid_en", "reply": "check your account, sent deh", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-276", "today": "2026-06-30", "family": "rl_pay_month", "reply": "sorry bro, akhir bulan nunggu gaji gw tf 😅", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-277", "today": "2026-05-16", "family": "rel_en", "reply": "sorry bgt ya, not hari ini sorrry, in 5 days ya 💸", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-278", "today": "2026-01-20", "family": "ms_en", "reply": "Minggu ini gak bisa, first thing next month aja ya 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-279", "today": "2026-01-13", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini sori basically 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-280", "today": "2026-02-12", "family": "pay_id", "reply": "duh, tunggu pas gajian dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-281", "today": "2026-05-26", "family": "mid_month", "reply": "nunggu pertengahan bulan ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-282", "today": "2026-05-25", "family": "vague_time_words", "reply": "minggu ini lagi kacau, nanti aku kabarin beb 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-283", "today": "2026-12-04", "family": "vague_en", "reply": "iya iya I'll pay you back, promise", "target": {"kind": "vague"}}
+{"id": "syn-2-284", "today": "2026-05-24", "family": "wd_id", "reply": "abis beli susu, kamis aku transfer ya literally", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-285", "today": "2026-05-22", "family": "rl_pay_month", "reply": "tadinya tomorrow, tapi akhir bulan nunggu gaji aja ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-286", "today": "2026-03-02", "family": "vague_id", "reply": "adh lupa, aku usahain ya beb 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-287", "today": "2026-07-21", "family": "me_id", "reply": "maaf ya, paling akhir bulan 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-288", "today": "2026-12-08", "family": "pay_me", "reply": "akhir bulan sekalian gajian turun ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-289", "today": "2026-03-17", "family": "rl_vague_month", "reply": "Kemarin abis bayar kos cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-290", "today": "2026-12-05", "family": "paid_id", "reply": "kemarin abis bayar kos udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-291", "today": "2026-12-26", "family": "rel_en", "reply": "In 2 days ya promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-292", "today": "2026-06-28", "family": "vague_id", "reply": "aku usahain ya", "target": {"kind": "vague"}}
+{"id": "syn-2-293", "today": "2026-04-17", "family": "pay_date", "reply": "Duh, tgl 4 sekalian payday, sumpah bro 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 4}}}
+{"id": "syn-2-294", "today": "2026-02-26", "family": "pay_en", "reply": "On payday for sure 😅", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-295", "today": "2026-05-27", "family": "nw_en", "reply": "besok gak bisa, next week aja ya 💸", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-296", "today": "2026-01-01", "family": "mid_month", "reply": "Duh, pertengahan bulan ya 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-297", "today": "2026-05-30", "family": "rl_vague_month", "reply": "sorry bro, cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-298", "today": "2026-08-05", "family": "rel_en", "reply": "I'll pay you tmrw ok", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-299", "today": "2026-09-02", "family": "mid_month", "reply": "ntar pas tengah bulan deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-300", "today": "2026-03-19", "family": "ms_en", "reply": "aduh lupa, I'll pay first thing next month 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-301", "today": "2026-11-13", "family": "vague_id", "reply": "nanti aku kabarin", "target": {"kind": "vague"}}
+{"id": "syn-2-302", "today": "2026-05-30", "family": "pay_me", "reply": "akhir bulan pas gajian deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-303", "today": "2026-12-19", "family": "vague_time_words", "reply": "next week? hmm not sure yet", "target": {"kind": "vague"}}
+{"id": "syn-2-304", "today": "2026-03-03", "family": "pay_ms", "reply": "Early next month sekalian gajian gw lunasin ya 😅", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-305", "today": "2026-10-08", "family": "rl_mid_month", "reply": "kemarin abis bayar kos, pertengahan bulan nanti ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-306", "today": "2026-02-01", "family": "vague_id", "reply": "kapan2 deh", "target": {"kind": "vague"}}
+{"id": "syn-2-307", "today": "2026-01-02", "family": "vague_id", "reply": "Sorry bro, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-308", "today": "2026-01-14", "family": "vague_id", "reply": "Aduh lupa pasti diganti kok", "target": {"kind": "vague"}}
+{"id": "syn-2-309", "today": "2026-04-20", "family": "pay_id", "reply": "Gaji turun tgl 10 ya ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-310", "today": "2026-03-25", "family": "rl_mid_month", "reply": "Kemarin abis bayar kos tgl 15an gw bayar 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-311", "today": "2026-12-01", "family": "rel_mixed", "reply": "duh, the day after tomorrow ya, which is pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-312", "today": "2026-11-05", "family": "ms_id", "reply": "Tunggu pas tgl muda ya 🥲", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-313", "today": "2026-03-09", "family": "pay_id", "reply": "tunggu gaji turun dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-314", "today": "2026-08-10", "family": "vague_en", "reply": "aduh llupa soon ya 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-315", "today": "2026-09-11", "family": "rel_id", "reply": "aku ganti 3 hari lagi ya 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-316", "today": "2026-03-12", "family": "dom_id", "reply": "iya iya tggl 2 ya beb 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 2}}}
+{"id": "syn-2-317", "today": "2026-04-23", "family": "pay_en", "reply": "I'll send it when I get paid", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-318", "today": "2026-02-20", "family": "me_en", "reply": "sorry bgt ya, end of the month ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-319", "today": "2026-01-17", "family": "me_en", "reply": "by end of the month ok", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-320", "today": "2026-09-15", "family": "vague_en", "reply": "I'll pay you back, promise 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-321", "today": "2026-05-25", "family": "ms_en", "reply": "omg sorry, I'll pay first thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-322", "today": "2026-11-04", "family": "paid_en", "reply": "sorry bgtt ya I paid you yesterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-323", "today": "2026-08-02", "family": "pay_me", "reply": "Eh iya, akhir bulan pas gajian gw bayar", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-324", "today": "2026-05-30", "family": "ms_en", "reply": "I'll pay early next month 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-325", "today": "2026-09-30", "family": "vague_month", "reply": "Duh, lg tight bgt bulan ini, ntar ya beb", "target": {"kind": "vague"}}
+{"id": "syn-2-326", "today": "2026-11-03", "family": "vague_id", "reply": "iya iya pasti diganti kok", "target": {"kind": "vague"}}
+{"id": "syn-2-327", "today": "2026-08-11", "family": "vague_id", "reply": "nanti aku kabarin deh", "target": {"kind": "vague"}}
+{"id": "syn-2-328", "today": "2026-12-18", "family": "nw_id", "reply": "minggu depan ya sih", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-329", "today": "2026-07-27", "family": "rel_mixed", "reply": "sorry, in 4 days aku transfer", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-330", "today": "2026-11-26", "family": "dom_en", "reply": "Kemarin abis bayar kos, tadinya besok, tapi 21st aja ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-331", "today": "2026-03-07", "family": "pay_me", "reply": "Akhir buln pas gajian deh ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-332", "today": "2026-10-13", "family": "pay_id", "reply": "aduh lupa tunggu abis gajian dulu ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-333", "today": "2026-03-16", "family": "me_en", "reply": "Iya iya i'll pay you before the month ends", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-334", "today": "2026-04-29", "family": "vague_en", "reply": "Maaf ya, soon ya", "target": {"kind": "vague"}}
+{"id": "syn-2-335", "today": "2026-04-28", "family": "rl_pay_month", "reply": "Abis beli susu, ujung bulan pas gajian gw tf beb 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-336", "today": "2026-09-20", "family": "paid_id", "reply": "Udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-337", "today": "2026-09-15", "family": "me_id", "reply": "Abis beli susu paling akhir bulan 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-338", "today": "2026-09-11", "family": "vague_month", "reply": "duh, bulan ini banyak cicilan, nanti ya 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-339", "today": "2026-11-01", "family": "nw_id", "reply": "Aduh lupa, pekan depan pasti", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-340", "today": "2026-07-23", "family": "wd_id", "reply": "paling hari sabtu deh", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-341", "today": "2026-11-11", "family": "paid_id", "reply": "sorry bro barusan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-342", "today": "2026-06-01", "family": "rl_vague_month", "reply": "maaf ya cicilan numpuk bulan ini sori promise", "target": {"kind": "vague"}}
+{"id": "syn-2-343", "today": "2026-05-19", "family": "rl_pay_date", "reply": "Pas payday tgl 5 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "syn-2-344", "today": "2026-09-01", "family": "paid_en", "reply": "Lagi tight banget i paid you yesterday 🥲", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-345", "today": "2026-09-24", "family": "paid_id", "reply": "udah tf semalem beb", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-346", "today": "2026-02-09", "family": "rel_id", "reply": "2 hari lagi ya pasti 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-347", "today": "2026-05-06", "family": "vague_id", "reply": "Duh kapan2 ddeh basically 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-348", "today": "2026-04-13", "family": "vague_en", "reply": "Hehe iya soon ya k", "target": {"kind": "vague"}}
+{"id": "syn-2-349", "today": "2026-08-12", "family": "pay_en", "reply": "When i get paid for sure beb 🙇", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-350", "today": "2026-04-01", "family": "ms_en", "reply": "this week kayaknya gak sempet, first thing next month pasti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-351", "today": "2026-03-28", "family": "paid_id", "reply": "barusan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-352", "today": "2026-08-30", "family": "nw_id", "reply": "abis beli susu, minggu depan pasti 🙏", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-353", "today": "2026-02-20", "family": "paid_en", "reply": "eh iya check your account, sent bro", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-354", "today": "2026-06-30", "family": "mid_month", "reply": "besok kayaknya gak sempet, mid-month pasti", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-355", "today": "2026-06-07", "family": "rl_pay_date", "reply": "Hehe iya minggu ini kayaknya gak sempet, pas payday tgl 10 pasti 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-356", "today": "2026-09-18", "family": "nw_id", "reply": "maaf ya, pekan depan pasti deh", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-357", "today": "2026-02-18", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini sori literally", "target": {"kind": "vague"}}
+{"id": "syn-2-358", "today": "2026-11-08", "family": "paid_en", "reply": "Duh, i paid you yesterday bro 🙏", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-359", "today": "2026-05-29", "family": "rel_mixed", "reply": "In 2 days ya, which is pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-360", "today": "2026-12-14", "family": "mid_month", "reply": "Tadinya tomorrow, tapi mid-month aja ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-361", "today": "2026-08-06", "family": "rl_pay_month", "reply": "maaf ya akhir bulan nunggu gaji gw tf promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-362", "today": "2026-11-28", "family": "rel_mixed", "reply": "today gak bisa, in 2 days aja ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-363", "today": "2026-11-19", "family": "pay_me", "reply": "akhir bulan sekalian gajian turun ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-364", "today": "2026-07-31", "family": "vague_time_words", "reply": "next week? hmm nt sure yet", "target": {"kind": "vague"}}
+{"id": "syn-2-365", "today": "2026-07-11", "family": "ms_id", "reply": "tunggu tanggal muda ya beb 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-366", "today": "2026-09-19", "family": "ms_id", "reply": "sorry bro not minggu ini sorry, tanggal muda ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-367", "today": "2026-09-15", "family": "vague_en", "reply": "working on it ya 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-368", "today": "2026-01-02", "family": "mid_month", "reply": "Tomorrow kayaknya gak sempet, tengah bulan pasti", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-369", "today": "2026-09-20", "family": "paid_id", "reply": "barusan aku tff", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-370", "today": "2026-12-26", "family": "dom_id", "reply": "lagi tight banget paling lambat tgl 20 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-371", "today": "2026-04-21", "family": "rel_id", "reply": "kemarin abis bayar kos, not hari ini sorry, 3 hari lagi ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-372", "today": "2026-01-16", "family": "pay_date", "reply": "minggu ini gak bisa, abis gajian tgl 5 aja ya 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "syn-2-373", "today": "2026-04-30", "family": "vague_en", "reply": "Soon ya beb 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-374", "today": "2026-01-20", "family": "rel_id", "reply": "besok siang deh aku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-375", "today": "2026-09-10", "family": "me_en", "reply": "sorryy bro, tomorrow? duh gabisa, end of month deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-376", "today": "2026-01-02", "family": "nw_id", "reply": "minggu ini? duh gabisa, minggu dpn deh 💸", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-377", "today": "2026-03-09", "family": "pay_me", "reply": "Aduh lupa, end of month pas payday deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-378", "today": "2026-11-02", "family": "paid_id", "reply": "Iya iya barusan aku tf 😭", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-379", "today": "2026-05-06", "family": "wd_en", "reply": "aduh lupa, by this thursday for sure 😭", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-380", "today": "2026-10-18", "family": "rel_tonight", "reply": "iya iya ntar malem ya gw tf 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-381", "today": "2026-01-13", "family": "nw_en", "reply": "aduh lupa next week ya promise", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-382", "today": "2026-07-23", "family": "me_id", "reply": "sorry bro tadinya tomorrow, tapi akkhir bulan ini aja ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-383", "today": "2026-12-07", "family": "dom_en", "reply": "by the 21st ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-384", "today": "2026-03-29", "family": "vague_id", "reply": "aduh lupa, aku usahain ya literally", "target": {"kind": "vague"}}
+{"id": "syn-2-385", "today": "2026-04-01", "family": "rl_mid_month", "reply": "kemarin abis bayar kos, tgl 15an gw bayar", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-386", "today": "2026-12-11", "family": "dom_id", "reply": "Kemarin abis bayar kos, tanggal 11 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 11}}}
+{"id": "syn-2-387", "today": "2026-12-05", "family": "me_id", "reply": "eh iya akhir bulan aku transfer beb 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-388", "today": "2026-09-25", "family": "rel_mixed", "reply": "sorry bro, sorry, tomorrow morning aku transfer bro 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-389", "today": "2026-05-26", "family": "wd_en", "reply": "Sunday ya promise beb", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sun"}}}
+{"id": "syn-2-390", "today": "2026-01-23", "family": "vague_id", "reply": "Nanti ya literally", "target": {"kind": "vague"}}
+{"id": "syn-2-391", "today": "2026-02-01", "family": "dom_id", "reply": "Duh paling lambat tanggal 13", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 13}}}
+{"id": "syn-2-392", "today": "2026-10-31", "family": "pay_date", "reply": "Sorry bgt ya on the 6th when i get paid ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 6}}}
+{"id": "syn-2-393", "today": "2026-12-10", "family": "ms_id", "reply": "hehe iya this week? duh gabisa, begitu ganti bulan deh", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-394", "today": "2026-12-23", "family": "vague_time_words", "reply": "duh nunggu THR ya basically", "target": {"kind": "vague"}}
+{"id": "syn-2-395", "today": "2026-06-26", "family": "pay_id", "reply": "Sorry bgt ya, abis gajian ya ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-396", "today": "2026-04-06", "family": "paid_id", "reply": "cek deh udah masuk ok 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-397", "today": "2026-02-03", "family": "paid_id", "reply": "cek deh udah masuk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-398", "today": "2026-01-22", "family": "rl_vague_month", "reply": "sorry bgt ya cicilan numpk bulan ini sori promise 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-399", "today": "2026-05-09", "family": "rel_tonight", "reply": "Maaf ya tar malam deh, lg di luar", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-400", "today": "2026-12-13", "family": "wd_id", "reply": "Tomorrow gak bisa, kamis aja ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-401", "today": "2026-04-01", "family": "dom_id", "reply": "sorry bro, tadinya tomorrow, tapi tanggal 1 aja ya basically 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 1}}}
+{"id": "syn-2-402", "today": "2026-12-23", "family": "dom_id", "reply": "duh, tanggal 18 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 18}}}
+{"id": "syn-2-403", "today": "2026-03-05", "family": "nw_id", "reply": "minggu dpn ya 😅", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-404", "today": "2026-07-10", "family": "mid_month", "reply": "abis beli susu, mid-month gw tf promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-405", "today": "2026-02-23", "family": "rel_id", "reply": "lusa aku transfer ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-406", "today": "2026-11-14", "family": "me_id", "reply": "not minggu ini sorry, akhir bulan ini ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-407", "today": "2026-11-09", "family": "vague_id", "reply": "pasti diganti kok basically", "target": {"kind": "vague"}}
+{"id": "syn-2-408", "today": "2026-08-10", "family": "rel_tonight", "reply": "ntar malem ya gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-409", "today": "2026-03-09", "family": "pay_date", "reply": "pas gajian tgl 6 lgsg lunas", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 6}}}
+{"id": "syn-2-410", "today": "2026-07-04", "family": "mid_month", "reply": "mid-month ya ok", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-411", "today": "2026-10-27", "family": "pay_date", "reply": "not tomorrow sorry, on the 15th when I get paid ya beb 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-412", "today": "2026-07-03", "family": "ms_id", "reply": "awal bulan depan aku ganti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-413", "today": "2026-02-03", "family": "vague_month", "reply": "ntar dlu ya, pengeluaran bulan ini gila sih", "target": {"kind": "vague"}}
+{"id": "syn-2-414", "today": "2026-10-18", "family": "pay_date", "reply": "tgl 7 sekalian payday ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 7}}}
+{"id": "syn-2-415", "today": "2026-11-23", "family": "vague_month", "reply": "Bulan ini banyak cicilan, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-416", "today": "2026-02-21", "family": "me_en", "reply": "tomorrow gak bisa, end of month aja ya 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-417", "today": "2026-09-13", "family": "wd_en", "reply": "This thursday ya promise ya 🙇", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-418", "today": "2026-09-27", "family": "mid_month", "reply": "lagi tight banget, ntar pas tengah bulan deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-419", "today": "2026-07-23", "family": "wd_en", "reply": "abis beli susu, I'll send it sunday ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sun"}}}
+{"id": "syn-2-420", "today": "2026-09-13", "family": "vague_en", "reply": "hehe iya I'll pay you back, promise", "target": {"kind": "vague"}}
+{"id": "syn-2-421", "today": "2026-10-29", "family": "wd_id", "reply": "Duh hari ini kayaknya gak sempet, hari kamis pasti", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-422", "today": "2026-05-15", "family": "ms_en", "reply": "Kemarin abis bayar kos tadinya this week, tapi first thing next month aja ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-423", "today": "2026-05-12", "family": "nw_en", "reply": "not besok sorry, sometime next week ya 🥲", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-424", "today": "2026-12-05", "family": "rl_vague_month", "reply": "sorry bgt ya, minggu-minggu ini lg kacau, nanti ya 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-425", "today": "2026-01-12", "family": "rl_pay_month", "reply": "akhir bulan nunggu gaji gw tf 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-426", "today": "2026-08-02", "family": "pay_id", "reply": "abis gajian ya ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-427", "today": "2026-09-26", "family": "rel_en", "reply": "I'll pay you tonight ya 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-428", "today": "2026-01-23", "family": "rl_vague_month", "reply": "minggu-minggu ini lg kacau, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-429", "today": "2026-03-09", "family": "pay_date", "reply": "Not tomorrow sorry, tgl 3 pas gajian ya 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 3}}}
+{"id": "syn-2-430", "today": "2026-02-04", "family": "dom_id", "reply": "besok? duh gabisa, tanggal 16 deh deh 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-431", "today": "2026-12-25", "family": "nw_en", "reply": "tadinya besok, tapi sometime next week aja ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-432", "today": "2026-04-10", "family": "pay_date", "reply": "Tgl 27 pas gajian lgsg llunas", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 27}}}
+{"id": "syn-2-433", "today": "2026-12-20", "family": "rl_pay_month", "reply": "tadinya tomorrow, tapi akhir bulan nunggu gaji aja ya 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-434", "today": "2026-05-09", "family": "rel_mixed", "reply": "in 2 days ya, which is pasti 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-435", "today": "2026-03-02", "family": "pay_me", "reply": "end of month pas payday gw bayar ok", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-436", "today": "2026-06-14", "family": "paid_id", "reply": "Hehe iya, udah aku transfer kk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-437", "today": "2026-04-29", "family": "pay_en", "reply": "tomorrow? duh gabisa, when I get paid deh ok", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-438", "today": "2026-03-28", "family": "rel_en", "reply": "I'll pay you in 3 days", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-439", "today": "2026-12-15", "family": "paid_id", "reply": "sorry bgt ya udah tf semalem basically", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-440", "today": "2026-02-15", "family": "rl_pay_date", "reply": "Pas payday tgl 11 deh janji 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 11}}}
+{"id": "syn-2-441", "today": "2026-09-27", "family": "mid_month", "reply": "pertengahn bulan ya 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-442", "today": "2026-02-15", "family": "me_id", "reply": "tomorrow gak bisa, ujung bulan aja ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-443", "today": "2026-08-23", "family": "paid_id", "reply": "udah aku transfer kok 🙏", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-444", "today": "2026-11-08", "family": "me_id", "reply": "ujung bulan aku transfer beb 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-445", "today": "2026-10-10", "family": "vague_month", "reply": "hehe iya, bulan ini banyak cicilan, nannti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-446", "today": "2026-05-30", "family": "wd_id", "reply": "Kmarin abis bayar kos hari sabtu aku transfer ya 😅", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-447", "today": "2026-08-06", "family": "me_en", "reply": "by before the month ends beb 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-448", "today": "2026-11-26", "family": "pay_ms", "reply": "Awal bulan depan sekalian gaji masuk deh promise ok 🥲", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-449", "today": "2026-05-26", "family": "ms_id", "reply": "awwal bulan aku ganti promise 🥲", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-450", "today": "2026-10-07", "family": "mid_month", "reply": "nunggu pas tengah bulan ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-451", "today": "2026-06-06", "family": "rl_vague_month", "reply": "hehe iya cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-452", "today": "2026-11-10", "family": "mid_month", "reply": "abis beli susu not tomorrow sorry, tengah bulan ya deh 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-453", "today": "2026-06-10", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini sori 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-454", "today": "2026-06-11", "family": "rl_vague_month", "reply": "Abis beli susu bulan ini lg berat bgt, ntar ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-455", "today": "2026-11-04", "family": "rl_pay_month", "reply": "ujung bulan pas gajian ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-456", "today": "2026-06-02", "family": "rel_en", "reply": "I'll pay you the day after tomorrow", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-457", "today": "2026-01-30", "family": "paid_en", "reply": "Check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-458", "today": "2026-10-28", "family": "ms_en", "reply": "first thing next month ya promise", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-459", "today": "2026-05-07", "family": "vague_month", "reply": "Iya iya bulan ini banyak cicilan, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-460", "today": "2026-08-21", "family": "mid_month", "reply": "eh iya md-month ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-461", "today": "2026-11-23", "family": "rel_id", "reply": "3 hari lagi aku transfer ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-462", "today": "2026-05-20", "family": "vague_en", "reply": "abis beli susu sorry, I haven't forgotten 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-463", "today": "2026-05-14", "family": "wd_id", "reply": "besok gak bisa, rabu aja ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "wed"}}}
+{"id": "syn-2-464", "today": "2026-03-26", "family": "rl_mid_month", "reply": "Sorry bro, pertengahan bulan nanti ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-465", "today": "2026-11-17", "family": "ms_en", "reply": "I'll payy first thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-466", "today": "2026-03-24", "family": "nw_en", "reply": "I'll pay you sometime next week 💸", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-467", "today": "2026-09-16", "family": "pay_me", "reply": "end of month pas payday gw bayar", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-468", "today": "2026-10-15", "family": "me_id", "reply": "akhir bulan ini aku transfer bro", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-469", "today": "2026-10-23", "family": "rl_mid_month", "reply": "Mid month gw bayar 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-470", "today": "2026-02-06", "family": "rel_id", "reply": "besok ya pasti 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-471", "today": "2026-09-04", "family": "paid_id", "reply": "Udah tf semalem 💸", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-472", "today": "2026-08-06", "family": "pay_ms", "reply": "duh, early next month sekalian gajian deh promise beb", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-473", "today": "2026-05-05", "family": "paid_en", "reply": "maaf ya I paid you yesterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-474", "today": "2026-10-29", "family": "pay_date", "reply": "Aduh lupa not tomorrow sorry, tgl 22 sekalian payday ya 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 22}}}
+{"id": "syn-2-475", "today": "2026-06-18", "family": "vague_time_words", "reply": "Minggu ini lagi kacau, nanti aku kabarin ok 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-476", "today": "2026-11-26", "family": "vague_time_words", "reply": "Abis beli susu nunggu thr ya literally", "target": {"kind": "vague"}}
+{"id": "syn-2-477", "today": "2026-02-20", "family": "rl_mid_month", "reply": "Paling mid month beb 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-478", "today": "2026-11-17", "family": "rl_vague_month", "reply": "cicilan numpuk bulan ini sori 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-479", "today": "2026-09-14", "family": "vague_en", "reply": "Abis beli susu sorry, i haven't forgotten", "target": {"kind": "vague"}}
+{"id": "syn-2-480", "today": "2026-03-19", "family": "rel_mixed", "reply": "kemarin abis bayar kos, in 4 days ya, which is pasti 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-481", "today": "2026-09-15", "family": "vague_id", "reply": "nanti aku kabarin", "target": {"kind": "vague"}}
+{"id": "syn-2-482", "today": "2026-07-12", "family": "vague_month", "reply": "abis beli susu, bulan ini banyak cicilan, nanti ya sih", "target": {"kind": "vague"}}
+{"id": "syn-2-483", "today": "2026-11-14", "family": "vague_month", "reply": "Lagi tight banget minggu2 ini deh, nunggu duit masuk sih 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-484", "today": "2026-04-01", "family": "pay_me", "reply": "Tomorrow? duh gabisa, akhir bulan sekalian gajian turun deh 😅", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-485", "today": "2026-12-29", "family": "dom_en", "reply": "Sorry bro, not besok sorry, 5th ya 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "syn-2-486", "today": "2026-06-28", "family": "me_en", "reply": "omg sorry, end of month ya promise 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-487", "today": "2026-06-14", "family": "rel_mixed", "reply": "sorry, tmrw aku transfer promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-488", "today": "2026-02-07", "family": "vague_en", "reply": "sorry bro, I'll pay you back, promise 😭", "target": {"kind": "vague"}}
+{"id": "syn-2-489", "today": "2026-10-16", "family": "paid_id", "reply": "barusan aku tf 🥲", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-490", "today": "2026-02-28", "family": "nw_id", "reply": "Kemarin abis bayar kos minggu dpn aku ganti 😅", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-491", "today": "2026-06-27", "family": "nw_id", "reply": "this week? duh gabisa, pekan depan deh bro", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-492", "today": "2026-01-31", "family": "paid_id", "reply": "Sorry bro, udah aku transfer kok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-493", "today": "2026-09-14", "family": "me_id", "reply": "Paling akhir bulan", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-494", "today": "2026-06-16", "family": "rel_en", "reply": "tonight ya promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-495", "today": "2026-01-11", "family": "rel_en", "reply": "Today? duh gabisa, in 3 days deh 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-496", "today": "2026-01-27", "family": "paid_id", "reply": "omg sorry, udah aku transfer kok 🥲", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-497", "today": "2026-09-06", "family": "rl_pay_date", "reply": "Pas payday tgl 21 deh janji ok", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-498", "today": "2026-12-30", "family": "nw_en", "reply": "sometime next week ya promise ok", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-499", "today": "2026-11-12", "family": "vague_month", "reply": "minggu2 ini deh, nunggu duit masuk", "target": {"kind": "vague"}}
+{"id": "syn-2-500", "today": "2026-08-24", "family": "vague_id", "reply": "duh sabar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-501", "today": "2026-07-21", "family": "vague_time_words", "reply": "kalau project cair aku tf", "target": {"kind": "vague"}}
+{"id": "syn-2-502", "today": "2026-01-13", "family": "pay_en", "reply": "aduh lupa, on payday ya promise", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-503", "today": "2026-05-22", "family": "rel_id", "reply": "Not today sorry, 4 hhari lagi ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-504", "today": "2026-07-10", "family": "dom_en", "reply": "Besok? duh gabisa, 2nd deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 2}}}
+{"id": "syn-2-505", "today": "2026-05-17", "family": "vague_id", "reply": "Pasti diganti kok 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-506", "today": "2026-02-08", "family": "vague_en", "reply": "sorry, I haven't forgotten promise 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-507", "today": "2026-07-06", "family": "ms_id", "reply": "Sorry bgt ya tadinya besok, tapi begitu ganti bulan aja ya 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-508", "today": "2026-04-23", "family": "pay_id", "reply": "lagi tight banget, pas gajian aku langsung tf", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-509", "today": "2026-01-21", "family": "me_id", "reply": "paling akhir bulan ini bro 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-510", "today": "2026-09-22", "family": "pay_en", "reply": "lagi tight banget, besok kayaknya gak sempet, when I get paid pasti beb", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-511", "today": "2026-08-13", "family": "paid_id", "reply": "barusan aku tf 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-512", "today": "2026-10-31", "family": "paid_en", "reply": "I paid you yesterday 🙏", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-513", "today": "2026-05-20", "family": "pay_date", "reply": "pas gajian tgl 16 lgsg lunas bro", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-514", "today": "2026-10-18", "family": "pay_ms", "reply": "awal bulan depan sekalian gaji masuk deh promise 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-515", "today": "2026-11-20", "family": "nw_en", "reply": "sometime next week for sure bro 😅", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-516", "today": "2026-07-09", "family": "rl_mid_month", "reply": "pling mid month", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-517", "today": "2026-05-07", "family": "nw_id", "reply": "Minggu dpn pasti literally", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-518", "today": "2026-08-10", "family": "nw_id", "reply": "minggu depan aku ganti 😭", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-519", "today": "2026-05-29", "family": "pay_date", "reply": "abis gajian tgl 10 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-520", "today": "2026-05-11", "family": "rl_mid_month", "reply": "tgl 15an ya 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-521", "today": "2026-11-18", "family": "paid_en", "reply": "Sorry bro, i paid you yestterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-522", "today": "2026-08-10", "family": "rl_vague_month", "reply": "Minggu-minggu ini lg kacau, nanti ya yya 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-523", "today": "2026-09-09", "family": "pay_date", "reply": "duh, besok? duh gabisa, pas gajian tgl 21 deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-524", "today": "2026-08-25", "family": "ms_id", "reply": "pas tgl muda aku ganti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-525", "today": "2026-01-27", "family": "paid_id", "reply": "kemarin abis bayar kos, barusan aku tf 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-526", "today": "2026-06-04", "family": "ms_id", "reply": "Begitu ganti bulan aku ganti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-527", "today": "2026-04-06", "family": "rl_pay_date", "reply": "Iya iya, pas payday tgl 2 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 2}}}
+{"id": "syn-2-528", "today": "2026-08-29", "family": "pay_en", "reply": "sorry bro gajian tgl 10, langsung aku tf", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-529", "today": "2026-12-14", "family": "wd_en", "reply": "sorry bro, I'll send it this monday", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "syn-2-530", "today": "2026-10-21", "family": "mid_month", "reply": "Sorry bro, tengah bulan gw tf", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-531", "today": "2026-08-05", "family": "rl_mid_month", "reply": "eh iya tgl 15an ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-532", "today": "2026-03-21", "family": "rl_pay_date", "reply": "pas payday tgl 15 deh janji", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-533", "today": "2026-11-20", "family": "pay_ms", "reply": "Maaf ya, tadinya akhir bulan, tappi awal bulan depan sekalian gaji masuk aja ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-534", "today": "2026-06-14", "family": "me_id", "reply": "iya iya besok? duh gabisa, akhir bulan deh ok", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-535", "today": "2026-05-02", "family": "rel_en", "reply": "duh in 5 days ya promise sih 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-536", "today": "2026-04-02", "family": "pay_id", "reply": "abis beli susu, nunggu gajian aku langsung tf promise 😅", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-537", "today": "2026-09-07", "family": "pay_id", "reply": "pas gajian aku langsung tf 😭", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-538", "today": "2026-03-21", "family": "vague_time_words", "reply": "Next week? hmm not sure yet ya", "target": {"kind": "vague"}}
+{"id": "syn-2-539", "today": "2026-07-18", "family": "paid_en", "reply": "check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-540", "today": "2026-02-01", "family": "ms_id", "reply": "awal bulan ya beb 🥲", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-541", "today": "2026-04-15", "family": "rel_mixed", "reply": "aduh lupa, sorry, tomorrow aku transfer literally", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-542", "today": "2026-08-13", "family": "pay_en", "reply": "omg sorry tomorrow kayaknya gak sempet, when I get paid psti 🙏", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-543", "today": "2026-08-11", "family": "rl_pay_date", "reply": "Not besok sorry, 6 aja pas gaji masuk ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 6}}}
+{"id": "syn-2-544", "today": "2026-08-24", "family": "wd_id", "reply": "Kemarin abis bayar kos paling hari rabu deh ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "wed"}}}
+{"id": "syn-2-545", "today": "2026-02-05", "family": "pay_id", "reply": "omg sorry, minggu ini kayaknya gak sempet, gaji turun pasti beb", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-546", "today": "2026-06-26", "family": "pay_me", "reply": "lagi tight banget, akhir bulan pas gajian ya sih 🙇", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-547", "today": "2026-08-13", "family": "me_id", "reply": "paling akhir bulan beb 🥲", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-548", "today": "2026-09-20", "family": "rl_vague_month", "reply": "Abis beli susu, cicilan numpuk bulan ini sori 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-549", "today": "2026-03-03", "family": "pay_ms", "reply": "Awal bulan depan sekalian gaji masuk deh promise 🥲", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-550", "today": "2026-05-30", "family": "rel_tonight", "reply": "lagi tight banget, tar malam ya gw tf literally", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-551", "today": "2026-03-04", "family": "wd_en", "reply": "duh, not tomorrow sorry, monday ya ok 🥲", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "syn-2-552", "today": "2026-06-11", "family": "paid_en", "reply": "check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-553", "today": "2026-03-24", "family": "rel_id", "reply": "omg sorry 2 hari lagi deh aku tf 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-554", "today": "2026-02-16", "family": "pay_en", "reply": "Aduh lupa, payday is the 10th, i'll send it then", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-555", "today": "2026-01-26", "family": "rl_vague_month", "reply": "duh, cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-556", "today": "2026-10-02", "family": "rel_id", "reply": "4 hari lagi ya pasti beb", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-557", "today": "2026-02-01", "family": "nw_en", "reply": "hehe iya, next week for sure bro beb 🙇", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-558", "today": "2026-03-10", "family": "paid_id", "reply": "udah tf semalem sih", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-559", "today": "2026-06-16", "family": "rel_en", "reply": "Duh sending it in 3 days beb", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-560", "today": "2026-05-27", "family": "pay_me", "reply": "tomorrow? duh gabisa, end of month pas payday deh ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-561", "today": "2026-12-17", "family": "rel_en", "reply": "iya iya, tadinya today, tapi in 5 days aja ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-562", "today": "2026-12-01", "family": "me_en", "reply": "I'll pay you end of the month bro", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-563", "today": "2026-10-06", "family": "rel_en", "reply": "I'll pay you in 2 days ok", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-564", "today": "2026-06-12", "family": "me_en", "reply": "duh, by before the month ends", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-565", "today": "2026-11-30", "family": "ms_id", "reply": "abis beli susu, begitu ganti bulan ya beb", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-566", "today": "2026-10-27", "family": "dom_en", "reply": "12th promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 12}}}
+{"id": "syn-2-567", "today": "2026-08-08", "family": "ms_id", "reply": "tunggu tanggal muda ya beb", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-568", "today": "2026-04-01", "family": "ms_en", "reply": "Hehe iya first thing next month ya promise beb", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-569", "today": "2026-09-11", "family": "pay_ms", "reply": "early next month sekalian gajian gw lunasin deh", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-570", "today": "2026-07-04", "family": "vague_month", "reply": "maaf ya lg tight bgt bulan ini, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-571", "today": "2026-09-09", "family": "pay_id", "reply": "aduh lupa payday is the 10th, I'll send it then basically 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-572", "today": "2026-04-19", "family": "paid_id", "reply": "kemarin abis bayar kos cek deh udah massuk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-573", "today": "2026-12-03", "family": "vague_time_words", "reply": "Sorry bgt ya nunggu thr ya", "target": {"kind": "vague"}}
+{"id": "syn-2-574", "today": "2026-09-21", "family": "pay_en", "reply": "Duh when i get paid ya promise 💸", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-575", "today": "2026-06-15", "family": "pay_en", "reply": "after payday for sure deh 😭", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-576", "today": "2026-07-07", "family": "dom_en", "reply": "duh, by the 21st ya bro", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-577", "today": "2026-06-09", "family": "vague_time_words", "reply": "Kemarin abis bayar kos next week? hmm not sure yet", "target": {"kind": "vague"}}
+{"id": "syn-2-578", "today": "2026-05-01", "family": "rel_en", "reply": "omg sorry I'll pay you the day after tomorrow", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-579", "today": "2026-01-13", "family": "wd_id", "reply": "kemarin abis bayar ks hari kamis aku transfer ya literally", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-580", "today": "2026-09-07", "family": "rel_tonight", "reply": "omg sorry, nanti sore ya gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-581", "today": "2026-08-28", "family": "rl_pay_month", "reply": "akhir bulan nunggu gaji ya 🥲", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-582", "today": "2026-08-07", "family": "vague_month", "reply": "ntar dlu ya, pengeluaran bulan ini gila beb", "target": {"kind": "vague"}}
+{"id": "syn-2-583", "today": "2026-04-17", "family": "pay_id", "reply": "maaf ya, tunggu gaji turun dulu ya 🙏", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-584", "today": "2026-10-31", "family": "rel_tonight", "reply": "maaf ya nanti sore gw lunasin deh", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-585", "today": "2026-05-02", "family": "nw_id", "reply": "Besok gak bisa, pekan depan aja ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-586", "today": "2026-05-09", "family": "rel_tonight", "reply": "tar malam gw lunasin 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-587", "today": "2026-08-29", "family": "paid_en", "reply": "Check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-588", "today": "2026-12-06", "family": "dom_en", "reply": "17th promis", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 17}}}
+{"id": "syn-2-589", "today": "2026-08-27", "family": "dom_en", "reply": "by the 7th ya promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 7}}}
+{"id": "syn-2-590", "today": "2026-03-02", "family": "mid_month", "reply": "Nunggu mid-month ya sih 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-591", "today": "2026-04-06", "family": "pay_en", "reply": "Tomorrow? duh gabisa, on payday deh", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-592", "today": "2026-11-01", "family": "rl_pay_date", "reply": "pas payday tgl 21 deh janji ya 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-593", "today": "2026-02-20", "family": "paid_id", "reply": "cek deh udah masuk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-594", "today": "2026-02-15", "family": "rl_pay_month", "reply": "eh iya, ujung bulan pas gajian ya 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-595", "today": "2026-03-04", "family": "ms_id", "reply": "kemarin abis bayar kos, tanggal muda aku ganti deh 😭", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-596", "today": "2026-09-16", "family": "vague_time_words", "reply": "nunggu THR ya", "target": {"kind": "vague"}}
+{"id": "syn-2-597", "today": "2026-03-23", "family": "wd_id", "reply": "omg sorry, paling sabtu deh beb", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "syn-2-598", "today": "2026-05-17", "family": "pay_id", "reply": "tomorrow gak bisa, pas gajian aja ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-599", "today": "2026-01-27", "family": "me_en", "reply": "tomorrow gak bisa, end of month aja ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-600", "today": "2026-08-23", "family": "vague_month", "reply": "lagi tight banget, minggu2 ini deh, nunggu duit masuk 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-601", "today": "2026-08-16", "family": "rl_pay_date", "reply": "Kemarin abis bayar kos, pas payday tgl 13 gw transfer basically 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 13}}}
+{"id": "syn-2-602", "today": "2026-04-11", "family": "rel_mixed", "reply": "tadinya hari ini, tapi in 3 days aja ya literally", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-603", "today": "2026-05-28", "family": "rel_mixed", "reply": "aduh lupa hari ini gak bisa, in 2 ddays aja ya ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-604", "today": "2026-07-06", "family": "pay_ms", "reply": "Early next month sekalian gajian ya ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-605", "today": "2026-10-24", "family": "rel_id", "reply": "tadinya today, tapi 3 hari lagi aja ya ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-606", "today": "2026-06-01", "family": "ms_en", "reply": "early next month for sure", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-607", "today": "2026-05-23", "family": "pay_me", "reply": "Eh iya akhir bulan sekalian gajian tturun ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-608", "today": "2026-08-17", "family": "rl_vague_month", "reply": "minggu-minggu ini lg kacau, nanti ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-609", "today": "2026-03-28", "family": "rl_mid_month", "reply": "kemarin abis bayar kos, besok? duh gabisa, mid month deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-610", "today": "2026-06-10", "family": "rel_mixed", "reply": "omg sorry in 4 days ya, which is pasti 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-611", "today": "2026-04-24", "family": "dom_id", "reply": "tadinya besok, tapi tanggal 12 aja ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 12}}}
+{"id": "syn-2-612", "today": "2026-12-29", "family": "rel_tonight", "reply": "kemarin abis bayar kos tar sore ya gw tf bro", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-613", "today": "2026-05-16", "family": "paid_id", "reply": "duh, udah aku transfer kok deh", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-614", "today": "2026-10-04", "family": "mid_month", "reply": "pertengahan bulan ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-615", "today": "2026-06-27", "family": "me_id", "reply": "Lagi tight banget, ujung bulan ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-616", "today": "2026-05-11", "family": "paid_en", "reply": "I paid you yesterday", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-617", "today": "2026-02-24", "family": "nw_en", "reply": "Tomorrow kayaknya gak sempet, next wek pasti 🙇", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-618", "today": "2026-12-17", "family": "mid_month", "reply": "omg sorry, ntar pas tengah bulan deh basically", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-619", "today": "2026-06-23", "family": "rel_id", "reply": "Sorry bro, bbesok pagi aku transfer ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-620", "today": "2026-09-03", "family": "vague_month", "reply": "Minggu2 ini deh, nunggu duit masuk sih", "target": {"kind": "vague"}}
+{"id": "syn-2-621", "today": "2026-08-28", "family": "vague_id", "reply": "aduh lupa nanti aku kabarin", "target": {"kind": "vague"}}
+{"id": "syn-2-622", "today": "2026-06-09", "family": "pay_ms", "reply": "akhir bulan gak bisa, early next month sekalian gajian aja ya bro", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-623", "today": "2026-07-26", "family": "pay_ms", "reply": "awal buln pas gajian ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-624", "today": "2026-09-22", "family": "rel_tonight", "reply": "ntar malem gw lunasin 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-625", "today": "2026-05-09", "family": "rel_en", "reply": "eh iya, I'll pay you in 3 days 🙇", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-626", "today": "2026-10-21", "family": "rel_mixed", "reply": "sorry, in 5 days aku transfer 💸", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-627", "today": "2026-10-17", "family": "wd_en", "reply": "this wednesday ya promise promise", "target": {"kind": "promise", "when": {"type": "weekday", "day": "wed"}}}
+{"id": "syn-2-628", "today": "2026-07-11", "family": "mid_month", "reply": "Ntar tengah bulan deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-629", "today": "2026-11-22", "family": "nw_en", "reply": "next week for sure bro 💸", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-630", "today": "2026-03-18", "family": "vague_time_words", "reply": "Omg ssorry, next week? hmm not sure yet bro", "target": {"kind": "vague"}}
+{"id": "syn-2-631", "today": "2026-06-11", "family": "vague_en", "reply": "I'll pay you back, promise", "target": {"kind": "vague"}}
+{"id": "syn-2-632", "today": "2026-09-23", "family": "vague_month", "reply": "hehe iya, ntar dlu ya, pengeluaran bulan ini gila basically 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-633", "today": "2026-12-17", "family": "ms_en", "reply": "eh iya, minggu ini kayaknya gak sempet, early next month pasti", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-634", "today": "2026-02-11", "family": "dom_id", "reply": "Tgl 4 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 4}}}
+{"id": "syn-2-635", "today": "2026-01-24", "family": "rel_id", "reply": "Hari ini deh aku tf basically 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-636", "today": "2026-11-25", "family": "vague_time_words", "reply": "Aduh lupa, gajian kemarin udah abis literally, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-637", "today": "2026-01-11", "family": "dom_en", "reply": "maaf ya by the 17th ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 17}}}
+{"id": "syn-2-638", "today": "2026-07-01", "family": "rel_id", "reply": "iya iya aku ganti 2 hari lagi ya ok", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-639", "today": "2026-08-09", "family": "rel_id", "reply": "aduh lupa tadinya hari ini, tapi 3 hari lagi aja ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-640", "today": "2026-06-03", "family": "paid_id", "reply": "omg sorry barsan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-641", "today": "2026-03-14", "family": "vague_time_words", "reply": "kalau project cair aku tf", "target": {"kind": "vague"}}
+{"id": "syn-2-642", "today": "2026-01-05", "family": "rl_pay_date", "reply": "eh iya, gajian kan tgl 4, pas itu ya basiccally 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 4}}}
+{"id": "syn-2-643", "today": "2026-09-26", "family": "ms_id", "reply": "begitu ganti bulan ya 🙇", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-644", "today": "2026-02-21", "family": "rel_id", "reply": "4 hari llagi deh aku tf ya 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-645", "today": "2026-01-16", "family": "paid_en", "reply": "iya iya check your account, sent ok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-646", "today": "2026-01-02", "family": "dom_id", "reply": "paling lambat tgl 3 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 3}}}
+{"id": "syn-2-647", "today": "2026-05-30", "family": "vague_time_words", "reply": "Kemarin abis bayar kos, kalau project cair aku tf 🥲", "target": {"kind": "vague"}}
+{"id": "syn-2-648", "today": "2026-02-23", "family": "rl_vague_month", "reply": "abis beli susu, bulan ini lg berat bgt, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-649", "today": "2026-05-20", "family": "rl_pay_date", "reply": "pas payday tgl 16 ya beb 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-650", "today": "2026-08-22", "family": "pay_id", "reply": "Tomorrow gak bisa, nunggu gajian aja ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-651", "today": "2026-08-15", "family": "vague_en", "reply": "duh, working on it beb", "target": {"kind": "vague"}}
+{"id": "syn-2-652", "today": "2026-05-15", "family": "rel_id", "reply": "sorry bgt ya lusa ya pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-653", "today": "2026-01-20", "family": "vague_id", "reply": "Nanti aku kabrin", "target": {"kind": "vague"}}
+{"id": "syn-2-654", "today": "2026-06-25", "family": "pay_date", "reply": "Abis gajian tgl 21 gw tf basically", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 21}}}
+{"id": "syn-2-655", "today": "2026-07-22", "family": "vague_month", "reply": "Aduh lupa, lg tight bgt bulan ini, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-656", "today": "2026-10-29", "family": "ms_en", "reply": "I'll pay first thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-657", "today": "2026-03-25", "family": "rl_pay_date", "reply": "3 aja pas gaji masuk ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 3}}}
+{"id": "syn-2-658", "today": "2026-09-02", "family": "pay_id", "reply": "Omg sorry payday is the 28th, i'll send it then", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 28}}}
+{"id": "syn-2-659", "today": "2026-01-04", "family": "pay_ms", "reply": "Sorry bgt ya awal bulan pas gajian ya bro 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-660", "today": "2026-07-30", "family": "vague_id", "reply": "sorry bgt ya aku usahain ya", "target": {"kind": "vague"}}
+{"id": "syn-2-661", "today": "2026-08-07", "family": "paid_en", "reply": "eh iya already sent it", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-662", "today": "2026-12-30", "family": "rl_vague_month", "reply": "maaf ya, bulan ini lg berat bgt, ntar ya ok", "target": {"kind": "vague"}}
+{"id": "syn-2-663", "today": "2026-09-29", "family": "rl_mid_month", "reply": "Maaf ya, tomorrow? duh gabisa, tgl 15an deh", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-664", "today": "2026-04-19", "family": "me_id", "reply": "paling ujng bulan 🙏", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-665", "today": "2026-04-27", "family": "rl_pay_date", "reply": "not tomorrow sorry, gajian kan tgl 16, pas itu ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-666", "today": "2026-07-04", "family": "dom_id", "reply": "Omg sorry, besok gak bisa, tgl 18 aja ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 18}}}
+{"id": "syn-2-667", "today": "2026-06-06", "family": "rel_mixed", "reply": "tomorrow morning ya, whicch is pasti 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-668", "today": "2026-10-28", "family": "ms_id", "reply": "Sorry bro, tunggu awal bulan ya 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-669", "today": "2026-02-11", "family": "mid_month", "reply": "minggu ini gak bisa, tengah bulan aja ya 🥲", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-670", "today": "2026-11-05", "family": "ms_id", "reply": "awal bulan depan ya 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-671", "today": "2026-07-16", "family": "wd_en", "reply": "By this monday for sure 😅", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "syn-2-672", "today": "2026-06-12", "family": "rl_vague_month", "reply": "minggu-minggu ini lg kacau, nanti ya deh", "target": {"kind": "vague"}}
+{"id": "syn-2-673", "today": "2026-10-24", "family": "vague_time_words", "reply": "aduh lupa, next week? hmm not sure yet basically", "target": {"kind": "vague"}}
+{"id": "syn-2-674", "today": "2026-01-23", "family": "vague_time_words", "reply": "Lagi tight banget minggu ini lagi kacau, nanti aku kabarin 🙏", "target": {"kind": "vague"}}
+{"id": "syn-2-675", "today": "2026-02-08", "family": "dom_id", "reply": "paling lambat tgl 10 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 10}}}
+{"id": "syn-2-676", "today": "2026-11-02", "family": "rl_pay_date", "reply": "sorry bgt ya gajian kan tgl 15, pas itu deh janji deh 🙇", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-677", "today": "2026-07-27", "family": "wd_id", "reply": "tadinya besok, tappi hari kamis aja ya 🙇", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-678", "today": "2026-04-22", "family": "paid_id", "reply": "Cek deh udah masuk", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-679", "today": "2026-02-01", "family": "paid_id", "reply": "abis beli susu, barusan aku tf 🙇", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-680", "today": "2026-05-04", "family": "dom_en", "reply": "besok kayaknya gak sempet, 20th pasti 😅", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-681", "today": "2026-01-11", "family": "rel_tonight", "reply": "iya iya, tar malam gw lunasin beb", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-682", "today": "2026-02-09", "family": "pay_ms", "reply": "early next month sekalian gajian ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-683", "today": "2026-10-22", "family": "vague_id", "reply": "Sorry bgt ya pasti diganti kok", "target": {"kind": "vague"}}
+{"id": "syn-2-684", "today": "2026-11-08", "family": "rel_mixed", "reply": "sorry, ttomorrow aku transfer 🙇", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-685", "today": "2026-01-18", "family": "vague_time_words", "reply": "gajian kemarin udah abis literally, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-686", "today": "2026-11-21", "family": "paid_id", "reply": "hhehe iya, cek deh udah masuk 🙇", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-687", "today": "2026-09-09", "family": "vague_id", "reply": "maaf ya nanti ya ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-688", "today": "2026-06-20", "family": "vague_id", "reply": "omg sorry, pasti diganti kok", "target": {"kind": "vague"}}
+{"id": "syn-2-689", "today": "2026-09-13", "family": "paid_id", "reply": "Maaf ya barusan aku tf", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-690", "today": "2026-10-24", "family": "vague_month", "reply": "lg tight bgt bulan ini, ntar ya", "target": {"kind": "vague"}}
+{"id": "syn-2-691", "today": "2026-01-25", "family": "rl_pay_month", "reply": "lagi tight banget, tomorrow? duh gabisa, ujung bulan pas gajian deh basically", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-692", "today": "2026-05-13", "family": "rel_id", "reply": "kemarin abis bayar kos, 5 hari lagi deh aku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-693", "today": "2026-04-09", "family": "mid_month", "reply": "iya iya, mid-month gw tf beb", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-694", "today": "2026-10-23", "family": "rel_mixed", "reply": "Eh iya sorry, in 3 days aku transfer", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-695", "today": "2026-06-01", "family": "rl_pay_month", "reply": "abis beli susu ujung bulan pas gajian gw tf", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-696", "today": "2026-06-22", "family": "nw_id", "reply": "duh, minggu dpn aku ganti 😭", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-697", "today": "2026-10-01", "family": "vague_en", "reply": "Sorry bgt ya, working on it 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-698", "today": "2026-09-04", "family": "wd_id", "reply": "hhari rabu aku transfer ya ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "wed"}}}
+{"id": "syn-2-699", "today": "2026-05-08", "family": "rel_en", "reply": "I'll pay you tomorrow morning basicallly", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-700", "today": "2026-10-07", "family": "nw_en", "reply": "sometime next week for sure bro", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-701", "today": "2026-10-11", "family": "vague_time_words", "reply": "Sorry bgt ya, minggu ini lagi kacau, nanti aku kabarin", "target": {"kind": "vague"}}
+{"id": "syn-2-702", "today": "2026-05-29", "family": "ms_en", "reply": "first thing next month ya promise sih", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-703", "today": "2026-04-27", "family": "paid_en", "reply": "Hehe iya, already sent it 💸", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-704", "today": "2026-05-07", "family": "pay_id", "reply": "duh, tadinya minggu ini, tapi gaji turun aja ya ok", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-705", "today": "2026-09-09", "family": "pay_date", "reply": "Eh iya, tgl 4 pas gajian, ssumpah", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 4}}}
+{"id": "syn-2-706", "today": "2026-09-10", "family": "vague_id", "reply": "kapan2 deh", "target": {"kind": "vague"}}
+{"id": "syn-2-707", "today": "2026-05-20", "family": "rel_en", "reply": "sorry bro I'll pay you today 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-708", "today": "2026-11-24", "family": "ms_id", "reply": "Sorry bgt ya, pas tgl muda ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-709", "today": "2026-12-09", "family": "rel_tonight", "reply": "Nanti sore gw lunasin", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-710", "today": "2026-07-30", "family": "me_id", "reply": "paling akhir bulan ini", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-711", "today": "2026-12-02", "family": "vague_month", "reply": "Abis beli susu bulan ini banyak cicilan, nanti ya 💸", "target": {"kind": "vague"}}
+{"id": "syn-2-712", "today": "2026-04-01", "family": "ms_en", "reply": "early next month for sure basically", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-713", "today": "2026-11-05", "family": "me_id", "reply": "Akhir bulan aku transfer beb 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-714", "today": "2026-04-30", "family": "rel_tonight", "reply": "Hehe iya sblm tidur ya gw tf promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-715", "today": "2026-06-19", "family": "me_en", "reply": "abis beli susu, end of the month ya promise", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-716", "today": "2026-07-19", "family": "ms_en", "reply": "Hehe iya i'll pay frst thing next month", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-717", "today": "2026-03-14", "family": "rel_mixed", "reply": "abis beli ssu sorry, the day after tomorrow aku transfer bro", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-718", "today": "2026-03-07", "family": "rl_vague_month", "reply": "minggu-minggu ini lg kacau, nanti ya 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-719", "today": "2026-12-06", "family": "rel_id", "reply": "Besok ya pasti 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-720", "today": "2026-11-21", "family": "dom_id", "reply": "paling lambat tanggal 8 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 8}}}
+{"id": "syn-2-721", "today": "2026-03-18", "family": "wd_id", "reply": "tadinya hari ini, tapi hari kamis aja ya", "target": {"kind": "promise", "when": {"type": "weekday", "day": "thu"}}}
+{"id": "syn-2-722", "today": "2026-05-26", "family": "paid_id", "reply": "Kemarin abis bayar kos cek deh udah masuk ok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-723", "today": "2026-10-24", "family": "rl_pay_month", "reply": "Ujung bulan pas gajian ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-724", "today": "2026-11-18", "family": "dom_en", "reply": "omg sorry tadinya tomorrow, tapi 20th aja ya 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 20}}}
+{"id": "syn-2-725", "today": "2026-07-16", "family": "paid_en", "reply": "aduh lupa, check your account, sent", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-726", "today": "2026-05-19", "family": "rel_tonight", "reply": "lagi tight banget sblm tidur deh, lg di luar", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-727", "today": "2026-06-27", "family": "paid_id", "reply": "Udah tf semalem", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-728", "today": "2026-12-10", "family": "paid_id", "reply": "Sorry bro cek deh udah masuk deh 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-729", "today": "2026-10-25", "family": "nw_id", "reply": "minggu depan ya ok", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-730", "today": "2026-09-22", "family": "pay_id", "reply": "abis gajian ya 😭", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-731", "today": "2026-10-28", "family": "vague_time_words", "reply": "Kalau project cair aku tf", "target": {"kind": "vague"}}
+{"id": "syn-2-732", "today": "2026-07-28", "family": "ms_en", "reply": "not besok sorry, early next month ya 😭", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-733", "today": "2026-09-17", "family": "rel_id", "reply": "Eh iya not hari ini sorry, besok pagi ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-734", "today": "2026-05-27", "family": "dom_id", "reply": "tanggal 11 ya 💸", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 11}}}
+{"id": "syn-2-735", "today": "2026-04-01", "family": "pay_ms", "reply": "Awal bulan depan sekalian gaji masuk deh promise", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-736", "today": "2026-08-10", "family": "rl_pay_month", "reply": "lagi tight banget ujung bulan pas gajian ya", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-737", "today": "2026-02-25", "family": "rel_en", "reply": "I'll pay you tomorrow morning", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-738", "today": "2026-04-18", "family": "nw_id", "reply": "eh iya pekan depan pasti 🥲", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-739", "today": "2026-07-10", "family": "wd_en", "reply": "Duh, by this friday for ssure 🙏", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "syn-2-740", "today": "2026-11-07", "family": "paid_en", "reply": "hehe iya, already sent it 😅", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-741", "today": "2026-06-29", "family": "pay_me", "reply": "Aduh lupa end of month pas payday deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-742", "today": "2026-09-30", "family": "vague_time_words", "reply": "minggu ini lagi kacau, nanti aku kabarin 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-743", "today": "2026-09-23", "family": "ms_en", "reply": "Eh iya early next month ya promise ya", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-744", "today": "2026-11-14", "family": "vague_time_words", "reply": "kalau project cair aku tf", "target": {"kind": "vague"}}
+{"id": "syn-2-745", "today": "2026-06-27", "family": "rel_id", "reply": "kemarin abis bayar kos, hari ini kayaknya gak sempet, 3 hari lagi pasti 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-746", "today": "2026-07-27", "family": "rl_pay_date", "reply": "kemarin abis bayar kos, pas payday tgl 8 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 8}}}
+{"id": "syn-2-747", "today": "2026-07-13", "family": "rel_mixed", "reply": "iya iya, tonight ya, which is pasti 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-748", "today": "2026-09-10", "family": "dom_en", "reply": "by the 2nd ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 2}}}
+{"id": "syn-2-749", "today": "2026-01-31", "family": "rl_mid_month", "reply": "pertengahan bulan nanti ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-750", "today": "2026-12-08", "family": "rl_pay_date", "reply": "gajian kan tgl 1, pas itu ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 1}}}
+{"id": "syn-2-751", "today": "2026-08-26", "family": "dom_en", "reply": "tadinya besok, tapi 16th aja ya promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 16}}}
+{"id": "syn-2-752", "today": "2026-11-08", "family": "wd_en", "reply": "I'll send it friday", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "syn-2-753", "today": "2026-10-12", "family": "wd_en", "reply": "Friday ya promise ya 💸", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "syn-2-754", "today": "2026-07-14", "family": "vague_month", "reply": "minggu2 ini deh, nunggu duit masuk 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-755", "today": "2026-03-30", "family": "paid_en", "reply": "Check your account, sent 💸", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-756", "today": "2026-10-19", "family": "rel_mixed", "reply": "tomorrow morning ya, which is pasti ya", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-757", "today": "2026-02-16", "family": "vague_id", "reply": "nanti ya 😅", "target": {"kind": "vague"}}
+{"id": "syn-2-758", "today": "2026-08-15", "family": "rel_tonight", "reply": "Sblm tidur ya gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-759", "today": "2026-06-25", "family": "nw_id", "reply": "Besok gak bisa, minggu depan aja ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-760", "today": "2026-12-29", "family": "rel_en", "reply": "tmrw for sure bro 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "syn-2-761", "today": "2026-06-02", "family": "nw_id", "reply": "pekan depan pasti 😭", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-762", "today": "2026-08-15", "family": "paid_id", "reply": "Udah aku transfer kok literally", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-763", "today": "2026-11-24", "family": "rl_vague_month", "reply": "Sorry bro cicilan numpuk bulan ini sori literally", "target": {"kind": "vague"}}
+{"id": "syn-2-764", "today": "2026-11-08", "family": "rl_pay_month", "reply": "tadinya besok, tapi ujung bulan pas gajian aja ya 💸", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-765", "today": "2026-12-09", "family": "vague_id", "reply": "NNanti ya sih 🙇", "target": {"kind": "vague"}}
+{"id": "syn-2-766", "today": "2026-09-28", "family": "vague_time_words", "reply": "Minggu ini lagi kacau, nanti aku kabarin bro", "target": {"kind": "vague"}}
+{"id": "syn-2-767", "today": "2026-05-16", "family": "rel_id", "reply": "lagi tight banget lusa ya pasti 🙏", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-768", "today": "2026-06-23", "family": "rel_tonight", "reply": "ntar malem gw lunasin 🙇", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-769", "today": "2026-09-21", "family": "rel_tonight", "reply": "Nanti sore ya gw tf deh", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-770", "today": "2026-09-14", "family": "nw_id", "reply": "sorry bgt ya tadinya tomorrow, tapi minggu depan aja ya ok", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-771", "today": "2026-07-12", "family": "rl_vague_month", "reply": "Hehe iya, minggu-minggu ini lg kacau, nanti ya", "target": {"kind": "vague"}}
+{"id": "syn-2-772", "today": "2026-08-19", "family": "rel_tonight", "reply": "Nanti sore deh, lg di luar 🙇", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-773", "today": "2026-08-27", "family": "vague_time_words", "reply": "omg sorry, gajian kemarin udah abis literally, nanti ya ok", "target": {"kind": "vague"}}
+{"id": "syn-2-774", "today": "2026-01-18", "family": "paid_en", "reply": "already sent it", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-775", "today": "2026-11-06", "family": "rel_id", "reply": "Kemarin abis bayar kos 5 hari lagi aku transfer ya basically", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 5}}}
+{"id": "syn-2-776", "today": "2026-04-14", "family": "dom_en", "reply": "lagi tght banget, 6th promise", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 6}}}
+{"id": "syn-2-777", "today": "2026-05-08", "family": "rl_mid_month", "reply": "pertengahan bulan nanti ya 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "syn-2-778", "today": "2026-05-27", "family": "pay_date", "reply": "pas gajian tgl 23 ya", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 23}}}
+{"id": "syn-2-779", "today": "2026-07-02", "family": "pay_ms", "reply": "hehe iya, awal bulan pas gajian gw lunasin literally", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-780", "today": "2026-10-10", "family": "rel_en", "reply": "I'll pay you today", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-781", "today": "2026-11-22", "family": "me_id", "reply": "Akhir bulan ini ya 😭", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-782", "today": "2026-04-30", "family": "paid_en", "reply": "Hehe iya, check your account, sent 🥲", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-783", "today": "2026-08-08", "family": "rel_id", "reply": "Aduh lupa, aku ganti 4 hari lagi ya promise", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 4}}}
+{"id": "syn-2-784", "today": "2026-08-04", "family": "rl_pay_month", "reply": "Akhir bulan nunggu gaji gw tf deh", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "syn-2-785", "today": "2026-09-30", "family": "ms_en", "reply": "Hehe iya, early next month ya promise ok 💸", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-786", "today": "2026-08-08", "family": "pay_en", "reply": "Minggu ini gak bisa, when i get paid aja ya", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-787", "today": "2026-07-31", "family": "vague_time_words", "reply": "next week? hmm not sure yt sih", "target": {"kind": "vague"}}
+{"id": "syn-2-788", "today": "2026-12-12", "family": "rel_tonight", "reply": "iya iya, nanti sore gw lunasin 🥲", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-789", "today": "2026-09-27", "family": "pay_ms", "reply": "Duh, awal bulan depan sekalian gaji masuk gw lunasin literally", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "syn-2-790", "today": "2026-06-11", "family": "rel_en", "reply": "I'll pay you in 3 days basically 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "syn-2-791", "today": "2026-06-14", "family": "paid_id", "reply": "lagi tight banget, udah aku transfer kok", "target": {"kind": "claims_paid"}}
+{"id": "syn-2-792", "today": "2026-04-23", "family": "rel_mixed", "reply": "tonight literally langsung akku tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "syn-2-793", "today": "2026-04-06", "family": "wd_id", "reply": "Paling senin deh 🙏", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "syn-2-794", "today": "2026-09-16", "family": "nw_id", "reply": "minggu depan ya", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "syn-2-795", "today": "2026-04-25", "family": "pay_id", "reply": "tunggu nunnggu gajian dulu ya 💸", "target": {"kind": "promise", "when": {"type": "payday"}}}
+{"id": "syn-2-796", "today": "2026-05-31", "family": "rel_mixed", "reply": "in 2 days ya, which is pasti", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "syn-2-797", "today": "2026-03-23", "family": "rl_vague_month", "reply": "Duh, cicilan numpuk bulan ini sori", "target": {"kind": "vague"}}
+{"id": "syn-2-798", "today": "2026-09-22", "family": "vague_month", "reply": "iya iya minggu2 ini deh, nunggu duit masuk", "target": {"kind": "vague"}}
+{"id": "syn-2-799", "today": "2026-02-03", "family": "rel_en", "reply": "sending it tonight 😭", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}

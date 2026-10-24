@@ -1,0 +1,3116 @@
+{
+ "hand-written": {
+  "rules": [
+   {
+    "id": "hw-01",
+    "reply": "eh sorry bbtt baru buka wa 😭 besok gw tf ya sblm maksi!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-02",
+    "reply": "anjir lupa wkwwk akhir bulan ya pas gajian turun, literally lg kering bgt dompet",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-03",
+    "reply": "omg sorry! jumat deh gw bayar, eh wait jumat gw cuti deng, senin aja gpp yaa? ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-04",
+    "reply": "eh iyaaa wait ya, nunggu invoice dr client cair nih, palingan tgl 25an",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-05",
+    "reply": "aduh sori bgt bro, gw baru inget. ntar tgl 28 ya pas payday.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 28
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-06",
+    "reply": "ntr malem gw trf yaa, mobile banking lg mantis (maintenance) wkwk 😅",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-07",
+    "reply": "yaampun maap bgt lupa, tar sorean jam 5 gw lunasin!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-08",
+    "reply": "eh iya sori, next week yaa gw pastiin beres, lg super tight bgt minggu ini 🥲",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-09",
+    "reply": "halo sorry br balas.. tgl 1 aja ya pas gajian, sumpah lg literally broke 😭",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-10",
+    "reply": "waduuh i forgot! besok gpp kah? jam 10an gw tf.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-11",
+    "reply": "eh iyaaa, nunggu payment yg dari dimas cair dlu nih, lusa yak!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-12",
+    "reply": "waduh gw kira udh gw tf kemaren wkwk, besok pagi ya janji ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-13",
+    "reply": "omg iya utang gw, bsk siang deh pas break gw transfer",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-14",
+    "reply": "aduh lg limit bgt ni e-wallet, hari sabtu ya gw topup dlu",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-15",
+    "reply": "sori sori, next month ya tgl 5an nunggu duit project cair 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 5
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-16",
+    "reply": "eh iya, btw ntar akhir bulan aja sekalian gw bayar yg kmrn2 make sense ga?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-17",
+    "reply": "astaga lupa, ntar nunggu THR cair aja boleh ga wkwk 🤣",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-18",
+    "reply": "jumat yaaa, eh atau sabtu deh takutnya gw lupa lg klo jumat sibuk bgt meeting",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-19",
+    "reply": "ya ampun sori bgt, nunggu refund tiket pesawat msk dlu nih, palingan 3 harian lg",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 3
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-20",
+    "reply": "eh tar malam aja ya, jam 8an gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-21",
+    "reply": "waduh lagi bokek abis, abis gajian ya tgl 27 tar gw lgsg tf gausah ditagih 🫡",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 27
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-22",
+    "reply": "omg sori, lusa ya gw transfer, besok gw full meeting back to back euy",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-23",
+    "reply": "eh iya, early next month ya sekalian gw gajian 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-24",
+    "reply": "aduh gw kira udh lunas wkwwk, tar weekend ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-25",
+    "reply": "minggu2 ini deh gw bayar, nunggu gajian dari side hustle gw yg satu lg",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-26",
+    "reply": "sori bgt bru bales, tar sore gw mampir atm deh skalian tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-27",
+    "reply": "eh iya, ntar nunggu pertengahan bulan ya pas invoice pada cair",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-28",
+    "reply": "ya Allah lupa, tar malam gw tf ya sblm tdr!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-29",
+    "reply": "eh maap maap, besok deh gw byr.. eh besok public holiday deng? lusa aja gmn?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-30",
+    "reply": "sori bro, tgl 25 pas gajian gw trf lgsg ya 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-31",
+    "reply": "ntar payday pertengahan bulan gw lunasiin yaa",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-32",
+    "reply": "aduh lg banyak pengeluaran, bulan depan awal bgt gw bayar deh i promise 🤞",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-33",
+    "reply": "eh iya, sabtu depan aja ya pas kita meetup lgsg gw cash-in wkwk",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 10
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-34",
+    "reply": "nunggu duit dr nyokap turun, bsk sorean ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-35",
+    "reply": "sori sori, hri jumat ya gw transfer sblm jumatan",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-36",
+    "reply": "eh ntar yaa, lg super tight bgt nih cashflow bulan ini 😭",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-37",
+    "reply": "sori bgt blm bs skrg, ntar kl annual bonus udh cair lgsg gw tf yaa",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-38",
+    "reply": "aduh gw jg lg pusing nih duit blm pd turun, ntar ya nyusul 🙏",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-39",
+    "reply": "waitt ya bro, lg nunggu si kevin bayar utang jg ke gw wkwwk",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-40",
+    "reply": "ntar deh liat sikon dlu, literally lg bokek parah 🥲",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-41",
+    "reply": "aduh sori bgt gw lg banyak cicilan bulan ini, ntar ya gw update lgi",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-42",
+    "reply": "belom ada duitnya euy, ntar kl udh ada lgsg gw tf",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-43",
+    "reply": "sori bro lg bener2 kering, kl gw udh ada rejeki nomplok lgsg gw lunasiin",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-44",
+    "reply": "ntar ya, m-banking gw keblokir nih blm sempet ke cabang 😅",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-45",
+    "reply": "eh ntar yaa, lg banyak kbutuhan mendadak nih sori bgt honestly",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-46",
+    "reply": "lho bukannya udh gw tf ya minggu lalu?? coba check mutasi lu deh 🧐",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sun"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-47",
+    "reply": "eh udh aku transfer kok td malem, blm masuk ya di lu?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-48",
+    "reply": "lahh perasaaan udh gw tf pas kita lg ngopi itu, cb cek bca lu deh",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-49",
+    "reply": "udh gw tf ya td pagi, tp statusnya pending/nyangkut sih gatau knp euy",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-50",
+    "reply": "eh udh lunas kan perasaan? lu udh cek yg tfan gw hari selasa blm?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "tue"
+     }
+    },
+    "raw": "",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   }
+  ],
+  "base": [
+   {
+    "id": "hw-01",
+    "reply": "eh sorry bbtt baru buka wa 😭 besok gw tf ya sblm maksi!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-02",
+    "reply": "anjir lupa wkwwk akhir bulan ya pas gajian turun, literally lg kering bgt dompet",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_end\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-03",
+    "reply": "omg sorry! jumat deh gw bayar, eh wait jumat gw cuti deng, senin aja gpp yaa? ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"mon\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-04",
+    "reply": "eh iyaaa wait ya, nunggu invoice dr client cair nih, palingan tgl 25an",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":25}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-05",
+    "reply": "aduh sori bgt bro, gw baru inget. ntar tgl 28 ya pas payday.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 28
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 28
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":28}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-06",
+    "reply": "ntr malem gw trf yaa, mobile banking lg mantis (maintenance) wkwk 😅",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-07",
+    "reply": "yaampun maap bgt lupa, tar sorean jam 5 gw lunasin!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": false,
+    "late": true
+   },
+   {
+    "id": "hw-08",
+    "reply": "eh iya sori, next week yaa gw pastiin beres, lg super tight bgt minggu ini 🥲",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-09",
+    "reply": "halo sorry br balas.. tgl 1 aja ya pas gajian, sumpah lg literally broke 😭",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-10",
+    "reply": "waduuh i forgot! besok gpp kah? jam 10an gw tf.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-11",
+    "reply": "eh iyaaa, nunggu payment yg dari dimas cair dlu nih, lusa yak!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-12",
+    "reply": "waduh gw kira udh gw tf kemaren wkwk, besok pagi ya janji ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-13",
+    "reply": "omg iya utang gw, bsk siang deh pas break gw transfer",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-14",
+    "reply": "aduh lg limit bgt ni e-wallet, hari sabtu ya gw topup dlu",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-15",
+    "reply": "sori sori, next month ya tgl 5an nunggu duit project cair 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 5
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 5
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":5}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-16",
+    "reply": "eh iya, btw ntar akhir bulan aja sekalian gw bayar yg kmrn2 make sense ga?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_end\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-17",
+    "reply": "astaga lupa, ntar nunggu THR cair aja boleh ga wkwk 🤣",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-18",
+    "reply": "jumat yaaa, eh atau sabtu deh takutnya gw lupa lg klo jumat sibuk bgt meeting",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"fri\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-19",
+    "reply": "ya ampun sori bgt, nunggu refund tiket pesawat msk dlu nih, palingan 3 harian lg",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 3
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-20",
+    "reply": "eh tar malam aja ya, jam 8an gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": false,
+    "late": true
+   },
+   {
+    "id": "hw-21",
+    "reply": "waduh lagi bokek abis, abis gajian ya tgl 27 tar gw lgsg tf gausah ditagih 🫡",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 27
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-22",
+    "reply": "omg sori, lusa ya gw transfer, besok gw full meeting back to back euy",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-23",
+    "reply": "eh iya, early next month ya sekalian gw gajian 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-24",
+    "reply": "aduh gw kira udh lunas wkwwk, tar weekend ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-25",
+    "reply": "minggu2 ini deh gw bayar, nunggu gajian dari side hustle gw yg satu lg",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"next_week\"}}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-26",
+    "reply": "sori bgt bru bales, tar sore gw mampir atm deh skalian tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": false,
+    "late": true
+   },
+   {
+    "id": "hw-27",
+    "reply": "eh iya, ntar nunggu pertengahan bulan ya pas invoice pada cair",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_end\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-28",
+    "reply": "ya Allah lupa, tar malam gw tf ya sblm tdr!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-29",
+    "reply": "eh maap maap, besok deh gw byr.. eh besok public holiday deng? lusa aja gmn?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-30",
+    "reply": "sori bro, tgl 25 pas gajian gw trf lgsg ya 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":25}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-31",
+    "reply": "ntar payday pertengahan bulan gw lunasiin yaa",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_end\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-32",
+    "reply": "aduh lg banyak pengeluaran, bulan depan awal bgt gw bayar deh i promise 🤞",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-33",
+    "reply": "eh iya, sabtu depan aja ya pas kita meetup lgsg gw cash-in wkwk",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 10
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-34",
+    "reply": "nunggu duit dr nyokap turun, bsk sorean ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-35",
+    "reply": "sori sori, hri jumat ya gw transfer sblm jumatan",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"fri\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-36",
+    "reply": "eh ntar yaa, lg super tight bgt nih cashflow bulan ini 😭",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-37",
+    "reply": "sori bgt blm bs skrg, ntar kl annual bonus udh cair lgsg gw tf yaa",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-38",
+    "reply": "aduh gw jg lg pusing nih duit blm pd turun, ntar ya nyusul 🙏",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-39",
+    "reply": "waitt ya bro, lg nunggu si kevin bayar utang jg ke gw wkwwk",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-40",
+    "reply": "ntar deh liat sikon dlu, literally lg bokek parah 🥲",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-41",
+    "reply": "aduh sori bgt gw lg banyak cicilan bulan ini, ntar ya gw update lgi",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-42",
+    "reply": "belom ada duitnya euy, ntar kl udh ada lgsg gw tf",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-43",
+    "reply": "sori bro lg bener2 kering, kl gw udh ada rejeki nomplok lgsg gw lunasiin",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-44",
+    "reply": "ntar ya, m-banking gw keblokir nih blm sempet ke cabang 😅",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-45",
+    "reply": "eh ntar yaa, lg banyak kbutuhan mendadak nih sori bgt honestly",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-46",
+    "reply": "lho bukannya udh gw tf ya minggu lalu?? coba check mutasi lu deh 🧐",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-47",
+    "reply": "eh udh aku transfer kok td malem, blm masuk ya di lu?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-48",
+    "reply": "lahh perasaaan udh gw tf pas kita lg ngopi itu, cb cek bca lu deh",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-49",
+    "reply": "udh gw tf ya td pagi, tp statusnya pending/nyangkut sih gatau knp euy",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-50",
+    "reply": "eh udh lunas kan perasaan? lu udh cek yg tfan gw hari selasa blm?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   }
+  ],
+  "sft": [
+   {
+    "id": "hw-01",
+    "reply": "eh sorry bbtt baru buka wa 😭 besok gw tf ya sblm maksi!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-02",
+    "reply": "anjir lupa wkwwk akhir bulan ya pas gajian turun, literally lg kering bgt dompet",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-03",
+    "reply": "omg sorry! jumat deh gw bayar, eh wait jumat gw cuti deng, senin aja gpp yaa? ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "mon"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"mon\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-04",
+    "reply": "eh iyaaa wait ya, nunggu invoice dr client cair nih, palingan tgl 25an",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":25}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-05",
+    "reply": "aduh sori bgt bro, gw baru inget. ntar tgl 28 ya pas payday.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 28
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-06",
+    "reply": "ntr malem gw trf yaa, mobile banking lg mantis (maintenance) wkwk 😅",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-07",
+    "reply": "yaampun maap bgt lupa, tar sorean jam 5 gw lunasin!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":0}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-08",
+    "reply": "eh iya sori, next week yaa gw pastiin beres, lg super tight bgt minggu ini 🥲",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "next_week"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"next_week\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-09",
+    "reply": "halo sorry br balas.. tgl 1 aja ya pas gajian, sumpah lg literally broke 😭",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-10",
+    "reply": "waduuh i forgot! besok gpp kah? jam 10an gw tf.",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-11",
+    "reply": "eh iyaaa, nunggu payment yg dari dimas cair dlu nih, lusa yak!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-12",
+    "reply": "waduh gw kira udh gw tf kemaren wkwk, besok pagi ya janji ✌️",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-13",
+    "reply": "omg iya utang gw, bsk siang deh pas break gw transfer",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-14",
+    "reply": "aduh lg limit bgt ni e-wallet, hari sabtu ya gw topup dlu",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-15",
+    "reply": "sori sori, next month ya tgl 5an nunggu duit project cair 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 5
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 5
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":5}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-16",
+    "reply": "eh iya, btw ntar akhir bulan aja sekalian gw bayar yg kmrn2 make sense ga?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_end"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_end\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-17",
+    "reply": "astaga lupa, ntar nunggu THR cair aja boleh ga wkwk 🤣",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-18",
+    "reply": "jumat yaaa, eh atau sabtu deh takutnya gw lupa lg klo jumat sibuk bgt meeting",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-19",
+    "reply": "ya ampun sori bgt, nunggu refund tiket pesawat msk dlu nih, palingan 3 harian lg",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 3
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 3
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":3}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-20",
+    "reply": "eh tar malam aja ya, jam 8an gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":0}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-21",
+    "reply": "waduh lagi bokek abis, abis gajian ya tgl 27 tar gw lgsg tf gausah ditagih 🫡",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 27
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 27
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":27}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-22",
+    "reply": "omg sori, lusa ya gw transfer, besok gw full meeting back to back euy",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-23",
+    "reply": "eh iya, early next month ya sekalian gw gajian 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-24",
+    "reply": "aduh gw kira udh lunas wkwwk, tar weekend ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-25",
+    "reply": "minggu2 ini deh gw bayar, nunggu gajian dari side hustle gw yg satu lg",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "payday"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"payday\"}}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-26",
+    "reply": "sori bgt bru bales, tar sore gw mampir atm deh skalian tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":0}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-27",
+    "reply": "eh iya, ntar nunggu pertengahan bulan ya pas invoice pada cair",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-28",
+    "reply": "ya Allah lupa, tar malam gw tf ya sblm tdr!",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 0
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":0}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-29",
+    "reply": "eh maap maap, besok deh gw byr.. eh besok public holiday deng? lusa aja gmn?",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 2
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":2}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-30",
+    "reply": "sori bro, tgl 25 pas gajian gw trf lgsg ya 🙏",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 25
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"day_of_month\",\"day\":25}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-31",
+    "reply": "ntar payday pertengahan bulan gw lunasiin yaa",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "day_of_month",
+      "day": 15
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-32",
+    "reply": "aduh lg banyak pengeluaran, bulan depan awal bgt gw bayar deh i promise 🤞",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-33",
+    "reply": "eh iya, sabtu depan aja ya pas kita meetup lgsg gw cash-in wkwk",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 10
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "sat"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"sat\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": false,
+    "early": true,
+    "late": false
+   },
+   {
+    "id": "hw-34",
+    "reply": "nunggu duit dr nyokap turun, bsk sorean ya gw tf",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "relative_days",
+      "n": 1
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"relative_days\",\"n\":1}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-35",
+    "reply": "sori sori, hri jumat ya gw transfer sblm jumatan",
+    "gold": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "weekday",
+      "day": "fri"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"weekday\",\"day\":\"fri\"}}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-36",
+    "reply": "eh ntar yaa, lg super tight bgt nih cashflow bulan ini 😭",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "promise",
+     "when": {
+      "type": "month_start"
+     }
+    },
+    "raw": "{\"kind\":\"promise\",\"when\":{\"type\":\"month_start\"}}",
+    "valid": true,
+    "kind_ok": false,
+    "exact": false,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-37",
+    "reply": "sori bgt blm bs skrg, ntar kl annual bonus udh cair lgsg gw tf yaa",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-38",
+    "reply": "aduh gw jg lg pusing nih duit blm pd turun, ntar ya nyusul 🙏",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-39",
+    "reply": "waitt ya bro, lg nunggu si kevin bayar utang jg ke gw wkwwk",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-40",
+    "reply": "ntar deh liat sikon dlu, literally lg bokek parah 🥲",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-41",
+    "reply": "aduh sori bgt gw lg banyak cicilan bulan ini, ntar ya gw update lgi",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-42",
+    "reply": "belom ada duitnya euy, ntar kl udh ada lgsg gw tf",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-43",
+    "reply": "sori bro lg bener2 kering, kl gw udh ada rejeki nomplok lgsg gw lunasiin",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-44",
+    "reply": "ntar ya, m-banking gw keblokir nih blm sempet ke cabang 😅",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-45",
+    "reply": "eh ntar yaa, lg banyak kbutuhan mendadak nih sori bgt honestly",
+    "gold": {
+     "kind": "vague"
+    },
+    "pred": {
+     "kind": "vague"
+    },
+    "raw": "{\"kind\":\"vague\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-46",
+    "reply": "lho bukannya udh gw tf ya minggu lalu?? coba check mutasi lu deh 🧐",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-47",
+    "reply": "eh udh aku transfer kok td malem, blm masuk ya di lu?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-48",
+    "reply": "lahh perasaaan udh gw tf pas kita lg ngopi itu, cb cek bca lu deh",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-49",
+    "reply": "udh gw tf ya td pagi, tp statusnya pending/nyangkut sih gatau knp euy",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   },
+   {
+    "id": "hw-50",
+    "reply": "eh udh lunas kan perasaan? lu udh cek yg tfan gw hari selasa blm?",
+    "gold": {
+     "kind": "claims_paid"
+    },
+    "pred": {
+     "kind": "claims_paid"
+    },
+    "raw": "{\"kind\":\"claims_paid\"}",
+    "valid": true,
+    "kind_ok": true,
+    "exact": true,
+    "early": false,
+    "late": false
+   }
+  ]
+ }
+}

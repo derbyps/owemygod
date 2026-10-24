@@ -19,6 +19,8 @@ READER_SYSTEM = (
     '- {"type":"month_start"}  awal bulan, early next month\n'
     '- {"type":"month_end"}  akhir bulan, end of the month\n'
     "If several times are mentioned, use the latest one they commit to.\n"
+    "If they name a date or end/start of month AND mention payday, use the date they named, not payday.\n"
+    'Mid-month (pertengahan bulan) is {"type":"day_of_month","day":15}. Tonight / this afternoon is today.\n'
     'Reply with JSON only, e.g. {"kind":"promise","when":{"type":"payday"}} or {"kind":"vague"}.'
 )
 

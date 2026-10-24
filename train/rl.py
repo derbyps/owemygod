@@ -33,7 +33,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--from-state", required=True, help="state_path printed by train/sft.py")
     ap.add_argument("--model", default=MODEL)
-    ap.add_argument("--data", default=str(ROOT / "data" / "train.jsonl"))
+    ap.add_argument("--data", default=str(ROOT / "data" / "rl.jsonl"))
     ap.add_argument("--steps", type=int, default=20)
     ap.add_argument("--batch", type=int, default=32, help="replies per step")
     ap.add_argument("--group", type=int, default=4, help="samples per reply")

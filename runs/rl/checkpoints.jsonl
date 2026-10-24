@@ -1,0 +1,4 @@
+{"name": "rl-005", "sampler_path": "tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/sampler_weights/rl-005", "step": 5}
+{"name": "rl-010", "sampler_path": "tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/sampler_weights/rl-010", "step": 10}
+{"name": "rl-015", "sampler_path": "tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/sampler_weights/rl-015", "step": 15}
+{"name": "rl-final", "state_path": "tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/weights/rl-final", "sampler_path": "tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/sampler_weights/rl-final", "step": 20}

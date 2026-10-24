@@ -1,0 +1,50 @@
+{"id": "hw-01", "today": "2026-10-21", "reply": "eh sorry bbtt baru buka wa 😭 besok gw tf ya sblm maksi!", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "hw-02", "today": "2026-10-21", "reply": "anjir lupa wkwwk akhir bulan ya pas gajian turun, literally lg kering bgt dompet", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "hw-03", "today": "2026-10-21", "reply": "omg sorry! jumat deh gw bayar, eh wait jumat gw cuti deng, senin aja gpp yaa? ✌️", "target": {"kind": "promise", "when": {"type": "weekday", "day": "mon"}}}
+{"id": "hw-04", "today": "2026-10-21", "reply": "eh iyaaa wait ya, nunggu invoice dr client cair nih, palingan tgl 25an", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 25}}}
+{"id": "hw-05", "today": "2026-10-21", "reply": "aduh sori bgt bro, gw baru inget. ntar tgl 28 ya pas payday.", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 28}}}
+{"id": "hw-06", "today": "2026-10-21", "reply": "ntr malem gw trf yaa, mobile banking lg mantis (maintenance) wkwk 😅", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "hw-07", "today": "2026-10-21", "reply": "yaampun maap bgt lupa, tar sorean jam 5 gw lunasin!", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "hw-08", "today": "2026-10-21", "reply": "eh iya sori, next week yaa gw pastiin beres, lg super tight bgt minggu ini 🥲", "target": {"kind": "promise", "when": {"type": "next_week"}}}
+{"id": "hw-09", "today": "2026-10-21", "reply": "halo sorry br balas.. tgl 1 aja ya pas gajian, sumpah lg literally broke 😭", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 1}}}
+{"id": "hw-10", "today": "2026-10-21", "reply": "waduuh i forgot! besok gpp kah? jam 10an gw tf.", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "hw-11", "today": "2026-10-21", "reply": "eh iyaaa, nunggu payment yg dari dimas cair dlu nih, lusa yak!", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "hw-12", "today": "2026-10-21", "reply": "waduh gw kira udh gw tf kemaren wkwk, besok pagi ya janji ✌️", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "hw-13", "today": "2026-10-21", "reply": "omg iya utang gw, bsk siang deh pas break gw transfer", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "hw-14", "today": "2026-10-21", "reply": "aduh lg limit bgt ni e-wallet, hari sabtu ya gw topup dlu", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "hw-15", "today": "2026-10-21", "reply": "sori sori, next month ya tgl 5an nunggu duit project cair 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 5}}}
+{"id": "hw-16", "today": "2026-10-21", "reply": "eh iya, btw ntar akhir bulan aja sekalian gw bayar yg kmrn2 make sense ga?", "target": {"kind": "promise", "when": {"type": "month_end"}}}
+{"id": "hw-17", "today": "2026-10-21", "reply": "astaga lupa, ntar nunggu THR cair aja boleh ga wkwk 🤣", "target": {"kind": "vague"}}
+{"id": "hw-18", "today": "2026-10-21", "reply": "jumat yaaa, eh atau sabtu deh takutnya gw lupa lg klo jumat sibuk bgt meeting", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "hw-19", "today": "2026-10-21", "reply": "ya ampun sori bgt, nunggu refund tiket pesawat msk dlu nih, palingan 3 harian lg", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 3}}}
+{"id": "hw-20", "today": "2026-10-21", "reply": "eh tar malam aja ya, jam 8an gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "hw-21", "today": "2026-10-21", "reply": "waduh lagi bokek abis, abis gajian ya tgl 27 tar gw lgsg tf gausah ditagih 🫡", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 27}}}
+{"id": "hw-22", "today": "2026-10-21", "reply": "omg sori, lusa ya gw transfer, besok gw full meeting back to back euy", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "hw-23", "today": "2026-10-21", "reply": "eh iya, early next month ya sekalian gw gajian 🙏", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "hw-24", "today": "2026-10-21", "reply": "aduh gw kira udh lunas wkwwk, tar weekend ya gw tf", "target": {"kind": "promise", "when": {"type": "weekday", "day": "sat"}}}
+{"id": "hw-25", "today": "2026-10-21", "reply": "minggu2 ini deh gw bayar, nunggu gajian dari side hustle gw yg satu lg", "target": {"kind": "vague"}}
+{"id": "hw-26", "today": "2026-10-21", "reply": "sori bgt bru bales, tar sore gw mampir atm deh skalian tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "hw-27", "today": "2026-10-21", "reply": "eh iya, ntar nunggu pertengahan bulan ya pas invoice pada cair", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "hw-28", "today": "2026-10-21", "reply": "ya Allah lupa, tar malam gw tf ya sblm tdr!", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 0}}}
+{"id": "hw-29", "today": "2026-10-21", "reply": "eh maap maap, besok deh gw byr.. eh besok public holiday deng? lusa aja gmn?", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 2}}}
+{"id": "hw-30", "today": "2026-10-21", "reply": "sori bro, tgl 25 pas gajian gw trf lgsg ya 🙏", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 25}}}
+{"id": "hw-31", "today": "2026-10-21", "reply": "ntar payday pertengahan bulan gw lunasiin yaa", "target": {"kind": "promise", "when": {"type": "day_of_month", "day": 15}}}
+{"id": "hw-32", "today": "2026-10-21", "reply": "aduh lg banyak pengeluaran, bulan depan awal bgt gw bayar deh i promise 🤞", "target": {"kind": "promise", "when": {"type": "month_start"}}}
+{"id": "hw-33", "today": "2026-10-21", "reply": "eh iya, sabtu depan aja ya pas kita meetup lgsg gw cash-in wkwk", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 10}}}
+{"id": "hw-34", "today": "2026-10-21", "reply": "nunggu duit dr nyokap turun, bsk sorean ya gw tf", "target": {"kind": "promise", "when": {"type": "relative_days", "n": 1}}}
+{"id": "hw-35", "today": "2026-10-21", "reply": "sori sori, hri jumat ya gw transfer sblm jumatan", "target": {"kind": "promise", "when": {"type": "weekday", "day": "fri"}}}
+{"id": "hw-36", "today": "2026-10-21", "reply": "eh ntar yaa, lg super tight bgt nih cashflow bulan ini 😭", "target": {"kind": "vague"}}
+{"id": "hw-37", "today": "2026-10-21", "reply": "sori bgt blm bs skrg, ntar kl annual bonus udh cair lgsg gw tf yaa", "target": {"kind": "vague"}}
+{"id": "hw-38", "today": "2026-10-21", "reply": "aduh gw jg lg pusing nih duit blm pd turun, ntar ya nyusul 🙏", "target": {"kind": "vague"}}
+{"id": "hw-39", "today": "2026-10-21", "reply": "waitt ya bro, lg nunggu si kevin bayar utang jg ke gw wkwwk", "target": {"kind": "vague"}}
+{"id": "hw-40", "today": "2026-10-21", "reply": "ntar deh liat sikon dlu, literally lg bokek parah 🥲", "target": {"kind": "vague"}}
+{"id": "hw-41", "today": "2026-10-21", "reply": "aduh sori bgt gw lg banyak cicilan bulan ini, ntar ya gw update lgi", "target": {"kind": "vague"}}
+{"id": "hw-42", "today": "2026-10-21", "reply": "belom ada duitnya euy, ntar kl udh ada lgsg gw tf", "target": {"kind": "vague"}}
+{"id": "hw-43", "today": "2026-10-21", "reply": "sori bro lg bener2 kering, kl gw udh ada rejeki nomplok lgsg gw lunasiin", "target": {"kind": "vague"}}
+{"id": "hw-44", "today": "2026-10-21", "reply": "ntar ya, m-banking gw keblokir nih blm sempet ke cabang 😅", "target": {"kind": "vague"}}
+{"id": "hw-45", "today": "2026-10-21", "reply": "eh ntar yaa, lg banyak kbutuhan mendadak nih sori bgt honestly", "target": {"kind": "vague"}}
+{"id": "hw-46", "today": "2026-10-21", "reply": "lho bukannya udh gw tf ya minggu lalu?? coba check mutasi lu deh 🧐", "target": {"kind": "claims_paid"}}
+{"id": "hw-47", "today": "2026-10-21", "reply": "eh udh aku transfer kok td malem, blm masuk ya di lu?", "target": {"kind": "claims_paid"}}
+{"id": "hw-48", "today": "2026-10-21", "reply": "lahh perasaaan udh gw tf pas kita lg ngopi itu, cb cek bca lu deh", "target": {"kind": "claims_paid"}}
+{"id": "hw-49", "today": "2026-10-21", "reply": "udh gw tf ya td pagi, tp statusnya pending/nyangkut sih gatau knp euy", "target": {"kind": "claims_paid"}}
+{"id": "hw-50", "today": "2026-10-21", "reply": "eh udh lunas kan perasaan? lu udh cek yg tfan gw hari selasa blm?", "target": {"kind": "claims_paid"}}

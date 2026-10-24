@@ -1,0 +1,29 @@
+[data] mean prompt 337 tokens, mean completion ~14 tokens
+[budget] estimated cost $0.58 (cap $1.20)
+step=0 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=13.2
+step=1 reward=0.95312 exact_rate=0.99219 early_rate=0.0 invalid_rate=0.00781 trained_on=4 secs=15.1
+step=2 reward=0.9375 exact_rate=0.96875 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=14.9
+step=3 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=14.6
+step=4 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=12.2
+step=5 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=16.9
+step=6 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=13.8
+step=7 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=13.5
+step=8 reward=0.95312 exact_rate=0.99219 early_rate=0.0 invalid_rate=0.00781 trained_on=4 secs=22.1
+step=9 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=12.9
+step=10 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=20.4
+step=11 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=13.6
+step=12 reward=0.95312 exact_rate=0.99219 early_rate=0.00781 invalid_rate=0.0 trained_on=4 secs=19.2
+step=13 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=14.4
+step=14 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=14.9
+step=15 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=20.0
+step=16 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=13.1
+step=17 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=14.3
+step=18 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=12.8
+step=19 reward=1.0 exact_rate=1.0 early_rate=0.0 invalid_rate=0.0 trained_on=0 secs=12.6
+
+=== RESULT ===
+state_path=tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/weights/rl-final
+sampler_path=tinker://8cbae2d5-8114-5da2-841d-28170aab9df5:train:0/sampler_weights/rl-final
+(saved to /Users/derby/Documents/vault/personal/2026-hacktober/owemygod/runs/rl/RESULT.txt)
+
+Next: python eval/run_eval.py --sft-path <sft sampler_path> --rl-path <sampler_path above>

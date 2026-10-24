@@ -74,7 +74,41 @@ FAMILIES: dict[str, dict] = {
               "templates": ["{t} ya promise", "I'll pay you {t}", "by {t}"]},
     "me_mixed": {"type": "month_end", "times": {None: ["end of month", "akhir bulan"]}, "heldout": True,
                  "templates": ["{t} literally aku tf", "which is {t} ya", "{t} deh janji"]},
+    # Patterns found in the hand-written DEV set (never the final test): an explicit date beats "payday",
+    # mid-month is the 15th, "tonight / this afternoon" is today, and "this month is tight" is vague.
+    "pay_date": {"type": "day_of_month",
+                 "times": {d: [f"tgl {d} pas gajian", f"pas gajian tgl {d}", f"abis gajian tgl {d}",
+                               f"tgl {d} sekalian payday", f"on the {d}th when I get paid"] for d in range(1, 29)},
+                 "templates": ["{t} ya", "{t} gw tf", "{t} lgsg lunas", "{t}, sumpah"]},
+    "pay_me": {"type": "month_end", "times": {None: ["akhir bulan pas gajian", "akhir bulan sekalian gajian turun",
+                                                     "end of month pas payday"]},
+               "templates": ["{t} ya", "{t} gw bayar", "{t} deh"]},
+    "pay_ms": {"type": "month_start", "times": {None: ["awal bulan pas gajian", "early next month sekalian gajian",
+                                                       "awal bulan depan sekalian gaji masuk"]},
+               "templates": ["{t} ya", "{t} gw lunasin", "{t} deh promise"]},
+    "mid_month": {"type": "day_of_month", "times": {15: ["pertengahan bulan", "tengah bulan", "mid-month",
+                                                         "pas tengah bulan"]},
+                  "templates": ["{t} ya", "nunggu {t} ya", "{t} gw tf", "ntar {t} deh"]},
+    "rel_tonight": {"type": "relative_days", "times": {0: ["ntar malem", "tar malam", "tar sore", "nanti sore",
+                                                           "sblm tidur"]},
+                    "templates": ["{t} ya gw tf", "{t} gw lunasin", "{t} deh, lg di luar"]},
+    # RL-only pool: the same hard patterns in different words, never used for SFT or any test.
+    "rl_pay_date": {"type": "day_of_month", "rl_only": True,
+                    "times": {d: [f"{d} aja pas gaji masuk", f"pas payday tgl {d}", f"gajian kan tgl {d}, pas itu"]
+                              for d in range(1, 29)},
+                    "templates": ["{t} ya", "{t} gw transfer", "{t} deh janji"]},
+    "rl_mid_month": {"type": "day_of_month", "rl_only": True,
+                     "times": {15: ["tgl 15an", "mid month", "pertengahan bulan nanti"]},
+                     "templates": ["{t} ya", "{t} gw bayar", "paling {t}"]},
+    "rl_pay_month": {"type": "month_end", "rl_only": True,
+                     "times": {None: ["ujung bulan pas gajian", "akhir bulan nunggu gaji"]},
+                     "templates": ["{t} ya", "{t} gw tf"]},
+    "rl_vague_month": {"kind": "vague", "rl_only": True, "templates": [
+        "bulan ini lg berat bgt, ntar ya", "minggu-minggu ini lg kacau, nanti ya", "cicilan numpuk bulan ini sori"]},
     # vague
+    "vague_month": {"kind": "vague", "templates": [
+        "lg tight bgt bulan ini, ntar ya", "minggu2 ini deh, nunggu duit masuk", "bulan ini banyak cicilan, nanti ya",
+        "ntar dlu ya, pengeluaran bulan ini gila"]},
     "vague_id": {"kind": "vague", "templates": [
         "nanti ya", "kapan2 deh", "pasti diganti kok", "aku usahain ya", "sabar ya", "nanti aku kabarin"]},
     "vague_en": {"kind": "vague", "templates": [

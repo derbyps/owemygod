@@ -24,8 +24,9 @@ from owemygod.rules import read_by_rules  # noqa: E402
 from owemygod.schema import ParseError, ReplyRead, parse_reply  # noqa: E402
 from owemygod.scoring import score  # noqa: E402
 
-SETS = {"synthetic held-out": ROOT / "data" / "test.jsonl", "hand-written": ROOT / "data" / "handwritten_test.jsonl"}
-SET_KEYS = {"test": "synthetic held-out", "handwritten": "hand-written"}
+SETS = {"synthetic held-out": ROOT / "data" / "test.jsonl", "hand-written dev": ROOT / "data" / "handwritten_dev.jsonl",
+        "hand-written test": ROOT / "data" / "handwritten_test.jsonl"}
+SET_KEYS = {"test": "synthetic held-out", "dev": "hand-written dev", "handwritten": "hand-written test"}
 LLM_MODELS = ("base", "sft", "rl")
 NAMES = {"rules": "Keyword rules", "base": "Qwen3-8B, untrained", "sft": "Fine-tuned (SFT)", "rl": "Fine-tuned (SFT + RL)"}
 

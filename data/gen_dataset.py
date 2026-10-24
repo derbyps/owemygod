@@ -18,7 +18,8 @@ from data.phrases import COMPOUND, EARLY_BY_TYPE, EMOJI, FAMILIES, FILLERS, OPEN
 from owemygod.schema import ReplyRead, WhenExpr, to_target_json  # noqa: E402
 
 HELDOUT_FAMILIES = {name for name, f in FAMILIES.items() if f.get("heldout")}
-TRAIN_FAMILIES = set(FAMILIES) - HELDOUT_FAMILIES
+RL_FAMILIES = {name for name, f in FAMILIES.items() if f.get("rl_only")}
+TRAIN_FAMILIES = set(FAMILIES) - HELDOUT_FAMILIES - RL_FAMILIES
 KIND_WEIGHTS = {"promise": 0.70, "vague": 0.20, "claims_paid": 0.10}
 
 
@@ -46,11 +47,16 @@ def _time(f: dict, rng: random.Random) -> tuple[WhenExpr, str]:
         return WhenExpr(type=t, n=key), phrase
     if t == "weekday":
         return WhenExpr(type=t, day=key), phrase
+    if t == "day_of_month":
+        return WhenExpr(type=t, day=key), phrase
     return WhenExpr(type=t), phrase
 
 
 def _typo(s: str, rng: random.Random) -> str:
-    i = rng.randrange(len(s))
+    letters = [i for i, c in enumerate(s) if c.isalpha()]
+    if not letters:
+        return s
+    i = rng.choice(letters)
     if s[i] in "aeiou" and len(s) > 6:
         return s[:i] + s[i + 1:]
     return s[:i] + s[i] + s[i:]
@@ -97,7 +103,7 @@ def _row(i: int, seed: int, name: str, f: dict, rng: random.Random) -> dict:
 
 def generate(n: int, seed: int, families: set[str] | None = None) -> list[dict]:
     rng = random.Random(seed)
-    names = sorted(families if families is not None else FAMILIES)
+    names = sorted(families if families is not None else TRAIN_FAMILIES | HELDOUT_FAMILIES)
     by_kind: dict[str, list[str]] = {}
     for name in names:
         by_kind.setdefault(_family_kind(FAMILIES[name]), []).append(name)
@@ -118,3 +124,4 @@ def _write(path: Path, rows: list[dict]) -> None:
 if __name__ == "__main__":
     _write(ROOT / "data" / "train.jsonl", generate(2000, seed=0, families=TRAIN_FAMILIES))
     _write(ROOT / "data" / "test.jsonl", generate(300, seed=1, families=HELDOUT_FAMILIES))
+    _write(ROOT / "data" / "rl.jsonl", generate(800, seed=2, families=RL_FAMILIES | TRAIN_FAMILIES))
