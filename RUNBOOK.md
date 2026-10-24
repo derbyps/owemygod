@@ -1,6 +1,6 @@
 # Runbook: train, evaluate and deploy OweMyGod
 
-Total [Tinker](https://thinkingmachines.ai/tinker/) spend is about **$1.30**. Every paid script prints its cost
+Total [Tinker](https://thinkingmachines.ai/tinker/) spend for everything we ran was about **$2.40**. Every paid script prints its cost
 estimate first and refuses to run above its cap.
 
 ## 0. Setup (≈3 min)
@@ -30,24 +30,25 @@ the untrained model, and saves the untrained model as a sampler checkpoint. Its 
 
 ```bash
 python train/sft.py --dry-run
-python train/sft.py            # paths saved in runs/sft/RESULT.txt
+python train/sft.py --log-path runs/sft2   # the shipped model; paths saved in runs/sft2/RESULT.txt
 ```
 
 ## 3. RL with the "never too early" reward (≈ $0.58, 20–40 min)
 
 ```bash
-python train/rl.py --from-state "<state_path from step 2>" --dry-run
-python train/rl.py --from-state "<state_path from step 2>"     # paths in runs/rl/RESULT.txt
+python train/rl.py --from-state "<state_path from step 2>" --log-path runs/rl2 --dry-run
+python train/rl.py --from-state "<state_path from step 2>" --log-path runs/rl2
 ```
 
-`early_rate` should fall and `reward` should rise in the log.
+Optional. In our runs the SFT model answered every RL-pool reply identically and correctly, so `trained_on` stayed
+0 and RL changed nothing; we stopped it and ship SFT. Watch `trained_on` in the first steps before paying for more.
 
 ## 4. Evaluation (≈ $0.05)
 
-Write `data/handwritten_test.jsonl` first (see `data/HANDWRITTEN.md`).
+`data/handwritten_dev.jsonl` (50) found the failure patterns; `data/handwritten_test.jsonl` (25) was written afterwards and run once.
 
 ```bash
-python eval/run_eval.py --sft-path "<sft sampler_path>" --rl-path "<rl sampler_path>"
+python eval/run_eval.py --models rules,base,sft --sets handwritten,dev,test --sft-path "<runs/sft2 sampler_path>"
 ```
 
 Writes `eval/out/table.md`, `chart.png` and `results.json`.
@@ -55,7 +56,7 @@ Writes `eval/out/table.md`, `chart.png` and `results.json`.
 ## 5. Check the path the app uses (< $0.001)
 
 ```bash
-python train/check_oai.py "<rl sampler_path>"
+python train/check_oai.py "<runs/sft2 sampler_path>"
 ```
 
 ## 6. Deploy on Render
@@ -63,7 +64,7 @@ python train/check_oai.py "<rl sampler_path>"
 1. Push to GitHub. On render.com: **New → Blueprint**, pick the repo (it reads `render.yaml`: Starter instance
    plus a 1 GB disk for the SQLite file).
 2. Generate push keys: `python scripts/gen_vapid.py`.
-3. Set the environment variables: `TINKER_API_KEY`, `OWEMYGOD_READER_PATH` (rl sampler_path),
+3. Set the environment variables: `TINKER_API_KEY`, `OWEMYGOD_READER_PATH` (runs/sft2 sampler_path),
    `OWEMYGOD_WRITER_PATH` (base sampler_path), `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`,
    `VAPID_SUBJECT` (`mailto:you@example.com`), `OWNER_USERNAME`, `OWNER_PASSWORD`.
    Optional limits: `OWEMYGOD_DEMO_MODEL_CALLS_PER_HOUR` (default 20), `OWEMYGOD_MODEL_CALLS_PER_DAY` (500).

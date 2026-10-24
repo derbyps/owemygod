@@ -15,7 +15,7 @@ LEVELS = {1: "gentle and warm, almost apologetic for asking",
           3: "firm but kind: clear that you need the money back, no jokes"}
 TONES = {"jaksel": "Jakarta-style mix of casual English and Indonesian (\"which is\", \"literally\", \"ya\", \"deh\")",
          "english": "casual English", "bahasa": "casual Indonesian (Bahasa gaul)"}
-BLOCKLIST = re.compile(r"\b(datengin|polisi|police|viralin|viral|lapor|sue|lawyer|pengacara|goblok|bego|tolol|"
+BLOCKLIST = re.compile(r"\b(debt collector|datengin|polisi|police|viralin|viral|lapor|sue|lawyer|pengacara|goblok|bego|tolol|"
                        r"anjing|bangsat|kontol|stupid|idiot|loser|kill|bunuh|ancam)\b", re.I)
 TEMPLATES: dict[tuple[int, str], str] = {
     (1, "jaksel"): "Hey {name}! Gentle reminder ya soal yang {amount} kemarin 🙏 no pressure tho",
@@ -39,16 +39,31 @@ def check_draft(text: str) -> bool:
     return "{amount}" in text and len(text) <= MAX_LEN and not leftovers and not BLOCKLIST.search(text)
 
 
+EXAMPLES = {
+    "jaksel": {1: "Hey {name}! Gentle reminder ya soal yang {amount} kemarin, no pressure tho 🙏",
+               2: "{name}~ udah gajian kan? 😆 which is, si {amount} kangen pulang literally",
+               3: "Hi {name}, aku butuh yang {amount} balik minggu ini ya. Kabarin bisa kapan, thanks 🙏"},
+    "english": {1: "Hey {name}! Just a gentle reminder about the {amount}, no rush 🙏",
+                2: "{name}, payday came and went 👀 the {amount} misses home",
+                3: "Hi {name}, I need the {amount} back this week. Can you tell me when? Thanks"},
+    "bahasa": {1: "Halo {name}! Mau ngingetin soal yang {amount} kemarin ya, santai aja 🙏",
+               2: "{name}, udah gajian kan? 😆 si {amount} pengen pulang nih",
+               3: "Halo {name}, aku butuh yang {amount} balik minggu ini ya. Kira-kira kapan bisa? Makasih"},
+}
+
+
 def build_writer_messages(level: int, tone: Tone, item: str | None, days_since: int,
                           replies: list[str]) -> list[dict[str, str]]:
-    system = ("You write one short WhatsApp message to a friend who owes money. Write it as the lender, in "
-              f"{TONES[tone]}. Tone: {LEVELS[level]}. Use the placeholders {{name}} and {{amount}} literally; "
-              "never invent a name or a number. Max 2 sentences, at most one emoji. No threats, no shaming, "
-              "no guilt-tripping. Reply with the message only.")
+    system = (f"You write one short WhatsApp message from a lender to a friend who owes them money, in {TONES[tone]}. "
+              f"Tone: {LEVELS[level]}. Write like a real friend texting: casual, short, natural slang. "
+              "Use the placeholders {name} and {amount} exactly as written; never write a number or a name yourself. "
+              "The amount is what they still owe: never say they owe more or ask for extra. "
+              "If their latest reply gave an excuse or a time, refer to it lightly (e.g. payday has passed). "
+              "One or two sentences, at most one emoji. No threats, no shaming, no guilt-tripping, no 'debt collector'. "
+              f"Example of this tone: {EXAMPLES[tone][level]}\nReply with the message only.")
     facts = [f"It was for: {item}." if item else "", f"Lent {days_since} days ago."]
     if replies:
-        facts.append("Their latest replies (newest last): " + " | ".join(f'"{r}"' for r in replies[-2:]) +
-                     ". You may refer to them kindly.")
+        facts.append("Their latest replies (newest last): " + " | ".join(f'"{r}"' for r in replies[-2:]) + ".")
     return [{"role": "system", "content": system}, {"role": "user", "content": " ".join(f for f in facts if f)}]
 
 

@@ -1,12 +1,11 @@
 ---
-title: "OweMyGod: I trained an 8B model that reminding a friend one day too early is five times worse than one day too late"
+title: "OweMyGod: a fine-tuned 8B model reads Jakarta debt excuses right 92% of the time (keyword rules: 60%)"
 published: false
 tags: devchallenge, hf26challenge, ai, opensource
 ---
 
-<!-- DRAFT. Fill every [[...]] from eval/out/table.md and your own experience before publishing.
-     Title option with a number once the eval is in:
-     "OweMyGod: my fine-tuned 8B model cut too-early debt reminders from [[base %]] to [[RL %]]" -->
+<!-- DRAFT. Fill every remaining [[...]] from your own experience before publishing.
+     Alt title: "OweMyGod: I tried to teach an 8B model that nagging a friend one day early is 5× worse than one day late" -->
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)*
 
@@ -60,26 +59,40 @@ There are seven kinds: tomorrow-ish, a weekday, next week, a day of the month, p
 Plain Python turns that into a date in your time zone (payday = the 25th, or whatever you set), and a small
 schedule engine decides the next reminder. The model reads Jakarta slang; code does arithmetic.
 
-### Fine-tuning on Tinker, with a reward that respects friendship
+### Fine-tuning on Tinker, and what RL taught me
 
-The reader is Qwen3-8B with a LoRA adapter trained on [Tinker](https://thinkingmachines.ai/tinker/):
+The reader is Qwen3-8B with a LoRA adapter trained on [Tinker](https://thinkingmachines.ai/tinker/), on 2,000
+synthetic replies in English–Indonesian code-mix ("literally", "which is", "deh", "bsk", typos, emoji). Each reply is
+generated *from* its label, so labels are never guessed by another model.
 
-1. **SFT on 2,000 synthetic replies** in English–Indonesian code-mix ("literally", "which is", "deh", "bsk",
-   typos, emoji). Each reply is generated *from* its label, so the labels are never guessed by another model.
-   Hard cases are included on purpose: *"besok gabisa, jumat aja"* (the later time wins), *"tanggal muda"* (early
-   in the month), *"gajian tgl 1"* (the explicit date beats "payday"), *"abis THR"* (no fixed date, so vague).
-2. **RL with a lopsided reward.** Reminding someone before the day they promised is rude; reminding them a day late
-   just costs a day. So: exact date +1, too late −1, **too early −5**, wrong kind −2, broken JSON −5.
+**Round 1 humbled me.** My keyword-rules baseline scored 91% on my own synthetic test, because I wrote both. So I
+asked a friend to write 50 replies the way they'd really text. On those, rules got 50% and my first fine-tune 80%,
+but it still reminded **too early 14% of the time**. Almost every miss was the same: *"tgl 28 ya pas payday"*
+→ the model said "payday" (the 25th) instead of the date the friend actually named.
 
-Total Tinker spend: [[≈ $X]].
+**Round 2** fixed the generator for what that *dev set* exposed (an explicit date beats payday, *pertengahan bulan*
+is the 15th, *tar malam* is today) and retrained. Then we wrote **25 brand-new replies** and ran them once.
 
-### Results
+**RL found nothing to fix, and I'm keeping that in the story.** I'd planned reinforcement learning with a lopsided
+reward (exact +1, late −1, **too early −5**), because a too-early reminder is the one that costs a friendship. It
+ran twice, and both times the fine-tuned model answered every training reply identically and correctly, so there
+was no difference to learn from (`trained_on=0`). The honest lesson: once the data covered the hard patterns,
+supervised fine-tuning was enough. Total Tinker spend: about $2.40 [[check the Tinker console]].
 
-[[Paste eval/out/table.md here. Comment honestly on it, e.g.: keyword rules do fine on easy phrasings; where the
-model earns its keep is contradictions and slang. Name 2–3 real examples from the hand-written set where rules
-failed and the model didn't, and at least one where the model still fails.]]
+### Results (25 hand-written replies, never seen in training, evaluated once)
 
-![Too-early reminders by system]([[chart.png URL]])
+| System | Exact date ↑ | Too early ↓ | Kind right ↑ |
+|---|---|---|---|
+| Keyword rules | 60% | 16% | 84% |
+| Qwen3-8B, untrained | 68% | 12% | 80% |
+| Fine-tuned v1 | 80% | 12% | 92% |
+| **Fine-tuned v2 (shipped)** | **92%** | **8%** | **100%** |
+
+Both remaining misses are one day early, and both are genuinely tricky: *"tgl 25 pas payday ya! eh tgl 25 minggu
+kan ya? senin deh"* (it kept the 25th, not the corrected Monday) and *"akhir bulan ya bro tgl 28/29"* (it picked the
+28th). That's why the app always shows how it read a reply and lets you fix the date in one tap.
+
+![Too-early reminders by system]([[upload eval/out/chart.png]])
 
 ### The app
 
@@ -96,18 +109,19 @@ If the model is down, keyword rules read replies and templates write reminders, 
   move it. For an app that holds friends' money troubles, I don't want to depend on someone else's model staying
   the same.
 - **A small, specialised model is enough.** Reading "abis gajian ya" doesn't need a frontier model. An 8B model
-  trained for this one job is cheap to run: [[cost per 1,000 replies]].
+  trained for this one job beats keyword rules by 32 points on real replies, and costs a fraction of a cent per reply.
 - **Privacy by design, honestly stated.** Names, phone numbers and amounts never go to any model; they stay in the
   app's database. The writer works with `{name}` and `{amount}` placeholders. The text of a logged reply *is* sent to
   Tinker's inference endpoint to be read; that's the trade-off, and with open weights I can remove it later by
   hosting the model myself.
-- **The reward is mine to choose.** "Too early is five times worse than too late" is a value judgement about
-  friendship. With an open model and Tinker's training loop I could put that judgement into the model itself.
+- **I could measure and fix it myself.** With open weights and Tinker's training loop I found a specific failure
+  ("payday" beating the date they named), fixed the data and retrained in an afternoon, for about a dollar.
 
 ## Prize Categories
 
-- **Best Use of Tinker:** SFT + RL with a custom asymmetric reward on Qwen3-8B; serving through Tinker's
-  OpenAI-compatible endpoint; base vs. SFT vs. RL measured on held-out and hand-written replies.
+- **Best Use of Tinker:** LoRA SFT of Qwen3-8B in two rounds driven by a hand-written dev set, an RL loop with a
+  custom asymmetric reward (and an honest account of why it had nothing to learn), and the shipped adapter served
+  through Tinker's OpenAI-compatible endpoint; rules vs. base vs. v1 vs. v2 on a clean hand-written test.
 - **Best Use of Render:** a Blueprint (`render.yaml`) with a Starter web service, a persistent disk for SQLite, an
   in-process daily scheduler that sends the 09:00 pushes, secrets kept out of the repo, and a `/healthz` that reports
   whether the model is reachable.
