@@ -5,3 +5,6 @@ __pycache__/
 .superpowers/
 .pytest_cache/
 runs/*/checkpoints
+local-server.log
+*.db-shm
+*.db-wal
