@@ -60,6 +60,7 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     app.state.conn = db.connect(db_path)
     app.state.reader, app.state.writer, app.state.clock = reader, writer, clock
     templates = Jinja2Templates(directory=HERE / "templates")
+    templates.env.filters["day"] = lambda iso: f"{datetime.fromisoformat(iso):%a, %b} {datetime.fromisoformat(iso).day}"
     templates.env.globals.update(badge_text=views.badge_text, fmt=format_amount, TONES=TONES, RHYTHMS=RHYTHMS,
                                  WEEKDAYS=WEEKDAYS, TIMEZONES=TIMEZONES, CURRENCIES=CURRENCIES,
                                  LEVEL_NAMES=views.LEVEL_NAMES)

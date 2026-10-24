@@ -52,4 +52,4 @@ def totals(debts: list[dict]) -> str:
         if d["status"] != "paid":
             sums[d["currency"]] += d["remaining"]
     parts = [format_amount(v, c) for c, v in sums.items() if v]
-    return " · ".join(parts) or "Rp0"
+    return " + ".join(parts) or "Rp0"

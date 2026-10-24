@@ -31,7 +31,7 @@ def test_format_usd(n, s): assert format_amount(n, "USD") == s
 def test_totals():
     assert totals([{"currency": "IDR", "remaining": 1_250_000, "status": "open"},
                    {"currency": "USD", "remaining": 4000, "status": "open"},
-                   {"currency": "IDR", "remaining": 99_000, "status": "paid"}]) == "Rp1.25jt · $40"
+                   {"currency": "IDR", "remaining": 99_000, "status": "paid"}]) == "Rp1.25jt + $40"
 
 
 def test_totals_empty(): assert totals([]) == "Rp0"

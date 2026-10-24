@@ -1,11 +1,15 @@
 """Fictional friends for the judges' demo sandbox: one in every state the app can show."""
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta
 
 from owemygod import db
 from owemygod.schedule import on_reminder_sent, on_reply, resume
 from owemygod.schema import ReplyRead, WhenExpr
+
+
+def _at(d: date, hour: int = 12):
+    return datetime.combine(d, time(hour))
 
 
 def seed_demo(conn, user_id: int, today: date) -> None:
@@ -13,17 +17,19 @@ def seed_demo(conn, user_id: int, today: date) -> None:
         did = db.create_debt(conn, user_id, friend_name=name, amount=amount, currency=currency, due_on=today,
                              item=item, rhythm="weekly", rhythm_day=today.weekday(),
                              today=today - timedelta(days=lent_days_ago))
-        conn.execute("UPDATE debts SET lent_on = ? WHERE id = ?", ((today - timedelta(days=lent_days_ago)).isoformat(), did))
+        lent = today - timedelta(days=lent_days_ago)
+        conn.execute("UPDATE debts SET lent_on = ? WHERE id = ?", (lent.isoformat(), did))
+        conn.execute("UPDATE events SET created_at = ? WHERE debt_id = ?", (_at(lent).isoformat(), did))
         return did, db.load_state(db.get_debt(conn, user_id, did))
 
     def nudge(did, s, on, text):
-        db.add_event(conn, did, "nudge", text, {"level": s.level, "before": db.state_to_json(s)})
+        db.add_event(conn, did, "nudge", text, {"level": s.level, "before": db.state_to_json(s)}, at=_at(on, 9))
         return on_reminder_sent(s, on)
 
     def reply(did, s, text, read, resolved, on):
         db.add_event(conn, did, "excuse", text, {**read.model_dump(exclude_none=True),
                                                  "resolved": resolved.isoformat() if resolved else None,
-                                                 "source": "model"})
+                                                 "source": "model"}, at=_at(on, 20))
         return on_reply(s, read, resolved, on)
 
     # 1. Sari: due today, first gentle reminder.

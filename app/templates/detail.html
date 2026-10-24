@@ -66,13 +66,13 @@
     <ol>
       {% for e in events %}
       <li class="slip ev-{{ e.kind }}">
-        <span class="when">{{ e.created_at[:10] }}</span>
+        <span class="when">{{ e.created_at|day }}</span>
         {% if e.kind == 'lent' %}💸 Lent <b class="amount">{{ fmt(d.amount, d.currency) }}</b>{% if e.text %} for {{ e.text }}{% endif %}
         {% elif e.kind == 'nudge' %}📤 Reminder sent <span class="level level-{{ e.parsed.level }}">{{ LEVEL_NAMES[e.parsed.level] }}</span>
           <p class="quote">{{ e.text }}</p>
           {% if loop.first and s.status == 'open' %}<form method="post" action="/events/{{ e.id }}/undo" class="inline"><button class="link">Undo</button></form>{% endif %}
         {% elif e.kind == 'excuse' %}💬 Reply <p class="quote">“{{ e.text }}”</p>
-          <span class="read">→ {{ {'promise': 'Promise', 'vague': 'No date yet', 'claims_paid': "Says they've paid"}[e.parsed.kind] }}{% if e.parsed.resolved %} · {{ e.parsed.resolved }}{% endif %}{% if e.parsed.source == 'rules' %} · read by rules{% endif %}</span>
+          <span class="read">→ {{ {'promise': 'Promise', 'vague': 'No date yet', 'claims_paid': "Says they've paid"}[e.parsed.kind] }}{% if e.parsed.resolved %}, {{ e.parsed.resolved|day }}{% endif %}{% if e.parsed.source == 'rules' %} (read by rules){% endif %}</span>
         {% elif e.kind == 'partial' %}💵 Paid <b class="amount">{{ fmt(e.parsed.amount, d.currency) }}</b>
         {% elif e.kind == 'paid' %}✅ Paid in full
         {% endif %}

@@ -131,14 +131,16 @@ def save_state(conn, debt_id: int, s: DebtState) -> None:
                  "status=? WHERE id=?", (*j.values(), debt_id))
 
 
-def add_event(conn, debt_id: int, kind: str, text: str | None = None, parsed: dict | None = None) -> int:
+def add_event(conn, debt_id: int, kind: str, text: str | None = None, parsed: dict | None = None,
+              at: datetime | None = None) -> int:
+    when = at.isoformat(timespec="seconds") if at else _now()
     cur = conn.execute("INSERT INTO events (debt_id, kind, text, parsed_json, created_at) VALUES (?, ?, ?, ?, ?)",
-                       (debt_id, kind, text, json.dumps(parsed) if parsed is not None else None, _now()))
+                       (debt_id, kind, text, json.dumps(parsed) if parsed is not None else None, when))
     return cur.lastrowid
 
 
 def list_events(conn, debt_id: int) -> list[dict]:
-    rows = conn.execute("SELECT * FROM events WHERE debt_id = ? ORDER BY id DESC", (debt_id,))
+    rows = conn.execute("SELECT * FROM events WHERE debt_id = ? ORDER BY created_at DESC, id DESC", (debt_id,))
     return [{**dict(r), "parsed": json.loads(r["parsed_json"]) if r["parsed_json"] else None} for r in rows]
 
 
