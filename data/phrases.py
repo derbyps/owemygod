@@ -32,7 +32,8 @@ FAMILIES: dict[str, dict] = {
     # weekday
     "wd_id": {"type": "weekday", "times": {k: [v, f"hari {v}"] for k, v in WEEKDAY_ID.items() if k != "sun"},
               "templates": ["{t} aku transfer ya", "{t} ini ya", "paling {t} deh"]},
-    "wd_en": {"type": "weekday", "times": {k: [v, f"this {v}"] for k, v in WEEKDAY_EN.items()},
+    "wd_en": {"type": "weekday", "times": {**{k: [v, f"this {v}"] for k, v in WEEKDAY_EN.items()},
+                                           "sat": ["saturday", "this weekend", "weekend ini"]},
               "templates": ["I'll send it {t}", "{t} ya promise", "by {t} for sure"]},
     "wd_mixed": {"type": "weekday", "times": {k: [v] for k, v in WEEKDAY_EN.items()}, "heldout": True,
                  "templates": ["{t} ini literally aku tf", "basically {t} ya", "{t} deh, janji"]},
@@ -58,11 +59,13 @@ FAMILIES: dict[str, dict] = {
     "pay_mixed": {"type": "payday", "times": {None: ["after payday", "abis gajian"]}, "heldout": True,
                   "templates": ["literally {t} langsung", "{t} deh, lagi bokek", "which is {t} ya"]},
     # month_start
-    "ms_id": {"type": "month_start", "times": {None: ["awal bulan", "awal bulan depan", "begitu ganti bulan"]},
+    "ms_id": {"type": "month_start", "times": {None: ["awal bulan", "awal bulan depan", "begitu ganti bulan",
+                                                      "tanggal muda", "pas tgl muda"]},
               "templates": ["{t} ya", "{t} aku ganti", "tunggu {t} ya"]},
     "ms_en": {"type": "month_start", "times": {None: ["early next month", "first thing next month"]},
               "templates": ["{t} ya promise", "I'll pay {t}", "{t} for sure"]},
-    "ms_mixed": {"type": "month_start", "times": {None: ["awal bulan", "early next month"]}, "heldout": True,
+    "ms_mixed": {"type": "month_start", "times": {None: ["tgl muda", "early next month", "awal bulan"]},
+                 "heldout": True,
                  "templates": ["{t} literally ya", "basically {t} deh", "{t} ya, sorry lama"]},
     # month_end
     "me_id": {"type": "month_end", "times": {None: ["akhir bulan", "akhir bulan ini", "ujung bulan"]},
@@ -77,7 +80,11 @@ FAMILIES: dict[str, dict] = {
     "vague_en": {"kind": "vague", "templates": [
         "soon ya", "I'll pay you back, promise", "working on it", "sorry, I haven't forgotten"]},
     "vague_mixed": {"kind": "vague", "heldout": True, "templates": [
-        "lagi tight banget sorry", "literally lagi bokek, nanti ya", "which is pasti kok, sabar"]},
+        "lagi tight banget sorry", "literally lagi bokek, nanti ya", "which is pasti kok, sabar",
+        "nunggu bonus cair ya", "abis THR deh", "kalau udah ada rezeki ya", "besok? belum tau sih"]},
+    "vague_time_words": {"kind": "vague", "templates": [
+        "minggu ini lagi kacau, nanti aku kabarin", "nunggu THR ya", "kalau project cair aku tf",
+        "gajian kemarin udah abis literally, nanti ya", "next week? hmm not sure yet"]},
     # claims_paid
     "paid_id": {"kind": "claims_paid", "templates": [
         "udah aku transfer kok", "cek deh udah masuk", "udah tf semalem", "barusan aku tf"]},
@@ -94,4 +101,16 @@ FILLERS = ["ya", "deh", "sih", "ok", "bro", "beb", "literally", "basically", "pr
 EMOJI = ["🙏", "😭", "🥲", "😅", "🙇", "💸", ""]
 
 # Replies that mention an earlier time first, then commit to a later one (the later one is the answer).
-COMPOUND = ["{early} gak bisa, {t} aja ya", "{early}? duh gabisa, {t} deh", "not {early} sorry, {t} ya"]
+COMPOUND = ["{early} gak bisa, {t} aja ya", "{early}? duh gabisa, {t} deh", "not {early} sorry, {t} ya",
+            "tadinya {early}, tapi {t} aja ya", "{early} kayaknya gak sempet, {t} pasti"]
+EARLY_BY_TYPE = {
+    "relative_days": ["hari ini", "today"],
+    "weekday": ["besok", "tomorrow", "hari ini"],
+    "next_week": ["besok", "tomorrow", "minggu ini", "this week"],
+    "day_of_month": ["besok", "tomorrow", "minggu ini"],
+    "payday": ["besok", "tomorrow", "minggu ini"],
+    "month_start": ["besok", "minggu ini", "this week", "akhir bulan"],
+    "month_end": ["besok", "tomorrow", "minggu ini"],
+}
+# Payday phrased with an explicit date: the date wins over "payday".
+PAYDAY_WITH_DATE = ["gajian tgl {d}, langsung aku tf", "gaji turun tgl {d} ya", "payday is the {d}th, I'll send it then"]

@@ -14,14 +14,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from data.phrases import COMPOUND, EMOJI, FAMILIES, FILLERS, OPENERS  # noqa: E402
+from data.phrases import COMPOUND, EARLY_BY_TYPE, EMOJI, FAMILIES, FILLERS, OPENERS, PAYDAY_WITH_DATE  # noqa: E402
 from owemygod.schema import ReplyRead, WhenExpr, to_target_json  # noqa: E402
 
 HELDOUT_FAMILIES = {name for name, f in FAMILIES.items() if f.get("heldout")}
 TRAIN_FAMILIES = set(FAMILIES) - HELDOUT_FAMILIES
 KIND_WEIGHTS = {"promise": 0.70, "vague": 0.20, "claims_paid": 0.10}
-COMPOUND_TYPES = {"next_week", "day_of_month", "payday", "month_start", "month_end"}
-EARLY = ["besok", "tomorrow", "hari ini", "today"]
 
 
 def _family_kind(f: dict) -> str:
@@ -82,8 +80,13 @@ def _row(i: int, seed: int, name: str, f: dict, rng: random.Random) -> dict:
         when, phrase = _time(f, rng)
         template = rng.choice(f["templates"])
         core = template.format(t=phrase)
-        if when.type in COMPOUND_TYPES and rng.random() < 0.08:
-            core = rng.choice(COMPOUND).format(early=rng.choice(EARLY), t=phrase)
+        if when.type == "relative_days" and when.n == 0:
+            pass  # nothing earlier than today
+        elif rng.random() < 0.25:
+            core = rng.choice(COMPOUND).format(early=rng.choice(EARLY_BY_TYPE[when.type]), t=phrase)
+        elif when.type == "payday" and rng.random() < 0.25:
+            day = rng.choice([1, 5, 10, 15, 25, 28])
+            when, core = WhenExpr(type="day_of_month", day=day), rng.choice(PAYDAY_WITH_DATE).format(d=day)
         target = ReplyRead(kind="promise", when=when)
     else:
         core = rng.choice(f["templates"])
