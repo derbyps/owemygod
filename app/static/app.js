@@ -1,5 +1,21 @@
 // Registers the service worker and runs the "Turn on notifications" flow on the settings page.
 (function () {
+  // One tap per submit: buttons that call the model show a loading label and can't be pressed twice.
+  document.addEventListener("submit", (event) => {
+    const form = event.target;
+    if (form.dataset.busy) { event.preventDefault(); return; }
+    form.dataset.busy = "1";
+    const btn = event.submitter || form.querySelector("button");
+    if (btn && btn.dataset.loading) {
+      btn.textContent = btn.dataset.loading;
+      btn.classList.add("is-loading");
+      btn.setAttribute("aria-busy", "true");
+      setTimeout(() => { btn.disabled = true; }, 0);
+    }
+    // Pages restored from the back/forward cache must be usable again.
+    window.addEventListener("pageshow", () => { delete form.dataset.busy; }, { once: true });
+  });
+
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js", { scope: "/" });
 
   const enable = document.getElementById("enable-push");

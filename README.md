@@ -8,6 +8,8 @@ right moment, and nudges you once at 09:00 when someone is due.
 
 Built for the DEV × Hacktoberfest 2026 Open-Source AI Challenge, week 3: *Slow and Steady*.
 
+**Live:** [owemygod.onrender.com](https://owemygod.onrender.com) (tap **Try the demo** for a sandbox with fictional friends)
+
 ## Who it's for
 
 People in Jakarta who lend money to friends and hate chasing it. In Indonesia there is even a saying for it:

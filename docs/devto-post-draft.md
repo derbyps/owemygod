@@ -34,7 +34,7 @@ reminders took one tap each instead of 10 minutes of agonising over the wording.
 
 ## Demo
 
-[[Render URL]] → **Try the demo** gives you a private sandbox with four fictional friends in every state. Turn on
+https://owemygod.onrender.com → **Try the demo** gives you a private sandbox with four fictional friends in every state. Turn on
 notifications in Settings and press **Send a test notification** to feel the 09:00 nudge.
 
 [[GIF: home list → Budi "Promised today" → log reply "besok gabisa, jumat aja" → read as Friday → Sari's reminder
@@ -42,7 +42,7 @@ notifications in Settings and press **Send a test notification** to feel the 09:
 
 ## Code
 
-{% github [[your-github]]/owemygod %}
+{% github derbyps/owemygod %}
 
 ## How I Built It
 

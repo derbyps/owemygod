@@ -26,11 +26,11 @@
         {% if d.draft_source == 'template' %}<p class="hint">Written from a template (model unavailable).</p>{% endif %}
         <button class="btn btn-primary btn-wa">Open in WhatsApp</button>
       </form>
-      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-ghost">↻ Regenerate</button></form>
+      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-ghost" data-loading="Writing…">↻ Regenerate</button></form>
     {% else %}
       <h2>Next reminder: {{ badge_text(row)|replace('Next: ', '')|replace('Waiting until ', '') }}</h2>
       <p class="why">{% if s.promise_on %}Waiting for their promise ({{ s.promise_on.strftime('%a %b') }} {{ s.promise_on.day }}).{% else %}{{ RHYTHMS[s.rhythm] }}, {{ LEVEL_NAMES[s.level] }} tone.{% endif %}</p>
-      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-secondary">Remind now</button></form>
+      <form method="post" action="/debts/{{ d.id }}/draft"><button class="btn btn-secondary" data-loading="Writing…">Remind now</button></form>
     {% endif %}
   </section>
   {% elif s.status == 'talk' %}
@@ -47,7 +47,7 @@
       <summary class="btn btn-secondary">Log reply</summary>
       <form method="post" action="/debts/{{ d.id }}/reply" class="card form">
         <label>What did they say? <textarea name="text" rows="2" required maxlength="500" placeholder="after payday ya"></textarea></label>
-        <button class="btn btn-primary">Read it</button>
+        <button class="btn btn-primary" data-loading="Reading…">Read it</button>
       </form>
     </details>
     <details class="action">

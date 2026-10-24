@@ -129,3 +129,19 @@ def test_demo_subscription_does_not_take_owner_endpoint(app):
     conn.execute("UPDATE users SET created_at = '2000-01-01T00:00:00' WHERE id = ?", (demo,))
     db.delete_old_demo_users(conn, datetime(2026, 1, 1))
     assert [s["endpoint"] for s in db.list_push_subscriptions(conn, 1)] == ["https://push/phone"]
+
+
+# double tap on Remind now / Regenerate must not pay for two drafts
+def test_double_tap_draft_calls_model_once(app, auth):
+    fc = FakeClient("Hey {name}, {amount} ya")
+    app.state.writer = Writer(fc)
+    d = _debt(auth)
+    auth.post(f"/debts/{d}/draft")
+    auth.post(f"/debts/{d}/draft")
+    assert fc.calls == 1
+
+
+def test_loading_labels_on_model_buttons(auth):
+    d = _debt(auth)
+    page = auth.get(f"/debts/{d}").text
+    assert 'data-loading="Writing…"' in page and 'data-loading="Reading…"' in page

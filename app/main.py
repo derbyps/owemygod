@@ -35,6 +35,7 @@ TIMEZONES = {"Asia/Jakarta": "WIB", "Asia/Makassar": "WITA", "Asia/Jayapura": "W
 TONES = {"jaksel": "Jaksel mix", "english": "English", "bahasa": "Bahasa"}
 RHYTHMS = {"weekly": "Every week", "biweekly": "Every 2 weeks", "monthly": "Every month"}
 WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+DRAFT_DEBOUNCE_SECONDS = 15
 KIND_TEXT = {"promise": "Promise", "vague": "No date yet", "claims_paid": "Says they've paid"}
 WHEN_TEXT = {"relative_days": None, "weekday": None, "next_week": "next week", "day_of_month": None,
              "payday": "after payday", "month_start": "start of the month", "month_end": "end of the month"}
@@ -62,6 +63,7 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
     app.state.conn = db.connect(db_path)
     app.state.reader, app.state.writer, app.state.clock = reader, writer, clock
     app.state.vapid_public, app.state.push_sender = None, None
+    app.state.recent_drafts = {}  # debt_id -> when a draft was last written, to absorb double taps
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.filters["day"] = lambda iso: f"{datetime.fromisoformat(iso):%a, %b} {datetime.fromisoformat(iso).day}"
     templates.env.globals.update(badge_text=views.badge_text, fmt=format_amount, TONES=TONES, RHYTHMS=RHYTHMS,
@@ -245,7 +247,11 @@ def create_app(db_path: str, reader: Reader, writer: Writer, clock=lambda: datet
         today = today_for(user)
         d = owned_debt(user, debt_id)
         s = fresh_state(d, today)
-        make_draft(user, d, s.level, today)
+        now = app.state.clock()
+        last = app.state.recent_drafts.get(debt_id)
+        if not (last and d["draft"] and (now - last).total_seconds() < DRAFT_DEBOUNCE_SECONDS):
+            make_draft(user, d, s.level, today)
+            app.state.recent_drafts[debt_id] = now
         return RedirectResponse(f"/debts/{debt_id}#reminder", status_code=303)
 
     @app.post("/debts/{debt_id}/sent")

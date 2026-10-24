@@ -198,3 +198,12 @@ details .form, details label { margin-top: 10px; }
   .hero .stamp { animation: thunk 260ms cubic-bezier(.2, 1.6, .4, 1) both; }
   @keyframes thunk { from { transform: rotate(-8deg) scale(1.8); opacity: 0; } to { transform: rotate(-8deg) scale(1); opacity: .9; } }
 }
+
+.btn.is-loading { opacity: .7; cursor: progress; }
+.btn.is-loading::after {
+  content: ""; width: 14px; height: 14px; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn.is-loading::after { animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+}
