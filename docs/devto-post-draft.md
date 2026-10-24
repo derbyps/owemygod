@@ -77,7 +77,7 @@ is the 15th, *tar malam* is today) and retrained. Then we wrote **25 brand-new r
 reward (exact +1, late −1, **too early −5**), because a too-early reminder is the one that costs a friendship. It
 ran twice, and both times the fine-tuned model answered every training reply identically and correctly, so there
 was no difference to learn from (`trained_on=0`). The honest lesson: once the data covered the hard patterns,
-supervised fine-tuning was enough. Total Tinker spend: about $2.40 [[check the Tinker console]].
+supervised fine-tuning was enough. Total Tinker spend: about $1.52.
 
 ### Results (25 hand-written replies, never seen in training, evaluated once)
 

@@ -72,7 +72,7 @@ How we got there, honestly:
   `runs/rl*/metrics.jsonl`). We ship SFT v2 and say so.
 
 Full tables (synthetic held-out, dev and test, including v1): [`eval/out/table.md`](eval/out/table.md). Total Tinker
-spend ≈ $2.40. Reproduce with [RUNBOOK.md](RUNBOOK.md).
+spend ≈ $1.52. Reproduce with [RUNBOOK.md](RUNBOOK.md).
 
 ## Run it
 

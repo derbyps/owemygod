@@ -1,6 +1,6 @@
 # Runbook: train, evaluate and deploy OweMyGod
 
-Total [Tinker](https://thinkingmachines.ai/tinker/) spend for everything we ran was about **$2.40**. Every paid script prints its cost
+Total [Tinker](https://thinkingmachines.ai/tinker/) spend for everything we ran was about **$1.52** (Tinker console). Every paid script prints its cost
 estimate first and refuses to run above its cap.
 
 ## 0. Setup (≈3 min)
