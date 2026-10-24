@@ -27,8 +27,9 @@ from owemygod.scoring import score  # noqa: E402
 SETS = {"synthetic held-out": ROOT / "data" / "test.jsonl", "hand-written dev": ROOT / "data" / "handwritten_dev.jsonl",
         "hand-written test": ROOT / "data" / "handwritten_test.jsonl"}
 SET_KEYS = {"test": "synthetic held-out", "dev": "hand-written dev", "handwritten": "hand-written test"}
-LLM_MODELS = ("base", "sft", "rl")
-NAMES = {"rules": "Keyword rules", "base": "Qwen3-8B, untrained", "sft": "Fine-tuned (SFT)", "rl": "Fine-tuned (SFT + RL)"}
+LLM_MODELS = ("base", "sft1", "sft", "rl")
+NAMES = {"rules": "Keyword rules", "base": "Qwen3-8B, untrained", "sft1": "Fine-tuned v1 (SFT, before dev fixes)",
+         "sft": "Fine-tuned v2 (SFT, shipped)", "rl": "Fine-tuned (SFT + RL)"}
 
 
 def _load(path: Path) -> list[dict]:
@@ -76,6 +77,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--models", default="rules,base,sft,rl")
     ap.add_argument("--sets", default="test,handwritten")
+    ap.add_argument("--sft1-path")
     ap.add_argument("--sft-path")
     ap.add_argument("--rl-path")
     ap.add_argument("--max-tokens", type=int, default=80)
@@ -89,7 +91,7 @@ def main() -> None:
     if not sets:
         sys.exit("No test rows found. Run python data/gen_dataset.py (and fill data/handwritten_test.jsonl).")
     llms = [m for m in models if m in LLM_MODELS]
-    for m, p in (("sft", args.sft_path), ("rl", args.rl_path)):
+    for m, p in (("sft1", args.sft1_path), ("sft", args.sft_path), ("rl", args.rl_path)):
         if m in llms and not p:
             sys.exit(f"--{m}-path is required to evaluate '{m}'")
 
@@ -115,7 +117,7 @@ def main() -> None:
 
         _tok, renderer = get_tokenizer_and_renderer()
         service = tinker.ServiceClient()
-        paths = {"base": None, "sft": args.sft_path, "rl": args.rl_path}
+        paths = {"base": None, "sft1": args.sft1_path, "sft": args.sft_path, "rl": args.rl_path}
         for m in llms:
             sampler = (service.create_sampling_client(base_model=MODEL) if m == "base"
                        else service.create_sampling_client(model_path=paths[m]))

@@ -38,8 +38,8 @@ level + tone + their replies ─► Qwen3-8B ─► "Hey {name}, udah gajian kan
 
 1. **The model translates; code decides.** The reader only names the *kind* of time ("payday", "next week",
    "the 25th"). Plain Python turns it into a date and runs the schedule, so the model can't miscount a calendar.
-2. **Never too early.** Training uses reinforcement learning with a lopsided reward: reminding someone *before* the
-   day they promised costs −5, reminding late costs −1. A too-early reminder is the one that costs a friendship.
+2. **Never too early.** "Too early" is the metric that matters: a reminder before the promised day is the one that
+   costs a friendship. The RL reward was built around it (−5 too early, −1 late); see Results for what happened.
 3. **The model never sees who owes what.** Names, phone numbers and amounts stay in the app's database; the
    writer works with `{name}` and `{amount}` placeholders.
 4. **It still works when the model is down**: keyword rules read replies and templates write reminders, and the
@@ -47,9 +47,30 @@ level + tone + their replies ─► Qwen3-8B ─► "Hey {name}, udah gajian kan
 
 ## Results
 
-Measured on held-out replies the model never saw: a synthetic set built from held-out phrasings, and a set of
-replies written by hand by real people (fictional names). Full table: [`eval/out/table.md`](eval/out/table.md);
-reproduce with [RUNBOOK.md](RUNBOOK.md).
+The real test is **25 replies written by hand by two people** (fictional names), never seen during training and
+evaluated once, at the end. "Too early" means the app would remind your friend before the day they promised.
+
+| System | Exact date ↑ | Too early ↓ | Kind right ↑ |
+|---|---|---|---|
+| Keyword rules | 60% | 16% | 84% |
+| Qwen3-8B, untrained | 68% | 12% | 80% |
+| **Qwen3-8B fine-tuned on Tinker (shipped)** | **92%** | **8%** | **100%** |
+
+Both remaining misses are one day early: *"tgl 25 pas payday… eh tgl 25 minggu kan? senin deh"* (it kept the 25th)
+and *"tgl 28/29"* (it picked the 28th).
+
+How we got there, honestly:
+
+- **v1** was trained on 2,000 synthetic replies. On a first hand-written set of 50 (the *dev set*) it still reminded
+  too early 14% of the time, mostly by choosing "payday" when the friend had named a date (*"tgl 28 ya pas payday"*).
+- **v2** fixed the generator for the patterns the dev set exposed (an explicit date beats payday, mid-month is the
+  15th, "tar malam" is today) and was retrained. Only then was the separate 25-reply test written and run.
+- **RL found nothing left to fix.** Reinforcement learning with a −5 penalty for "too early" ran twice, but the
+  SFT model answered every training reply identically and correctly, so there was no signal (`trained_on=0`, see
+  `runs/rl*/metrics.jsonl`). We ship SFT v2 and say so.
+
+Full tables (synthetic held-out, dev and test, including v1): [`eval/out/table.md`](eval/out/table.md). Total Tinker
+spend ≈ $2.40. Reproduce with [RUNBOOK.md](RUNBOOK.md).
 
 ## Run it
 

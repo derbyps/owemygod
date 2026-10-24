@@ -1,0 +1,78 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[data] 2000 examples, 804,473 tokens/epoch, lr=4.73e-04
+[budget] estimated cost $0.71 (cap $1.00)
+step=0 epoch=0 train_nll=0.22178 lr=0.00047 secs=33.3 progress=1/62
+step=1 epoch=0 train_nll=0.231 lr=0.00047 secs=4.3 progress=2/62
+step=2 epoch=0 train_nll=0.07547 lr=0.00046 secs=4.1 progress=3/62
+step=3 epoch=0 train_nll=0.08677 lr=0.00045 secs=5.5 progress=4/62
+step=4 epoch=0 train_nll=0.00916 lr=0.00044 secs=3.9 progress=5/62
+step=5 epoch=0 train_nll=0.05897 lr=0.00043 secs=4.0 progress=6/62
+step=6 epoch=0 train_nll=0.01733 lr=0.00043 secs=4.0 progress=7/62
+step=7 epoch=0 train_nll=0.02496 lr=0.00042 secs=3.8 progress=8/62
+step=8 epoch=0 train_nll=0.00668 lr=0.00041 secs=3.9 progress=9/62
+step=9 epoch=0 train_nll=0.00494 lr=0.0004 secs=3.5 progress=10/62
+step=10 epoch=0 train_nll=0.0056 lr=0.0004 secs=4.0 progress=11/62
+step=11 epoch=0 train_nll=0.00122 lr=0.00039 secs=4.0 progress=12/62
+step=12 epoch=0 train_nll=0.00248 lr=0.00038 secs=3.7 progress=13/62
+step=13 epoch=0 train_nll=0.00378 lr=0.00037 secs=4.0 progress=14/62
+step=14 epoch=0 train_nll=0.00104 lr=0.00037 secs=3.8 progress=15/62
+step=15 epoch=0 train_nll=0.00039 lr=0.00036 secs=3.8 progress=16/62
+step=16 epoch=0 train_nll=0.00051 lr=0.00035 secs=4.0 progress=17/62
+step=17 epoch=0 train_nll=0.02312 lr=0.00034 secs=3.7 progress=18/62
+step=18 epoch=0 train_nll=0.03844 lr=0.00034 secs=3.7 progress=19/62
+step=19 epoch=0 train_nll=0.00022 lr=0.00033 secs=4.0 progress=20/62
+step=20 epoch=0 train_nll=0.01989 lr=0.00032 secs=4.0 progress=21/62
+step=21 epoch=0 train_nll=0.00308 lr=0.00031 secs=4.0 progress=22/62
+step=22 epoch=0 train_nll=0.00265 lr=0.00031 secs=3.8 progress=23/62
+step=23 epoch=0 train_nll=0.01024 lr=0.0003 secs=3.7 progress=24/62
+step=24 epoch=0 train_nll=0.00739 lr=0.00029 secs=4.0 progress=25/62
+step=25 epoch=0 train_nll=0.00276 lr=0.00028 secs=3.7 progress=26/62
+step=26 epoch=0 train_nll=0.00183 lr=0.00027 secs=3.7 progress=27/62
+step=27 epoch=0 train_nll=0.00095 lr=0.00027 secs=4.3 progress=28/62
+step=28 epoch=0 train_nll=0.00731 lr=0.00026 secs=3.7 progress=29/62
+step=29 epoch=0 train_nll=0.0002 lr=0.00025 secs=3.7 progress=30/62
+step=30 epoch=0 train_nll=0.00021 lr=0.00024 secs=4.3 progress=31/62
+step=31 epoch=1 train_nll=0.00021 lr=0.00024 secs=3.7 progress=32/62
+step=32 epoch=1 train_nll=0.00015 lr=0.00023 secs=3.7 progress=33/62
+step=33 epoch=1 train_nll=0.0001 lr=0.00022 secs=3.7 progress=34/62
+step=34 epoch=1 train_nll=0.00023 lr=0.00021 secs=3.8 progress=35/62
+step=35 epoch=1 train_nll=0.00883 lr=0.00021 secs=3.7 progress=36/62
+step=36 epoch=1 train_nll=0.0001 lr=0.0002 secs=4.0 progress=37/62
+step=37 epoch=1 train_nll=0.00071 lr=0.00019 secs=3.7 progress=38/62
+step=38 epoch=1 train_nll=0.00049 lr=0.00018 secs=3.7 progress=39/62
+step=39 epoch=1 train_nll=0.00293 lr=0.00018 secs=4.0 progress=40/62
+step=40 epoch=1 train_nll=4e-05 lr=0.00017 secs=3.7 progress=41/62
+step=41 epoch=1 train_nll=0.0014 lr=0.00016 secs=5.5 progress=42/62
+step=42 epoch=1 train_nll=0.00015 lr=0.00015 secs=3.8 progress=43/62
+step=43 epoch=1 train_nll=3e-05 lr=0.00014 secs=3.7 progress=44/62
+step=44 epoch=1 train_nll=0.00523 lr=0.00014 secs=3.8 progress=45/62
+step=45 epoch=1 train_nll=0.00932 lr=0.00013 secs=3.7 progress=46/62
+step=46 epoch=1 train_nll=6e-05 lr=0.00012 secs=3.7 progress=47/62
+step=47 epoch=1 train_nll=3e-05 lr=0.00011 secs=4.0 progress=48/62
+step=48 epoch=1 train_nll=2e-05 lr=0.00011 secs=3.7 progress=49/62
+step=49 epoch=1 train_nll=3e-05 lr=0.0001 secs=3.8 progress=50/62
+step=50 epoch=1 train_nll=2e-05 lr=9e-05 secs=3.8 progress=51/62
+step=51 epoch=1 train_nll=5e-05 lr=8e-05 secs=4.3 progress=52/62
+step=52 epoch=1 train_nll=4e-05 lr=8e-05 secs=3.7 progress=53/62
+step=53 epoch=1 train_nll=4e-05 lr=7e-05 secs=3.7 progress=54/62
+step=54 epoch=1 train_nll=4e-05 lr=6e-05 secs=4.0 progress=55/62
+step=55 epoch=1 train_nll=0.00012 lr=5e-05 secs=4.1 progress=56/62
+step=56 epoch=1 train_nll=4e-05 lr=5e-05 secs=3.8 progress=57/62
+step=57 epoch=1 train_nll=5e-05 lr=4e-05 secs=3.7 progress=58/62
+step=58 epoch=1 train_nll=5e-05 lr=3e-05 secs=3.5 progress=59/62
+step=59 epoch=1 train_nll=3e-05 lr=2e-05 secs=3.9 progress=60/62
+step=60 epoch=1 train_nll=4e-05 lr=2e-05 secs=3.4 progress=61/62
+step=61 epoch=1 train_nll=7e-05 lr=1e-05 secs=3.7 progress=62/62
+
+=== RESULT ===
+state_path=tinker://fbf20c70-feed-549b-a365-1df21eaeae0f:train:0/weights/sft-final
+sampler_path=tinker://fbf20c70-feed-549b-a365-1df21eaeae0f:train:0/sampler_weights/sft-final
+(saved to runs/sft2/RESULT.txt)
+
+Next: python train/rl.py --from-state <state_path above>
+Exception ignored in: <function ResourceTracker.__del__ at 0x164aa4400>
+Traceback (most recent call last):
+  File "/Users/derby/Documents/vault/personal/2026-hacktober/boldprint/.venv/lib/python3.12/site-packages/multiprocess/resource_tracker.py", line 80, in __del__
+  File "/Users/derby/Documents/vault/personal/2026-hacktober/boldprint/.venv/lib/python3.12/site-packages/multiprocess/resource_tracker.py", line 89, in _stop
+  File "/Users/derby/Documents/vault/personal/2026-hacktober/boldprint/.venv/lib/python3.12/site-packages/multiprocess/resource_tracker.py", line 102, in _stop_locked
+AttributeError: '_thread.RLock' object has no attribute '_recursion_count'
